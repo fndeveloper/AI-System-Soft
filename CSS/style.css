@@ -8,8 +8,29 @@
 body{
     font-family: var(--font-family) !important;
 }
+
+/* MEDIA QUIRES */
+@media (max-width:992px) {
+    .float-en{
+        position: fixed;
+        right: 2%;
+     
+    }
+    .head-1{
+        font-size: 32px !important;
+    }
+    .h100{
+        height: 120vh !important;
+    }
+}
+/* MEDIA QUIRES */
+
 .navbar{
-background-color: white;
+    top: 0%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    position: fixed !important;
+
+background-color:rgb(244, 244, 244);
 border-bottom: 1px solid #1818181e;
 }
 .topbtnfix{
@@ -51,7 +72,7 @@ color: var(--color-black);
     background-color: var(--color1) !important;
 }
 .h100{
-    height: 100vh !important;
+    height: 100vh ;
 }
 .arr{
     fill: var(--color1) !important;
@@ -117,4 +138,8 @@ right: 0%;
 .color-black{
 
     color: var(--color-black) !important;
+}
+.ofc1{
+    transition: 0.7s ease-in-out !important;
+    width: 75% !important;
 }
