@@ -129,7 +129,7 @@ transition: 0.7s ease-in-out !important;
     transition: 0.7s ease-in-out !important;
     border-radius: 50%;
     position: absolute;
-height: 0%;
+height: 70%;
 width: 0%;
 z-index: -1;
 right: 0%;
@@ -155,4 +155,40 @@ right: 0%;
 .ofc1{
     transition: 0.7s ease-in-out !important;
     width: 75% !important;
+}
+.fixo{
+    top: 0%;
+    height: 100vh;
+    width: 2px;
+ z-index: -1;
+    background-color: rgba(220, 220, 220, 0.746);
+    position: fixed;
+    left: 5%;
+}
+.fixo1{
+    top: 0%;
+    height: 100vh;
+    width: 2px;
+ z-index: -1;
+    background-color: rgba(220, 220, 220, 0.746);
+    position: fixed;
+    right: 5%;
+}
+.top-ani{
+    height: 80px;
+    width: 1px;
+
+    position: fixed;
+    top: 20%;
+    background-color: var(--color1);
+    animation: 5s linear infinite top;
+    animation-delay: 2s !important ;
+}
+@keyframes top {
+    from{
+        top: 0%;
+    }
+    to{
+        top: 100%;
+    }
 }
