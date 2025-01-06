@@ -23,6 +23,19 @@ body{
         height: 120vh !important;
     }
 }
+@media (max-width:576px) {
+    .float-en{
+        position: fixed;
+        right: 2%;
+     
+    }
+    .head-1{
+        font-size: 32px !important;
+    }
+    .h100{
+        height: 150vh !important;
+    }
+}
 /* MEDIA QUIRES */
 
 .navbar{
