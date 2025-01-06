@@ -4,6 +4,7 @@
     --font-family: "Unbounded", serif;
     --color1:#a51f09;
     --color-black:#686868;
+    --bg-color:#1A1A1A;
     --color-round:rgba(220, 220, 220, 0.966);
 }
 body{
@@ -20,9 +21,9 @@ body{
     .head-1{
         font-size: 32px !important;
     }
-    .h100{
+    /* .h100{
         height: 120vh !important;
-    }
+    } */
 }
 @media (max-width:576px) {
     .float-en{
@@ -33,9 +34,9 @@ body{
     .head-1{
         font-size: 32px !important;
     }
-    .h100{
+    /* .h100{
         height: 150vh !important;
-    }
+    } */
 }
 /* MEDIA QUIRES */
 
@@ -43,7 +44,7 @@ body{
     top: 0%;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     position: fixed !important;
-
+z-index: 1111;
 background-color:rgb(244, 244, 244);
 border-bottom: 1px solid #1818181e;
 }
@@ -85,9 +86,9 @@ color: var(--color-black);
     color: white !important;
     background-color: var(--color1) !important;
 }
-.h100{
+/* .h100{
     height: 100vh ;
-}
+} */
 .arr{
     fill: var(--color1) !important;
 }
@@ -120,7 +121,7 @@ color: var(--color-black);
     
  padding: 20px 50px ;
 
-    background-color: rgb(25, 25, 25);
+    background-color: var(--bg-color);
 z-index: 1;
 transition: 0.7s ease-in-out !important;
 
