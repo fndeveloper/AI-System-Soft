@@ -4,6 +4,7 @@
     --font-family: "Unbounded", serif;
     --color1:#a51f09;
     --color-black:#686868;
+    --color-round:rgba(220, 220, 220, 0.966);
 }
 body{
     font-family: var(--font-family) !important;
@@ -161,18 +162,18 @@ right: 0%;
     height: 100vh;
     width: 2px;
  z-index: -1;
-    background-color: rgba(220, 220, 220, 0.746);
+    background-color: var(--color-round) !important;
     position: fixed;
-    left: 5%;
+    left: 4.6%;
 }
 .fixo1{
     top: 0%;
     height: 100vh;
     width: 2px;
  z-index: -1;
-    background-color: rgba(220, 220, 220, 0.746);
+    background-color:var(--color-round) !important;
     position: fixed;
-    right: 5%;
+    right: 4.6%;
 }
 .top-ani{
     height: 80px;
@@ -191,4 +192,7 @@ right: 0%;
     to{
         top: 100%;
     }
+}
+.roun{
+    border:1px solid var(--color-round) !important ;
 }
