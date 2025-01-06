@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+:root{
+    --font-family: "Unbounded", serif;
+    --color1:#a51f09;
+    --color-black:#686868;
+}
+body{
+    font-family: var(--font-family) !important;
+}
+.navbar{
+background-color: white;
+border-bottom: 1px solid #1818181e;
+}
+.topbtnfix{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+/* NAV-HOVER */
+.navhover{
+    /* background-color: #bb9108 !important; */
+    position: absolute !important;
+    top: 0px;
+    width: 0%;
+    color: var(--golden-color) !important;
+    z-index: -22 !important; 
+    bottom: 0px;
+  
+    transition: 0.5s ease-in-out !important;
+  
+    border-bottom: 2px solid var(--golden-color);
+  }
+  .nav-item:hover .navhover{
+  top: 0px !important;
+    width: 100% !important;
+  }
+  .nav-item{
+    position: relative;
+    margin: 0px 6px;
+  }  
+/* NAV-HOVER */
+.nav-item>a{
+    font-weight: 300;
+    font-size: 14px !important;
+color: var(--color-black);
+}
+.btn-red{
+   
+    color: white !important;
+    background-color: var(--color1) !important;
+}
+.h100{
+    height: 100vh !important;
+}
+.arr{
+    fill: var(--color1) !important;
+}
+.image-1{
+    border-radius: 250px;
+    padding-left: 10px;
+    min-height: 370px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.color-red{
+    background-color: var(--color1) !important;
+}
+.ol7{
+    background-color: var(--color1);
+    border-radius: 250px;
+}
+.banner-btn>svg{
+   fill: white !important;
+}
+@media (max-width:992px) {
+    .banner-btn{
+        border-radius: 0% !important;
+    padding: 5px !important;
+    }
+}
+.banner-btn{
+    position: relative;
+    border-radius: 50%;
+    
+ padding: 20px 50px ;
+
+    background-color: rgb(25, 25, 25);
+z-index: 1;
+transition: 0.7s ease-in-out !important;
+
+}
+
+.hoverbanner{
+    transition: 0.7s ease-in-out !important;
+    border-radius: 50%;
+    position: absolute;
+height: 0%;
+width: 0%;
+z-index: -1;
+right: 0%;
+}
+
+.banner-btn:hover .hoverbanner{
+    
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    color: var(--color1) !important;
+    background-color:var(--color1);
+
+}
+.pb-g{
+    font-size: 14px;
+    background-color: rgb(220, 219, 219);
+}
+.color-black{
+
+    color: var(--color-black) !important;
+}

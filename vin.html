@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIN Decoder</title>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div style="margin: 50px;">
+    <h1>VIN Decoder</h1>
+    <form id="vinForm">
+      <label for="vinInput">Enter VIN Number:</label>
+      <input type="text" id="vinInput" name="vin" required />
+      <button type="submit">Decode VIN</button>
+    </form>
+    <div id="result" style="margin-top: 20px;">
+      <h2>Result:</h2>
+      <pre id="output"></pre>
+    </div>
+  </div>
+
+  <script>
+    const apiPrefix = "https://api.vindecoder.eu/3.2";
+    const apiKey = "a384b599bbe7"; // Your API key
+    const secretKey = "b20f283f5d"; // Your secret key
+    const id = "decode";
+
+    // Function to calculate the SHA-1 hash
+    async function sha1(input) {
+      const encoder = new TextEncoder();
+      const data = encoder.encode(input);
+      const hashBuffer = await crypto.subtle.digest("SHA-1", data);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      return hashArray.map(byte => byte.toString(16).padStart(2, "0")).join("");
+    }
+
+    // Main function to call the API
+    async function fetchAPI(vin) {
+      try {
+        // Convert VIN to uppercase
+        const upperVin = vin.toUpperCase();
+        console.log("Uppercase VIN:", upperVin);
+
+        // Generate the control sum (first 10 characters of the SHA-1 hash)
+        const hash = await sha1(`${upperVin}|${id}|${apiKey}|${secretKey}`);
+        const controlSum = hash.substr(0, 10);
+        console.log("Control Sum:", controlSum);
+
+        // Construct the API URL
+        const apiUrl = `${apiPrefix}/${apiKey}/${controlSum}/decode/${upperVin}.json`;
+        console.log("API URL:", apiUrl);
+
+        // Fetch the API data
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log("API Data:", data.decode[2].value);
+
+        // Display the data in the output element
+        document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        document.getElementById("output").textContent = `Error: ${error.message}`;
+      }
+    }
+
+    // Event listener for the form submission
+    document.getElementById("vinForm").addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent form from refreshing the page
+      const vin = document.getElementById("vinInput").value.trim(); // Get VIN value
+      if (vin) {
+        fetchAPI(vin); // Call the API with the VIN
+      } else {
+        alert("Please enter a valid VIN number.");
+      }
+    });
+  </script>
+</body>
+</html>
