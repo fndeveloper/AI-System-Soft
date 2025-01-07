@@ -4,6 +4,7 @@
     --font-family: "Unbounded", serif;
     --color1:#a51f09;
     --color-black:#686868;
+    --border-col:#1818182f;
     --bg-color:#1A1A1A;
     --color-round:rgba(220, 220, 220, 0.966);
 }
@@ -44,7 +45,7 @@ body{
  
 z-index: 1111;
 
-border-bottom: 1px solid #1818181e;
+border-bottom: 1px solid var(--border-col);
 transition: 1.2s ease-in-out !important;
 }
 .topbtnfix{
@@ -213,9 +214,12 @@ right: 0%;
 height: 400px !important;
 border-radius: 5%;
 }
+.s11{
+    fill: #1A1A1A !important;
+}
 .btn1{
     background-color:transparent;
-    color: white;
+    /* color: white; */
     font-size: 15px;
     font-weight: 300;
     outline: none;
@@ -264,4 +268,40 @@ background: linear-gradient(90deg, rgba(25,23,23,1) 1%, rgba(22,22,22,1) 58%);
     left: 0px;
 
     border-bottom:2px solid var(--color1) ;
+}
+#home {
+    transition: 0.5s ease-in-out;
+  }
+  .ser-col-1{
+    transition: 0.9s ease-in-out;
+
+    border-top: 1px solid var(--border-col) !important;
+    border-bottom: 1px solid var(--border-col) !important;
+
+  }
+  .ser-col-1:hover{
+    cursor: grab;
+    transition: 0.7s ease-in-out !important;
+    background-color: #47474721;
+  }
+  .pro>span:hover{
+    color: white;
+    background-color:#474747;
+  }
+  .pro>span{
+    transition: 0.6s ease-in-out !important;
+    border-radius: 7px;
+    padding: 5px 15px;
+transition: 0.8s ease-in !important;
+    font-size: 14px !important;
+    border: 1px solid #47474762;
+    /* background-color: var(--color-black); */
+  }
+.course-det{
+    transition: 0.7s ease-in-out !important;
+    display: none;
+}
+.ser-col-1:hover .course-det{
+    transition: 0.7s ease-in-out !important;
+    display: block;
 }
