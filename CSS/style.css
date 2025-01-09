@@ -1,54 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 
-:root{
+:root {
     --font-family: "Unbounded", serif;
-    --color1:#a51f09;
-    --color-black:#686868;
-    --border-col:#1818182f;
-    --bg-color:#1A1A1A;
-    --color-round:rgba(220, 220, 220, 0.966);
+    --color1: #a51f09;
+    --color-black: #686868;
+    --border-col: #1818182f;
+    --bg-color: #1A1A1A;
+    --color-round: rgba(220, 220, 220, 0.966);
 }
-body{
+
+body {
     font-family: var(--font-family) !important;
 }
 
 /* MEDIA QUIRES */
 @media (max-width:992px) {
-    .float-en{
+    .float-en {
         position: absolute;
         right: 2%;
-     
+
     }
-    .head-1{
+
+    .head-1 {
         font-size: 32px !important;
     }
-    /* .h100{
-        height: 120vh !important;
-    } */
+
+  
+}
+.topoff>div>ul>li>a{
+    text-transform: uppercase;
+    color: white !important;
+    font-weight: 600;
+    font-size: 28px !important;
+}
+.topoff{
+    height: 70vh;
+}
+.lets-talk-btn-hover{
+    position: absolute;
+    top: 0%;
+    height: 0%;
+    width: 0%;
+    background-color: #474747 !important;
+    z-index: -1;
+    border-radius: 20px;
+    height: 100%;
+    
+    right: 0%;
+    transition: 0.5s ease-in-out !important;
+}
+.top-nav-heading{
+    opacity: 0.1;
+}
+.top-header-icon>a{
+    color: var(--bg-color) !important;
+background-color: white;
+padding: 5px 10px;
+border-radius: 50%;
+font-size: 22px !important;
+}
+.lets-talk-btn:hover .lets-talk-btn-hover{
+    left: 0%;
+    height: 100%;
+    width: 100%;
+}
+.lets-talk-btn{
+    z-index: 1;
+    position: relative;
+ letter-spacing: 1px;
+    border-radius: 20px;
+    
+    border: 1px solid white;
+    background-color: transparent;
 }
 @media (max-width:576px) {
-    .float-en{
+    .float-en {
         position: absolute;
         right: 2%;
-     
+
     }
-    .head-1{
+
+    .head-1 {
         font-size: 32px !important;
     }
-    /* .h100{
-        height: 150vh !important;
-    } */
+
 }
+
 /* MEDIA QUIRES */
 
-.navbar{
- 
-z-index: 1111;
+.navbar {
 
-border-bottom: 1px solid var(--border-col);
-transition: 1.2s ease-in-out !important;
+    z-index: 1111;
+
+    border-bottom: 1px solid var(--border-col);
+    transition: 1.2s ease-in-out !important;
 }
-.topbtnfix{
+
+.topbtnfix {
     color: white;
     padding: 10px;
     position: fixed;
@@ -56,134 +104,153 @@ transition: 1.2s ease-in-out !important;
     right: 10px;
     background-color: var(--color1) !important;
 }
+
 /* NAV-HOVER */
-.navhover{
+.navhover {
     /* background-color: #bb9108 !important; */
     position: absolute !important;
     top: 0px;
     width: 0%;
     color: var(--golden-color) !important;
-    z-index: -22 !important; 
+    z-index: -22 !important;
     bottom: 0px;
-  
+
     transition: 0.5s ease-in-out !important;
-  
+
     border-bottom: 2px solid var(--golden-color);
-  }
-  .nav-item:hover .navhover{
-  top: 0px !important;
+}
+
+.nav-item:hover .navhover {
+    top: 0px !important;
     width: 100% !important;
-  }
-  .nav-item{
+}
+
+.nav-item {
     position: relative;
     margin: 0px 6px;
-  }  
-/* NAV-HOVER */
-.nav-item>a{
-    font-weight: 300;
-    font-size: 14px !important;
-color: var(--color-black);
 }
-.btn-red{
+
+/* NAV-HOVER */
+.nav-item>a {
+    font-weight: 300;
+    /* font-size: 34px !important; */
+    color: var(--color-black);
+}
+
+.btn-red {
     border-radius: 50% !important;
-   border: 1px solid var(--color1) !important;
+    border: 1px solid var(--color1) !important;
     color: var(--color1) !important;
     background-color: transparent !important;
 }
+
 /* .h100{
     height: 100vh ;
 } */
-.arr{
+.arr {
     fill: var(--color1) !important;
 }
-.image-1{
+
+.image-1 {
     border-radius: 250px;
     padding-left: 10px;
     min-height: 370px;
     -o-object-fit: cover;
     object-fit: cover;
 }
-.color-red{
+
+.color-red {
     background-color: var(--color1) !important;
 }
-.ol7{
+
+.ol7 {
     background-color: var(--color1);
     border-radius: 250px;
 }
-.banner-btn>svg{
-   fill: white !important;
+
+.banner-btn>svg {
+    fill: white !important;
 }
+
 @media (max-width:992px) {
-    .banner-btn{
+    .banner-btn {
         border-radius: 0% !important;
-    padding: 5px !important;
+        padding: 5px !important;
     }
 }
-.offcanvas{
+
+.offcanvas {
     z-index: 1111 !important;
 }
-.banner-btn{
+
+.banner-btn {
     position: relative;
     border-radius: 50%;
-    
- padding: 20px 50px ;
+
+    padding: 20px 50px;
 
     background-color: var(--bg-color);
-z-index: 1;
-transition: 0.7s ease-in-out !important;
+    z-index: 1;
+    transition: 0.7s ease-in-out !important;
 
 }
 
-.hoverbanner{
+.hoverbanner {
     transition: 0.7s ease-in-out !important;
     border-radius: 50%;
     position: absolute;
-height: 70%;
-width: 0%;
-z-index: -1;
-right: 0%;
+    height: 70%;
+    width: 0%;
+    z-index: -1;
+    right: 0%;
 }
 
-.banner-btn:hover .hoverbanner{
-    
+.banner-btn:hover .hoverbanner {
+
     left: 0%;
     height: 100%;
     width: 100%;
     color: var(--color1) !important;
-    background-color:var(--color1);
+    background-color: var(--color1);
 
 }
-.pb-g{
+
+.pb-g {
     font-size: 14px;
     background-color: rgb(220, 219, 219);
 }
-.color-black{
+
+.color-black {
 
     color: var(--color-black) !important;
 }
-.ofc1{
+
+.ofc1 {
     transition: 0.7s ease-in-out !important;
     width: 75% !important;
 }
-.fixo{
+
+.fixo {
     top: 0%;
     height: 100vh;
     width: 2px;
- z-index: -1;
+    z-index: -1;
     background-color: var(--color-round) !important;
     position: fixed;
     left: 4.6%;
 }
-.fixo1{
+
+.fixo1 {
     top: 0%;
     height: 100vh;
     width: 2px;
- z-index: -1;
-    background-color:var(--color-round) !important;
+    z-index: -1;
+    background-color: var(--color-round) !important;
     position: fixed;
     right: 4.6%;
 }
-.top-ani{
+
+.top-ani {
     height: 80px;
     width: 1px;
 
@@ -191,47 +258,56 @@ right: 0%;
     top: 20%;
     background-color: var(--color1);
     animation: 5s linear infinite top;
-    animation-delay: 2s !important ;
+    animation-delay: 2s !important;
 }
+
 @keyframes top {
-    from{
+    from {
         top: 0%;
     }
-    to{
+
+    to {
         top: 100%;
     }
 }
-.roun{
-    border:1px solid var(--color-round) !important ;
+
+.roun {
+    border: 1px solid var(--color-round) !important;
 }
-.who{
+
+.who {
     background-color: var(--bg-color);
 
 }
-.gth>div>img{
+
+.gth>div>img {
     object-fit: cover;
     background-size: cover;
-height: 400px !important;
-border-radius: 5%;
+    height: 400px !important;
+    border-radius: 5%;
 }
-.s11{
+
+.s11 {
     fill: #1A1A1A !important;
 }
-.btn1{
-    background-color:transparent;
+
+.btn1 {
+    background-color: transparent;
     /* color: white; */
     font-size: 15px;
     font-weight: 300;
     outline: none;
-    border: none ;
+    border: none;
     z-index: 111;
     position: relative !important;
 }
-.s1{
-    
+
+.s1 {
+
     fill: white !important;
 }
-.under-hover{
+
+.under-hover {
     position: absolute;
     border-bottom: 1px solid var(--color1) !important;
     bottom: 0px;
@@ -240,68 +316,101 @@ border-radius: 5%;
     z-index: -1;
     transition: 0.6s ease-in-out !important;
 }
-.btn1:hover .under-hover{
+
+.btn1:hover .under-hover {
     width: 100%;
 
     height: 100%;
- }
- .klo{
-    background: rgb(25,23,23);
-background: linear-gradient(90deg, rgba(25,23,23,1) 1%, rgba(22,22,22,1) 58%);
+}
+
+.klo {
+    background: rgb(25, 23, 23);
+    background: linear-gradient(90deg, rgba(25, 23, 23, 1) 1%, rgba(22, 22, 22, 1) 58%);
     border: 1px solid var(--color-black);
     border-radius: 10px;
- }
+}
 
- .navfix{
+.navfix {
     position: fixed !important;
     top: 0% !important;
     transition: 1.2s ease-in-out !important;
-    background-color:rgb(244, 244, 244);
+    background-color: rgb(244, 244, 244);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 
- }
- 
-#navunder{
+}
+
+#navunder {
     width: 1px;
     position: absolute;
     bottom: 0px;
     left: 0px;
 
-    border-bottom:2px solid var(--color1) ;
+    border-bottom: 2px solid var(--color1);
 }
+
 #home {
     transition: 0.5s ease-in-out;
-  }
-  .ser-col-1{
+}
+
+.ser-col-1 {
     transition: 0.9s ease-in-out;
 
     border-top: 1px solid var(--border-col) !important;
     border-bottom: 1px solid var(--border-col) !important;
 
-  }
-  .ser-col-1:hover{
+}
+
+.ser-col-1:hover {
     cursor: grab;
     transition: 0.7s ease-in-out !important;
     background-color: #47474721;
-  }
-  .pro>span:hover{
+}
+
+.pro>span:hover {
     color: white;
-    background-color:#474747;
-  }
-  .pro>span{
+    background-color: #474747;
+}
+
+.pro>span {
     transition: 0.6s ease-in-out !important;
     border-radius: 7px;
     padding: 5px 15px;
-transition: 0.8s ease-in !important;
+    transition: 0.8s ease-in !important;
     font-size: 14px !important;
     border: 1px solid #47474762;
     /* background-color: var(--color-black); */
-  }
-.course-det{
+}
+
+.course-det {
     transition: 0.7s ease-in-out !important;
     display: none;
 }
-.ser-col-1:hover .course-det{
+
+.ser-col-1:hover .course-det {
     transition: 0.7s ease-in-out !important;
     display: block;
+}
+
+.offcanvas-top {
+    background-color: var(--bg-color) !important;
+    transition: 0.4s ease-in-out !important;
+    height: 100vh !important;
+    position: fixed;
+    right: 0%;
+    top: 0%;
+    opacity: 0.99;
+    animation: top 0.1s linear !important;
+
+}
+
+@keyframes top {
+    0% {
+        opacity: 0.6;
+        /* At the start, opacity is 0.6 */
+    }
+
+    100% {
+        opacity: 1 !important;
+        /* At the end, opacity becomes 1 */
+    }
 }
