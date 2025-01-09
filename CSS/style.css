@@ -443,3 +443,46 @@ border-radius: 150px 150px 250px 0;
 background-size: cover;
 border-radius: 120px 0 120px 0;
     }
+
+
+    /* SERIVCE-PAGES CSS */
+    .service-card {
+        background-color: #f8f9fa;
+        border: 1px solid var(--border-col);
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+        position: relative;
+        transition: 0.9s ease-in-out !important;
+
+}
+    .service-card:hover .service-card-hover{
+        height: 100%;
+        width: 100%;
+    }
+  .service-card-hover{
+    transition: 0.9s ease-in-out !important;
+    position: absolute;
+    background-color: red;
+  }
+   
+      .service-icon {
+      
+        background-color:var(--bg-color);
+        color: white;
+       
+
+      }
+  
+      .service-title {
+
+        margin-bottom: 10px;
+      }
+  
+      .service-description {
+        font-size: 14px;
+
+        color: var(--color-black);
+      }
+  
+    /* SERICE-PAGE CSS */
