@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 
 :root {
-    --font-family: "Unbounded", serif;
+    --font-family: "Raleway", serif;
+    --font-family-play: "Play", serif;
     --color1: #a51f09;
+
     --color-black: #686868;
     --border-col: #1818182f;
     --bg-color: #1A1A1A;
@@ -10,17 +13,24 @@
 }
 
 body {
+    font-weight: 700 !important;
     font-family: var(--font-family) !important;
 }
 
+.num {
+    font-family: var(--font-family-play) !important;
+}
+
 /* MEDIA QUIRES */
-.sdsd{
+.sdsd {
     display: block;
 }
+
 @media (max-width:992px) {
-    .sdsd{
+    .sdsd {
         display: none !important;
     }
+
     .float-en {
         position: absolute;
         right: 2%;
@@ -31,18 +41,25 @@ body {
         font-size: 32px !important;
     }
 
-  
+
 }
-.topoff>div>ul>li>a{
+
+.head-1 {
+    font-weight: 600 !important;
+}
+
+.topoff>div>ul>li>a {
     text-transform: uppercase;
     color: white !important;
     font-weight: 600;
     font-size: 28px !important;
 }
-.topoff{
+
+.topoff {
     height: 70vh;
 }
-.lets-talk-btn-hover{
+
+.lets-talk-btn-hover {
     position: absolute;
     top: 0%;
     height: 0%;
@@ -51,34 +68,39 @@ body {
     z-index: -1;
     border-radius: 20px;
     height: 100%;
-    
+
     right: 0%;
     transition: 0.5s ease-in-out !important;
 }
-.top-nav-heading{
+
+.top-nav-heading {
     opacity: 0.1;
 }
-.top-header-icon>a{
+
+.top-header-icon>a {
     color: var(--bg-color) !important;
-background-color: white;
-padding: 5px 10px;
-border-radius: 50%;
-font-size: 22px !important;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 22px !important;
 }
-.lets-talk-btn:hover .lets-talk-btn-hover{
+
+.lets-talk-btn:hover .lets-talk-btn-hover {
     left: 0%;
     height: 100%;
     width: 100%;
 }
-.lets-talk-btn{
+
+.lets-talk-btn {
     z-index: 1;
     position: relative;
- letter-spacing: 1px;
+    letter-spacing: 1px;
     border-radius: 20px;
-    
+
     border: 1px solid white;
     background-color: transparent;
 }
+
 @media (max-width:576px) {
     .float-en {
         position: absolute;
@@ -138,7 +160,7 @@ font-size: 22px !important;
 
 /* NAV-HOVER */
 .nav-item>a {
-    font-weight: 300;
+    font-weight: 500;
     /* font-size: 34px !important; */
     color: var(--color-black);
 }
@@ -153,16 +175,17 @@ font-size: 22px !important;
     background-color: transparent !important;
 }
 
-.h100{
-    height: 100vh ;
+.h100 {
+    height: 100vh;
 }
+
 .arr {
     fill: var(--color1) !important;
 }
 
 .image-1 {
     border-radius: 250px;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     min-height: 370px;
     -o-object-fit: cover;
     object-fit: cover;
@@ -173,7 +196,7 @@ font-size: 22px !important;
 }
 
 .ol7 {
-    background-color: var(--color1);
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 250px;
 }
 
@@ -194,9 +217,6 @@ font-size: 22px !important;
 
 .banner-btn {
     position: relative;
-    border-radius: 50%;
-
-    padding: 20px 50px;
 
     background-color: var(--bg-color);
     z-index: 1;
@@ -206,17 +226,24 @@ font-size: 22px !important;
 
 .hoverbanner {
     transition: 0.7s ease-in-out !important;
-    border-radius: 50%;
+
     position: absolute;
-    height: 70%;
     width: 0%;
-    z-index: -1;
-    right: 0%;
+    height: 0%;
+    opacity: 0;
+    z-index: 1;
+
+}
+
+.arrsvg {
+    position: absolute !important;
+    fill: white !important;
+    bottom: 30% !important;
 }
 
 .banner-btn:hover .hoverbanner {
 
-    left: 0%;
+    opacity: 1 !important;
     height: 100%;
     width: 100%;
     color: var(--color1) !important;
@@ -264,15 +291,19 @@ font-size: 22px !important;
     width: 1px;
     position: fixed;
     background-color: var(--color1);
-    animation: 0.4s linear infinite top; /* Animation applied here */
+    animation: 0.4s linear infinite top;
+    /* Animation applied here */
 }
 
 @keyframes top {
     from {
-        top: 0%; /* Start position */
+        top: 0%;
+        /* Start position */
     }
+
     to {
-        top: 100%; /* End position */
+        top: 100%;
+        /* End position */
     }
 }
 
@@ -419,70 +450,172 @@ font-size: 22px !important;
         /* At the end, opacity becomes 1 */
     }
 }
-.ser{
+
+.ser {
     background-color: var(--bg-color);
 }
-.i1{
+
+.i1 {
     object-fit: cover;
     background-size: cover;
-    border-radius: 120px 0 120px 0;}
+    border-radius: 120px 0 120px 0;
+}
 
-    .i2{
-border-radius: 150px 150px 250px 0;
-object-fit: cover;
-background-size: cover;
-    }
-    .i3{
-        object-fit: cover;
-background-size: cover;
-border-radius: 150px 150px 250px 0;
-    }
-    
-    .i4{
-        object-fit: cover;
-background-size: cover;
-border-radius: 120px 0 120px 0;
-    }
+.i2 {
+    border-radius: 150px 150px 250px 0;
+    object-fit: cover;
+    background-size: cover;
+}
+
+.i3 {
+    object-fit: cover;
+    background-size: cover;
+    border-radius: 150px 150px 250px 0;
+}
+
+.i4 {
+    object-fit: cover;
+    background-size: cover;
+    border-radius: 120px 0 120px 0;
+}
 
 
-    /* SERIVCE-PAGES CSS */
-    .service-card {
-        background-color: #f8f9fa;
-        border: 1px solid var(--border-col);
-        padding: 10px;
-        border-radius: 8px;
-        text-align: center;
-        position: relative;
-        transition: 0.9s ease-in-out !important;
+/* SERIVCE-PAGES CSS */
+.service-card {
+    background-color: #f8f9fa;
+    border: 1px solid var(--border-col);
+    padding: 10px;
+    border-radius: 8px;
+
+    position: relative !important;
+    transition: 0.6s ease-in-out !important;
+    z-index: 1;
+}
+
+.service-card:hover .service-card-hover {
+    width: 100%;
+    background-color: var(--bg-color);
+}
+
+.service-icon {
+
+    background-color: var(--bg-color);
+    color: white;
+
 
 }
-    .service-card:hover .service-card-hover{
-        height: 100%;
-        width: 100%;
-    }
-  .service-card-hover{
+
+.service-title {
+
+    margin-bottom: 10px;
+}
+
+.service-description {
+    font-size: 14px;
+
+    color: var(--color-black);
+}
+
+footer {
+    background-color: var(--bg-color) !important;
+}
+
+.bottom-footer {
+    border-top: 1px solid var(--color-black) !important;
+    background-color: var(--border-col);
+}
+
+/* SERICE-PAGE CSS */
+/* FOOTER START */
+/* footer>div>div>div */
+/* FOOTER END */
+.cardss>div>div:hover .cardss>div>div>h4 {
+    font-weight: normal;
+}
+
+.cardss1 {
+    z-index: 2 !important;
+
+    position: relative !important;
+    transition: 0.8s ease-in-out !important;
+}
+
+.col-22 {
+    border-right: 1px solid white !important;
+}
+
+
+
+.cardss-hover {
     transition: 0.9s ease-in-out !important;
-    position: absolute;
-    background-color: red;
-  }
-   
-      .service-icon {
-      
-        background-color:var(--bg-color);
-        color: white;
-       
+    z-index: -1;
+    background-color: var(--bg-color);
+    height: 100%;
+    width: 0%;
+    top: 0%;
+    position: absolute !important;
+}
 
-      }
-  
-      .service-title {
+.cardss>div>div>h4 {
+    transition: 0.7s ease-in-out !important;
+}
 
-        margin-bottom: 10px;
-      }
-  
-      .service-description {
-        font-size: 14px;
 
-        color: var(--color-black);
-      }
-  
-    /* SERICE-PAGE CSS */
+
+.cardss>div>div>div>i {
+    padding: 15px;
+    font-size: 28px;
+    border-radius: 0% !important;
+    color: white !important;
+
+}
+
+.set-btn {
+    font-weight: 600 !important;
+    color: var(--bg-color) !important;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 20px;
+    border: 2px solid var(--border-col);
+    background-color: white;
+    position: relative;
+    z-index: 2 !important;
+    transition: 0.8s ease-in-out !important;
+
+}
+
+.set-btn:hover {
+    color: white !important;
+}
+
+.set-btn:hover .set-btn-hover {
+    width: 100% !important;
+    color: white !important;
+}
+.set-btn-hover>a>i{
+    color: white !important;
+}
+.set-btn-hover {
+    transition: 0.8s ease-in-out !important;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    z-index: 4 !important;
+    border-radius: 20px !important;
+    width: 0%;
+    background-color: var(--bg-color) !important;
+    position: absolute !important;
+}
+
+.col-22 {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--bg-color);
+}
+
+.paraa-1 {
+
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 15px !important;
+}
