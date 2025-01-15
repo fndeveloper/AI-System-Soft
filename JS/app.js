@@ -8,9 +8,14 @@ window.addEventListener("scroll", function () {
     
     
     const scrollProgress = (window.scrollY / scrollableHeight) * 99;
-    
-    
-    
+
+    if(scrollProgress >99){
+      document.getElementById("topbtn").innerHTML=`<i class="fa-solid fa-arrow-up"></i>`;
+    }
+    else{
+      this.document.getElementById("topbtn").innerHTML=scrollProgress.toFixed(0)+"%";
+
+    }
     navunder.style.width=`${scrollProgress}vw`
     var navbar = document.getElementById("navbar");
     if(this.window.scrollY>200){
