@@ -732,4 +732,80 @@ transform: rotateX(0deg);
     /* padding-top: 12px; */
   
   }
-    
+  .dropdown{
+    transition: 0.5s ease-in-out !important;
+
+  }
+  .dropdown-menu{
+    transition: 0.5s ease-in-out !important;
+    transform: rotateX(90deg) !important;
+  }
+  .dropdown-menu>li>.dropdown-item{
+    transition: 0.2s ease-in-out !important;
+    color: white !important;
+  }
+  .who1{
+    background-color: var(--bg-color) !important;
+  }
+  .dropdown-menu>li>.dropdown-item:hover{
+    background-color: white ;
+    color: var(--color1) !important;
+  }
+  .dropdown-menu{
+    display: block !important;
+    padding: 14px !important;
+    background-color: var(--color1) !important;
+  }
+  .dropdown:hover .dropdown-menu{
+
+    transform: rotateX(0deg) !important;
+
+  }
+  .nav-item>.nav-link{
+    transition: 0.6s ease-in-out !important
+  }
+  .nav-item>.nav-link:hover{
+    color: var(--color1) !important;
+  }
+  .navhover {
+    /* background-color: #bb9108 !important; */
+    position: absolute !important;
+    top: 0px;
+    width: 0%;
+    color: var(--color1) !important;
+    z-index: -22 !important;
+    bottom: 0px;
+  
+    transition: 0.5s ease-in-out !important;
+  
+    border-bottom: 2px solid var(--color1) !important;
+  }
+  
+  .nav-item:hover .navhover {
+    top: 0px !important;
+    width: 100% !important;
+  }
+  .social-icons{
+    padding: 10px;left: 0%;
+    background-color: var(--color1);
+    background-color: #2b2a2a;
+  }
+  .social-icons>div>a>i{
+    padding: 10px;
+    font-size: 20px;
+    color: white !important;
+    border-radius: 12%;
+background-color: var(--color1);    
+  }
+  .offcanvas-end{
+    transition: 0.8s ease-in-out !important;
+  }
+  /* ABOUT US PAGES CSS */
+  .about-container-1{
+    background-image: url("/Assets/Banner-Image/banner-img-2.jpg");
+height: 60vh;
+width: 100%;
+background-size: cover;
+object-fit: cover;
+}
+  /* ABOUT US PAGES CSS */
