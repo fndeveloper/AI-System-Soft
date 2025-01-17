@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 :root {
-    --font-family: "Raleway", serif;
+    --font-family:"Nunito", serif;
+    /* --font-family: "Raleway", serif; */
     --font-family-play: "Play", serif;
     /* --color1: #a51f09; */
     --color1: #811f10;
-
-    --color-black: #686868;
+    --para-color:#545454;
+    --para-color: #686868;
     --border-col: #1818182f;
     --bg-color: #1A1A1A;
     --color-round: rgba(220, 220, 220, 0.966);
@@ -172,7 +173,7 @@ border-radius: 50%;
 .nav-item>a {
     font-weight: 500;
     /* font-size: 34px !important; */
-    color: var(--color-black);
+    color: var(--para-color);
 }
 .bg{
     background-color: var(--color1) !important;
@@ -268,9 +269,9 @@ border-radius: 50%;
     background-color: rgb(220, 219, 219);
 }
 
-.color-black {
+.para-color {
 
-    color: var(--color-black) !important;
+    color: var(--para-color) !important;
 }
 
 .ofc1 {
@@ -374,10 +375,15 @@ border-radius: 50%;
 .klo {
     background: rgb(25, 23, 23);
     background: linear-gradient(90deg, rgba(25, 23, 23, 1) 1%, rgba(22, 22, 22, 1) 58%);
-    border: 1px solid var(--color-black);
+    border: 1px solid var(--para-color);
     border-radius: 10px;
 }
-
+.bg1{
+    background-color: #252525 !important;
+}
+input{
+    background-color: var(--bg-color) !important;
+}
 .navfix {
     position: fixed !important;
     top: 0% !important;
@@ -426,7 +432,7 @@ border-radius: 50%;
     transition: 0.8s ease-in !important;
     font-size: 14px !important;
     border: 1px solid #47474762;
-    /* background-color: var(--color-black); */
+    /* background-color: var(--para-color); */
 }
 
 .course-det {
@@ -525,7 +531,7 @@ border-radius: 50%;
 .service-description {
     font-size: 14px;
 
-    color: var(--color-black);
+    color: var(--para-color);
 }
 
 footer {
@@ -533,7 +539,7 @@ footer {
 }
 
 .bottom-footer {
-    border-top: 1px solid var(--color-black) !important;
+    border-top: 1px solid var(--para-color) !important;
     background-color: var(--border-col);
 }
 
@@ -800,7 +806,8 @@ background-color: var(--color1);
   .offcanvas-end{
     transition: 0.8s ease-in-out !important;
   }
-  /* ABOUT US PAGES CSS */
+  /* 
+ PAGES CSS */
   .about-container-1{
     background-image: url("/Assets/Banner-Image/banner-img-2.jpg");
 height: 60vh;
@@ -808,4 +815,5 @@ width: 100%;
 background-size: cover;
 object-fit: cover;
 }
-  /* ABOUT US PAGES CSS */
+  /* 
+ PAGES CSS */

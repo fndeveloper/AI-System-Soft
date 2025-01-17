@@ -9,7 +9,7 @@ window.addEventListener("scroll", function () {
     
     const scrollProgress = (window.scrollY / scrollableHeight) * 99;
 
-    if(scrollProgress >99){
+    if(scrollProgress >95){
       document.getElementById("topbtn").innerHTML=`<i class="fa-solid fa-arrow-up"></i>`;
     }
     else{
@@ -18,6 +18,8 @@ window.addEventListener("scroll", function () {
     }
     navunder.style.width=`${scrollProgress}vw`
     var navbar = document.getElementById("navbar");
+    var navbar1 = document.getElementById("navbar1");
+
     if(this.window.scrollY>200){
 
         document.getElementById("home").style.transform = "scale(0.950)";
@@ -27,7 +29,7 @@ window.addEventListener("scroll", function () {
 
     }
     if (window.scrollY > 400) {
-    navbar.classList.add("navfix"); // Add fade-in class
+    navbar.classList.add("navfix");// Add fade-in class
   } else {
     navbar.classList.remove("navfix"); // Remove fade-in class
   }
