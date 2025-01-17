@@ -3,22 +3,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 :root {
     --font-family:"Nunito", serif;
-    /* --font-family: "Raleway", serif; */
     --font-family-play: "Play", serif;
-    /* --color1: #a51f09; */
-    --color1: #811f10;
+  --color1: #811f10;
     --para-color:#545454;
-    --para-color: #686868;
+
     --border-col: #1818182f;
     --bg-color: #1A1A1A;
     --color-round: rgba(220, 220, 220, 0.966);
 }
 
 body {
+    color: rgb(48, 48, 48) !important;
     font-weight: 700 !important;
     font-family: var(--font-family) !important;
 }
-
+.text-white1{
+ 
+    color: rgba(230, 230, 230, 0.842) !important;
+}
+.text-dark1{
+    color: var(--bg-color) !important;
+}
 .num {
     font-family: var(--font-family-play) !important;
 }
@@ -381,7 +386,33 @@ border-radius: 50%;
 .bg1{
     background-color: #252525 !important;
 }
+
+select{
+    color: var(--para-color) !important;
+}
 input{
+    color: white !important;
+}
+.form-control:focus {
+    color: white !important;
+    outline: none !important;
+    border: none !important;
+}
+.form-control:focus .form-control::placeholder{
+    color: white !important;
+}
+
+.form-control {
+    box-sizing: border-box !important;
+    padding: 10px !important;
+    transition: 0.5s ease-in-out !important;
+
+    border: none !important;
+}
+.form-control,.form-select{
+    transition: 0.5s ease-in-out !important;
+    border: none !important;
+    color: white !important;
     background-color: var(--bg-color) !important;
 }
 .navfix {
@@ -702,7 +733,7 @@ transform: rotateX(0deg);
 /*  */
 
 .borders{
-    border: 1px solid white !important;
+    border: 1px solid var(--para-color) !important;
 }
 .btn3 {
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;

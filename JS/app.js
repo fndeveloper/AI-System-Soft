@@ -35,6 +35,9 @@ window.addEventListener("scroll", function () {
   }
 });
 
+var form=document.getElementById("form")
+console.log(form);
+
 
 // document.getElementById("tit1").addEventListener("click", () => {
 //   const det1 = document.getElementById("det1");
