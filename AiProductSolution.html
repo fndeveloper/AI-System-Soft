@@ -46,25 +46,29 @@
             object-fit: cover;
             background-image: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.418)), url("Assets/Banner-Image/banner-img-6.png");
         }
-.para-col{
-    color: var(--para-color) !important;
-}
+
+        .para-col {
+            color: var(--para-color) !important;
+        }
+
         .navbar {
-            position: absolute;
+            position:fixed;
             top: 0%;
             background-color: transparent !important;
         }
 
         .nav-item>.nav-link {
-            color: white !important;
+            color: white ;
         }
 
         .btn-red {
-            color: white !important;
+            color: white ;
             border: 1px solid white !important;
         }
 
         .navbar {
+            transition: 0.1s ease-in-out !important;
+
             border-bottom: 1px solid rgba(255, 255, 255, 0.192);
         }
 
@@ -83,6 +87,14 @@
             border: 1px solid rgba(255, 255, 255, 0.253);
             background-color: var(--color1);
         }
+        .navfix1{
+            background-color: white !important;
+        }
+        .nav-color{
+            color:#2e2e2ec5 !important;
+            transition: 0.1s ease-in-out !important;
+  
+        }
     </style>
 </head>
 
@@ -94,49 +106,55 @@
     </a>
     <!-- HOME START -->
     <div id="home1" class="home d-flex  align-items-center">
-     
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg px-0 py-2 container-fluid d-flex flex-column" id="navbar1">
-    <div class="container-fluid d-flex flex-row justify-content-between">
-      <!-- Logo -->
-      <a class="navbar-brand" href="#">
-        <img src="assets/Logo/logo.png" alt="Logo" class="col-lg-2 col-2" />
-      </a>
 
-      <!-- Toggler Button -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg px-0 py-2 container-fluid d-flex flex-column" id="navbar">
+            <div class="container-fluid d-flex flex-row justify-content-between">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="assets/Logo/logo.png" alt="Logo" class="col-lg-2 col-2" />
 
-      <!-- Collapsible Navbar Content -->
-      <div class="collapse sdsd navbar-collapse d-flex flex-row justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mt-2 mb-lg-0 d-lg-flex d-none">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="index.html">Home</a>
-            <span class="navhover"></span>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Service
-            </a>
-            <span class="navhover"></span>
-            <ul class="dropdown-menu mx-auto">
-              <li><a class="dropdown-item nav-link" href="AiProductSolution.html">AiProductSolution</a></li>
-              <li><a class="dropdown-item nav-link" href="GrcSolution.html">GRC Solutions</a></li>
-              <li><a class="dropdown-item nav-link" href="Web-AppDevelopment.html">Web & App Development</a></li>
-              <li><a class="dropdown-item nav-link" href="EcommerceSolution.html">Ecommerce Solutions</a></li>
-              <li><a class="dropdown-item nav-link" href="DigitalMarketing.html">
-                Digital Marketing</a></li>
+                </a>
 
-            </ul>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="about.html"  aria-expanded="false">
-             About-Us
-            </a>
-            <span class="navhover"></span>
-            <!-- <ul class="dropdown-menu mx-auto">
+                <!-- Toggler Button -->
+                <button class=" btn-red navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight1">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <!-- Collapsible Navbar Content -->
+                <div class="collapse sdsd navbar-collapse d-flex flex-row justify-content-end"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mt-2 mb-lg-0 d-lg-flex d-none">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            <span class="navhover"></span>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Service
+                            </a>
+                            <span class="navhover"></span>
+                            <ul class="dropdown-menu mx-auto">
+                                <li><a class="dropdown-item nav-link"
+                                        href="AiProductSolution.html">AiProductSolution</a></li>
+                                <li><a class="dropdown-item nav-link" href="GrcSolution.html">GRC Solutions</a></li>
+                                <li><a class="dropdown-item nav-link" href="Web-AppDevelopment.html">Web & App
+                                        Development</a></li>
+                                <li><a class="dropdown-item nav-link" href="EcommerceSolution.html">Ecommerce
+                                        Solutions</a></li>
+                                <li><a class="dropdown-item nav-link" href="DigitalMarketing.html">
+                                        Digital Marketing</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="about.html" aria-expanded="false">
+                                About-Us
+                            </a>
+                            <span class="navhover"></span>
+                            <!-- <ul class="dropdown-menu mx-auto">
               <li><a class="dropdown-item nav-link" href="memberships/ScoutMemberships.html">Cybron Scout
                   Memberships</a></li>
               <li><a class="dropdown-item nav-link" href="memberships/AssociateMemberships.html">Cybron Associate
@@ -144,32 +162,33 @@
               <li><a class="dropdown-item nav-link" href="memberships/ProfessionalMemberships.html">Cybron Professional
                   Memberships</a></li>
             </ul> -->
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Portfolio">Portfolio</a>
-            <span class="navhover"></span>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us</a>
-            <span class="navhover"></span>
-          </li>
-        </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                            <span class="navhover"></span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                            <span class="navhover"></span>
+                        </li>
+                    </ul>
 
-        <!-- Offcanvas Button -->
-        <form class="d-flex " role="search">
-          <div class="input-group">
-          <button class="btn btn-red" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight1">
-        <i class="fa-solid fa-bars"></i>
-</button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <!-- Optional Element -->
-    <div class="" id="navunder"></div>
-  </nav>
+                    <!-- Offcanvas Button -->
+                    <form class="d-lg-flex d-none" role="search">
+                        <div class="input-group">
+                            <button class="btn btn-red" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight1">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Optional Element -->
+            <div class="" id="navunder"></div>
+        </nav>
 
-  <!-- NAVBAR -->
+        <!-- NAVBAR -->
 
         <div class="container d-flex flex-lg-row  align-items-center flex-column">
             <div class="col-lg-4">
@@ -213,7 +232,7 @@
             <!-- About Section -->
             <div class="about-section text-start">
                 <h2 class="fw-bolder py-3 text-white">
-</h2>
+                </h2>
                 <h5 class="text-white">
                     AI-GRC-Software Development Solution .
                     We Develop Secure & Intelligent Solutions
@@ -264,7 +283,7 @@
         <div class="offcanvas-header container">
             <h5 class="offcanvas-title" id="offcanvasTopLabel">
                 <a class="navbar-brand" href="#">
-                         <img src="assets/Logo/logo.png" alt="Logo" class="col-lg-2 col-2" />
+                    <img src="assets/Logo/logo.png" alt="Logo" class="col-lg-2 col-2" />
 
                     <!-- Replace with actual logo path -->
                 </a>
@@ -442,7 +461,8 @@
                             </svg>
                         </div>
                         <h3 class="fw-bold text-start">Email Campaign</h3>
-                        <p class=" text-start para-col fw-normal">Generate potential solutions or strategies to address.</p>
+                        <p class=" text-start para-col fw-normal">Generate potential solutions or strategies to address.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -465,7 +485,8 @@
                             </svg>
                         </div>
                         <h3 class=" fw-bold text-start">Automation</h3>
-                        <p class="text-start para-col fw-normal">Provide training and support to help the client's team.</p>
+                        <p class="text-start para-col fw-normal">Provide training and support to help the client's team.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -482,7 +503,8 @@
                             </svg>
                         </div>
                         <h3 class=" fw-bold text-start">Social Integration</h3>
-                        <p class=" text-start para-col fw-normal">Provide training and support to help the client's team.</p>
+                        <p class=" text-start para-col fw-normal">Provide training and support to help the client's
+                            team.</p>
                     </div>
                 </div>
             </div>
@@ -490,11 +512,11 @@
 
     </div>
     <!-- MAIN 3 END -->
-     <div
+    <div
         class="container-fluid d-flex flex-lg-row pt-5 mt-5 align-items-lg-center flex-column mt-lg-0 mt-5 justify-content-between">
         <div class="d-flex flex-lg-row flex-column align-items-lg-center ">
             <h2 class="strk text-start position-relative ">
-          FAQS
+                FAQS
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" class="arr" height="6" viewBox="0 0 50 6">
                     <path d="M50 3L45 0.113249V5.88675L50 3ZM0 3.5H45.5V2.5H0V3.5Z"></path>
                 </svg></span>
@@ -507,92 +529,113 @@
                 depending on the client's needs, industry.</h5>
         </div>
     </div>
-     <!-- MAIN 4 START -->
-     <div class="container-fluid px-4 py-5">
+    <!-- MAIN 4 START -->
+    <div class="container-fluid px-4 py-5">
         <div class="row g-4">
             <div class="col-lg-6">
                 <div class=" border-0 shadow-sm p-3">
                     <h4 class="fw-bold py-2">1. What services does your agency offer?</h4>
-                    <p class="para-color fw-normal">Provide an overview of the primary digital services your agency specializes in, such as digital marketing, web development, design, etc. Feel free to customize these based on the specific services, policies, and practices.</p>
+                    <p class="para-color fw-normal">Provide an overview of the primary digital services your agency
+                        specializes in, such as digital marketing, web development, design, etc. Feel free to customize
+                        these based on the specific services, policies, and practices.</p>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="card border-0 shadow-sm p-3">
                     <h4 class="fw-bold py-2">2. What industries does your agency work with?</h4>
-                    <p class="para-color fw-normal">Provide an overview of the primary digital services your agency specializes in, such as digital marketing, web development, design, etc. Feel free to customize these based on the specific services, policies, and practices.</p>
+                    <p class="para-color fw-normal">Provide an overview of the primary digital services your agency
+                        specializes in, such as digital marketing, web development, design, etc. Feel free to customize
+                        these based on the specific services, policies, and practices.</p>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="card border-0 shadow-sm p-3">
                     <h4 class="fw-bold py-2">3. What sets your agency apart from others in the industry?</h4>
-                    <p class="para-color fw-normal">Provide an overview of the primary digital services your agency specializes in, such as digital marketing, web development, design, etc. Feel free to customize these based on the specific services, policies, and practices.</p>
+                    <p class="para-color fw-normal">Provide an overview of the primary digital services your agency
+                        specializes in, such as digital marketing, web development, design, etc. Feel free to customize
+                        these based on the specific services, policies, and practices.</p>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="card border-0 shadow-sm p-3">
                     <h4 class="fw-bold py-2">4. What is your pricing structure or payment process?</h4>
-                    <p class="para-color fw-normal">Provide an overview of the primary digital services your agency specializes in, such as digital marketing, web development, design, etc. Feel free to customize these based on the specific services, policies, and practices.</p>
+                    <p class="para-color fw-normal">Provide an overview of the primary digital services your agency
+                        specializes in, such as digital marketing, web development, design, etc. Feel free to customize
+                        these based on the specific services, policies, and practices.</p>
                 </div>
             </div>
         </div>
-  
+
     </div>
-    
-      <!-- MAIN 4 END -->
-      <footer class=" pt-5">
+
+    <!-- MAIN 4 END -->
+    <footer class=" pt-5">
         <div class="container-fluid px-4 py-3">
-          <div class="row">
-            <div class="col-lg-3  col-12 mb-4">
-                            <img src="Assets/Logo/logo.png" alt="Cybron Logo" class="mb-3 col-lg-4 col-3 m-0 p-0">
-    
-              <p class="locte text-white fs-6 ">AI-GRC-Software Development Solution . We Develop Secure & Intelligent Solutions</p>
-              <!-- <p><a href="mailto:cybron@cybroninternational.com" class="text-white">cybron@cybroninternational.com</a></p> -->
-            </div>
-    
-            <div class="col-lg-3  col-12 col-md-6 mb-4 ps-lg-5">
-              <h3 class="mb-3 text-white">Usefull Links</h3>
-              <ul class="list-unstyled fs-6">
-                <li class="mb-1 "><a href="index.html" class="text-white fw-lighter text-decoration-none ">Home</a>    
-                  <span class="navhover"></span></li>
-                <li class="mb-1"><a href="about.html" class="text-white fw-lighter text-decoration-none">About-Us</a></li>
-                <li class="mb-1"><a href="portfolio.html" class="text-white fw-lighter text-decoration-none">Portfolio</a></li>
-                <li class="mb-1"><a href="AiProductSolution.html" class="text-white fw-lighter text-decoration-none">Service</a></li>
-                <li class="mb-1"><a href="contact.html" class="text-white fw-lighter text-decoration-none">Contact Us</a></li>
-              </ul>
-            
-            </div>
-    
-            <div class="col-lg-3 col-12 col-md-6 mb-4 ps-lg-5">
-              <h3 class="mb-3 text-white">Contact Us</h3>
-              <ul class="list-unstyled fs-6">
-                <li class="mb-1"><a href="mailto:info@aisystemsoft.com?subject=Inquiry&body=Hello, I would like to know more about your services."  class="text-white fw-lighter text-decoration-none"> info@aisystemsoft.com</a></li>
-                <li class="mb-1 mt-2"><a href="tel:+16892764636" class="text-white fw-lighter text-decoration-none">+1 (689) 276-4636</a></li>
-    
-    
-                <li class="mb-1 mt-2"><a href="https://www.google.com/maps/place/Conroy+Windermere,+FL-34786,+USA" class="text-white fw-lighter text-decoration-none">
-                  Conroy Windermere,<br> FL-34786, USA
-                </a></li>
-               </ul>
-            </div>
-    
-            <div class="col-lg-3 col-12 col-md-6 mb-4">
-              <h3 class="mb-3 text-white">Subscribe newsletter</h3>
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Email Address" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                  <button class="btn bg text-white" type="button">
-                    <i class="fa fa-paper-plane" aria-hidden="true"></i>
-                  </button>
+            <div class="row">
+                <div class="col-lg-3  col-12 mb-4">
+                    <img src="Assets/Logo/logo.png" alt="Cybron Logo" class="mb-3 col-lg-4 col-3 m-0 p-0">
+
+                    <p class="locte text-white fs-6 ">AI-GRC-Software Development Solution . We Develop Secure &
+                        Intelligent Solutions</p>
+                    <!-- <p><a href="mailto:cybron@cybroninternational.com" class="text-white">cybron@cybroninternational.com</a></p> -->
                 </div>
-              </div>
+
+                <div class="col-lg-3  col-12 col-md-6 mb-4 ps-lg-5">
+                    <h3 class="mb-3 text-white">Usefull Links</h3>
+                    <ul class="list-unstyled fs-6">
+                        <li class="mb-1 "><a href="index.html"
+                                class="text-white fw-lighter text-decoration-none ">Home</a>
+                            <span class="navhover"></span>
+                        </li>
+                        <li class="mb-1"><a href="about.html"
+                                class="text-white fw-lighter text-decoration-none">About-Us</a></li>
+                        <li class="mb-1"><a href="portfolio.html"
+                                class="text-white fw-lighter text-decoration-none">Portfolio</a></li>
+                        <li class="mb-1"><a href="AiProductSolution.html"
+                                class="text-white fw-lighter text-decoration-none">Service</a></li>
+                        <li class="mb-1"><a href="contact.html"
+                                class="text-white fw-lighter text-decoration-none">Contact Us</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-3 col-12 col-md-6 mb-4 ps-lg-5">
+                    <h3 class="mb-3 text-white">Contact Us</h3>
+                    <ul class="list-unstyled fs-6">
+                        <li class="mb-1"><a
+                                href="mailto:info@aisystemsoft.com?subject=Inquiry&body=Hello, I would like to know more about your services."
+                                class="text-white fw-lighter text-decoration-none"> info@aisystemsoft.com</a></li>
+                        <li class="mb-1 mt-2"><a href="tel:+16892764636"
+                                class="text-white fw-lighter text-decoration-none">+1 (689) 276-4636</a></li>
+
+
+                        <li class="mb-1 mt-2"><a
+                                href="https://www.google.com/maps/place/Conroy+Windermere,+FL-34786,+USA"
+                                class="text-white fw-lighter text-decoration-none">
+                                Conroy Windermere,<br> FL-34786, USA
+                            </a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-12 col-md-6 mb-4">
+                    <h3 class="mb-3 text-white">Subscribe newsletter</h3>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email Address"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn bg text-white" type="button">
+                                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-    
-     
+
+
         </div>
         <p class="mb-0 mx-auto bg-col pb-3 text-white container-fluid p-3 text-center bottom-footer">© 2024 AiSystemSoft
-          All Rights Reserved</p>
-      </footer>
+            All Rights Reserved</p>
+    </footer>
 
 
     <!-- FOOTER -->
@@ -605,8 +648,50 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
     <!-- EXTERNEL JS FILE -->
-    <script src="JS/app.js"></script>
+    <!-- <script src="JS/app.js"></script> -->
     <!-- EXTERNEL JS FILE -->
+     <!-- INTERNEL JS  -->
+      <script>
+        window.addEventListener("scroll", function () {
+
+    
+var navunder=document.getElementById("navunder");
+const scrollableHeight = document.body.scrollHeight - window.innerHeight;
+
+
+const scrollProgress = (window.scrollY / scrollableHeight) * 98;
+
+if(scrollProgress >95){
+  document.getElementById("topbtn").innerHTML=`<i class="fa-solid fa-arrow-up"></i>`;
+}
+else{
+  this.document.getElementById("topbtn").innerHTML=scrollProgress.toFixed(0)+"%";
+
+}
+navunder.style.width=`${scrollProgress}vw`
+var navbar = document.getElementById("navbar");
+var navlink=document.querySelectorAll(".nav-item > .nav-link")
+var btn=document.querySelector(".btn-red")
+
+
+if (window.scrollY > 400) {
+navbar.classList.add("navfix1");// Add fade-in class
+btn.classList.add("nav-color")
+navlink.forEach((e)=>{
+    e.classList.add("nav-color")
+})
+} else {
+btn.classList.remove("nav-color")
+
+navbar.classList.remove("navfix1"); // Remove fade-in class
+
+navlink.forEach((e)=>{
+    e.classList.remove("nav-color")
+})
+}
+});
+      </script>
+      <!-- INTERNEL JS -->
 </body>
 
 </html>

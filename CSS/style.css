@@ -27,7 +27,18 @@ body {
 .num {
     font-family: var(--font-family-play) !important;
 }
-
+.cursor-point {
+    position: absolute;
+    width: 10px;
+    z-index: 1111111;
+    height: 10px;
+    padding: 10px;
+    border: 1px solid var(--color1) !important;
+    /* background-color:var(--color1); */
+    border-radius: 50%;
+    pointer-events: none; /* Prevents interference with clicking */
+    transition: transform 0.1s linear !important; /* Smooth movement */
+  }
 /* MEDIA QUIRES */
 .sdsd {
     display: block;
@@ -143,6 +154,7 @@ body {
     width: 50px;
     text-align: center !important;
     right: 10px;
+    z-index: 22222;
 color: white !important;
 border-radius: 50%;
     border: 1px solid var(--color1);
@@ -183,10 +195,11 @@ border-radius: 50%;
 .bg{
     background-color: var(--color1) !important;
 }
+@media (max-width:992px) {
+    
+}
 .btn-red {
-    position: fixed !important;
-    top: 2.5% !important;
-    right: 1%;
+   
     border-radius: 50% !important;
     border: 1px solid var(--color1) !important;
     color: var(--color1) !important;
@@ -799,6 +812,7 @@ transform: rotateX(0deg);
 
   }
   .nav-item>.nav-link{
+    color:#2e2e2ec5 ;
     transition: 0.6s ease-in-out !important
   }
   .nav-item>.nav-link:hover{

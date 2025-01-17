@@ -7,7 +7,7 @@ window.addEventListener("scroll", function () {
     const scrollableHeight = document.body.scrollHeight - window.innerHeight;
     
     
-    const scrollProgress = (window.scrollY / scrollableHeight) * 99;
+    const scrollProgress = (window.scrollY / scrollableHeight) * 98;
 
     if(scrollProgress >95){
       document.getElementById("topbtn").innerHTML=`<i class="fa-solid fa-arrow-up"></i>`;
@@ -35,22 +35,27 @@ window.addEventListener("scroll", function () {
   }
 });
 
+var contactform=document.getElementById("contact-form")
+contactform.addEventListener("click",(e)=>{
+  e.preventDefault();
 var form=document.getElementById("form")
-console.log(form);
+
+var conactform={
+  "name": form.querySelector("#firstName").value,
+      "lastname": form.querySelector("#lastName").value,
+      "num": form.querySelector("#phoneNumber").value,
+      "email": form.querySelector("#email").value,
+      "query": form.querySelector("#queryTopic").value,
+      "msg": form.querySelector("#message").value,
+}
+localStorage.setItem("contact-form",JSON.stringify(conactform))
 
 
-// document.getElementById("tit1").addEventListener("click", () => {
-//   const det1 = document.getElementById("det1");
+  
+})
+const cursorPoint = document.getElementById('cursorPoint');
+document.addEventListener('mousemove', (event) => {
 
-//   // Check current opacity and toggle it
-//   if (det1.style.opacity === "1") {
-//     det1.style.height="0px"
-//     det1.style.opacity = "0";
-//     det1.style.pointerEvents = "none"; // Disable interaction when hidden
-//   } else {
-//     det1.style.height="100px"
-
-//     det1.style.opacity = "1";
-//     det1.style.pointerEvents = "auto"; // Enable interaction when visible
-//   }
-// });
+ 
+  cursorPoint.style.transform = `translate(${event.clientX}px, ${event.clientY}px)`;
+});
