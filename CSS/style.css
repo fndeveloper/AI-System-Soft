@@ -27,18 +27,7 @@ body {
 .num {
     font-family: var(--font-family-play) !important;
 }
-.cursor-point {
-    position: absolute;
-    width: 10px;
-    z-index: 1111111;
-    height: 10px;
-    padding: 10px;
-    border: 1px solid var(--color1) !important;
-    /* background-color:var(--color1); */
-    border-radius: 50%;
-    pointer-events: none; /* Prevents interference with clicking */
-    transition: transform 0.1s linear !important; /* Smooth movement */
-  }
+
 /* MEDIA QUIRES */
 .sdsd {
     display: block;
@@ -54,11 +43,6 @@ body {
         right: 2%;
 
     }
-
-    .head-1 {
-        font-size: 32px !important;
-    }
-
 
 }
 
@@ -126,10 +110,6 @@ body {
 
     }
 
-    .head-1 {
-        font-size: 32px !important;
-    }
-
 }
 
 /* MEDIA QUIRES */
@@ -139,7 +119,7 @@ body {
     z-index: 1111;
 
     border-bottom: 1px solid var(--border-col);
-    transition: 1.2s ease-in-out !important;
+    transition: 0.4s ease-in-out !important;
 }
 #topbtn{
     font-size: 24px !important;
@@ -206,16 +186,12 @@ border-radius: 50%;
     background-color: transparent !important;
 }
 
-.h100 {
-    height: 100vh;
-}
-
 .arr {
     fill: var(--color1) !important;
 }
 
 .image-1 {
-    border-radius: 250px;
+    /* border-radius: 250px; */
     /* padding-left: 10px; */
     min-height: 370px;
     -o-object-fit: cover;
@@ -228,13 +204,28 @@ border-radius: 50%;
 
 .ol7 {
     border: 1px solid rgb(255, 255, 255);
-    border-radius: 250px;
+    /* border-radius: 250px; */
 }
 
 .banner-btn>svg {
     fill: white !important;
 }
+@media (min-width:992px) {
+    .image-1 {
+        border-radius: 250px !important;
+        /* padding-left: 10px; */
+        min-height: 370px;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+}
+.image-1 {
+    border-radius: 20px;
 
+    min-height: 370px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
 @media (max-width:992px) {
     .banner-btn {
         border-radius: 0% !important;
@@ -431,7 +422,7 @@ input{
 .navfix {
     position: fixed !important;
     top: 0% !important;
-    transition: 1.2s ease-in-out !important;
+    transition: 0.4s ease-in-out !important;
     background-color: rgb(244, 244, 244);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 
