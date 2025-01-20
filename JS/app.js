@@ -59,3 +59,4 @@ document.addEventListener('mousemove', (event) => {
  
   cursorPoint.style.transform = `translate(${event.clientX}px, ${event.clientY}px)`;
 });
+

@@ -892,10 +892,17 @@ swiper-slide:hover .slide-pos {
 
 /* 
  PAGES CSS */
+
 .head-2 {
     transition: all 0.7s !important;
 }
+#phone{
+    background-color:var(--bg-color);
+    padding: 10px;
 
+    border: none;
+    border-radius: 2px;
+}
 .col-org {
     color: var(--color1) !important;
 }
