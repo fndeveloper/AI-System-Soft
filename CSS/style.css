@@ -498,27 +498,22 @@ input {
     display: block;
 }
 
-.offcanvas-top {
+.offcanvas-top1 {
+    position: fixed !important;
+    right: 0% !important;
     background-color: var(--bg-color) !important;
     transition: 0.9s ease-in-out !important;
     height: 100vh !important;
-    position: fixed;
-    right: 0%;
-    top: 0%;
+
     opacity: 0.99;
     animation: top 0.1s linear !important;
 
 }
 
-@keyframes top {
-    0% {
-        opacity: 0.6;
-        /* At the start, opacity is 0.6 */
-    }
+@media (max-width:992px) {
 
-    100% {
-        opacity: 1 !important;
-        /* At the end, opacity becomes 1 */
+    .d-flex>.input-group>button {
+        display: none !important;
     }
 }
 
@@ -899,20 +894,28 @@ swiper-slide:hover .slide-pos {
  PAGES CSS */
 .cardsss:hover {
 
-    height: 480px;
+    height: 600px;
 }
 
-.cardsss:hover .btn-explore {
-    background-color: var(--color1);
-    color: white !important;
+@media (max-width:992px) {
+    .cardsss:hover {
+
+        height: 530px !important;
+    }
+
 }
+
+
+
 
 .head-2 {
     transition: all 0.7s !important;
 }
-.col-org{
+
+.col-org {
     color: var(--color1) !important;
 }
+
 .cardsss {
     height: 160px;
     transition: all 0.7s !important;
@@ -933,11 +936,14 @@ swiper-slide:hover .slide-pos {
 }
 
 .btn-explore {
-    transition: all 0.7s !important;
-
-    padding: 9px  11px!important;
+    transition:ease-in-out 0.9s !important;
+   
     color: white;
+    height: 25px;
+    width: 10px;
+    position: relative !important;
     border: none;
+    /* border: 1px solid red; */
     border-radius: 30px;
     font-size: 15px;
     font-weight: 600 !important;
