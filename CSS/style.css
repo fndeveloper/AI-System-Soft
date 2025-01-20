@@ -910,7 +910,9 @@ swiper-slide:hover .slide-pos {
 .head-2 {
     transition: all 0.7s !important;
 }
-
+.col-org{
+    color: var(--color1) !important;
+}
 .cardsss {
     height: 160px;
     transition: all 0.7s !important;
