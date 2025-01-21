@@ -897,6 +897,8 @@ swiper-slide:hover .slide-pos {
     transition: all 0.7s !important;
 }
 #phone{
+
+    font-family: var(--font-family-play);
     background-color:var(--bg-color);
     padding: 10px;
 
@@ -906,9 +908,11 @@ swiper-slide:hover .slide-pos {
 .col-org {
     color: var(--color1) !important;
 }
-
+.col-9>{
+    font-family: var(--font-family-play) !important;
+}
 .cardsss {
-
+/* height: 140px; */
     transition: all 0.7s !important;
     border-radius: 10px;
     padding: 14px 10px;
@@ -939,8 +943,10 @@ color: white !important;
 }
 .cardsss:hover .ex-cion{
     width: 100%;
+
 color: white !important;
 }
+
 .btn-explore {
     padding: 10px;
     transition:ease-in-out 0.2s !important;
