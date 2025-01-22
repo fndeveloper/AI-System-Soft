@@ -965,6 +965,9 @@ color: white !important;
     font-weight: 600 !important;
     background-color: var(--bg-color);
 }
-.col-33{
-    position: static !important;
-}
+.sticky-element {
+    position: sticky;
+    top: 10%;  /* Stick to the top */
+height: 60vh !important;
+    z-index: 10;  /* Optional, to ensure it is above other content */
+  }
