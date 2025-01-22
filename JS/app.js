@@ -60,3 +60,15 @@ document.addEventListener('mousemove', (event) => {
   cursorPoint.style.transform = `translate(${event.clientX}px, ${event.clientY}px)`;
 });
 
+
+// COUNTRY CODE
+const inputs = document.querySelector(".phonenum");
+
+inputs.forEach(input => {
+    window.intlTelInput(input, {
+        initialCountry: "us",
+        separateDialCode: true,
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js", // For formatting
+    });
+});
+// COUNTRY CODE

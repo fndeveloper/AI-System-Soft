@@ -967,7 +967,8 @@ color: white !important;
 }
 .sticky-element {
     position: sticky;
-    top: 10%;  /* Stick to the top */
-height: 60vh !important;
-    z-index: 10;  /* Optional, to ensure it is above other content */
+    height: 125vh !important;
+    top: 3%;  
+
+    z-index: 10; 
   }
