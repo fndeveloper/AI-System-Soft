@@ -36,23 +36,7 @@ window.addEventListener("scroll", function () {
 });
 
 var contactform=document.getElementById("contact-form")
-contactform.addEventListener("click",(e)=>{
-  e.preventDefault();
-var form=document.getElementById("form")
 
-var conactform={
-  "name": form.querySelector("#firstName").value,
-      "lastname": form.querySelector("#lastName").value,
-      "num": form.querySelector("#phoneNumber").value,
-      "email": form.querySelector("#email").value,
-      "query": form.querySelector("#queryTopic").value,
-      "msg": form.querySelector("#message").value,
-}
-localStorage.setItem("contact-form",JSON.stringify(conactform))
-
-
-  
-})
 const cursorPoint = document.getElementById('cursorPoint');
 document.addEventListener('mousemove', (event) => {
 
@@ -62,13 +46,13 @@ document.addEventListener('mousemove', (event) => {
 
 
 // COUNTRY CODE
-const inputs = document.querySelector(".phonenum");
+// const inputs = document.querySelector(".phonenum");
 
-inputs.forEach(input => {
-    window.intlTelInput(input, {
-        initialCountry: "us",
-        separateDialCode: true,
-        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js", // For formatting
-    });
-});
+// inputs.forEach(input => {
+//     window.intlTelInput(input, {
+//         initialCountry: "us",
+//         separateDialCode: true,
+//         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js", // For formatting
+//     });
+// });
 // COUNTRY CODE

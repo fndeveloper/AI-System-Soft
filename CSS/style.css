@@ -1067,3 +1067,22 @@ swiper-slide:hover .slide-pos {
     background-size: cover;
     height: 60vh !important ;
 }
+/* date picker */
+.fo::before {
+    content: "Select a date" !important; /* Custom placeholder text */
+    position: absolute !important;
+    top: 10px; /* Adjust according to your design */
+    left: 10px;
+    color: #aaa;
+    pointer-events: none;
+    font-size: 14px;
+  }
+
+  .fo:focus::before {
+    content: "" !important; /* Remove placeholder text when focused */
+  }
+
+  .fo:valid::before {
+    content: "" !important; /* Remove placeholder text when a valid date is selected */
+  }
+/* date picker */
