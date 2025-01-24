@@ -21,6 +21,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- intl-tel-input CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+    <!-- Utils (Optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"></script>
     <style>
         :root {
             --font-family: "Raleway", serif;
@@ -46,25 +51,29 @@
             object-fit: cover;
             background-image: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.418)), url("Assets/Banner-Image/banner-img-5.jpg");
         }
-.para-col{
-    color: var(--para-color) !important;
-}
+
+        .para-col {
+            color: var(--para-color) !important;
+        }
+
         .navbar {
-            position: absolute;
+            position: fixed;
             top: 0%;
             background-color: transparent !important;
         }
 
         .nav-item>.nav-link {
-            color: white !important;
+            color: white;
         }
 
         .btn-red {
-            color: white !important;
+            color: white;
             border: 1px solid white !important;
         }
 
         .navbar {
+            transition: 0.1s ease-in-out !important;
+
             border-bottom: 1px solid rgba(255, 255, 255, 0.192);
         }
 
@@ -83,6 +92,16 @@
             border: 1px solid rgba(255, 255, 255, 0.253);
             background-color: var(--color1);
         }
+
+        .navfix1 {
+            background-color: white !important;
+        }
+
+        .nav-color {
+            color: #2e2e2ec5 !important;
+            transition: 0.1s ease-in-out !important;
+
+        }
     </style>
 </head>
 
@@ -94,49 +113,54 @@
     </a>
     <!-- HOME START -->
     <div id="home1" class="home d-flex  align-items-center">
-     
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg px-0 py-2 container-fluid d-flex flex-column" id="navbar1">
-    <div class="container-fluid d-flex flex-row justify-content-between">
-      <!-- Logo -->
-      <a class="navbar-brand" href="#">
-             <img src="assets/Logo/logo.png" alt="Logo" class="col-lg-2 col-2" />
 
-      </a>
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg px-0 py-2 container-fluid d-flex flex-column" id="navbar">
+            <div class="container-fluid d-flex flex-row justify-content-between">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="assets/Logo/logo.png" alt="Logo" class="col-lg-2 col-2" />
 
-      <!-- Toggler Button -->
- <button class="btn btn-red navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-  <i class="fa-solid fa-bars"></i>
-</button>
+                </a>
 
-      <!-- Collapsible Navbar Content -->
-      <div class="collapse sdsd navbar-collapse d-flex flex-row justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mt-2 mb-lg-0 d-lg-flex d-none">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="index.html">Home</a>
-            <span class="navhover"></span>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Service
-            </a>
-            <span class="navhover"></span>
-            <ul class="dropdown-menu mx-auto">
-              <li><a class="dropdown-item nav-link" href="AiProductSolution.html">AiProductSolution</a></li>
-              <li><a class="dropdown-item nav-link" href="GrcSolution.html">GRC Solutions</a></li>
-              <li><a class="dropdown-item nav-link" href="Web-AppDevelopment.html">Web & App Development</a></li>
-              <li><a class="dropdown-item nav-link" href="EcommerceSolution.html">Ecommerce Solutions</a></li>
-              <li><a class="dropdown-item nav-link" href="DigitalMarketing.html">
-                Digital Marketing</a></li>
+                <!-- Toggler Button -->
+                <button class="btn btn-red navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <!-- Collapsible Navbar Content -->
+                <div class="collapse sdsd navbar-collapse d-flex flex-row justify-content-end"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mt-2 mb-lg-0 d-lg-flex d-none">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            <span class="navhover"></span>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Service
+                            </a>
+                            <span class="navhover"></span>
+                            <ul class="dropdown-menu mx-auto">
+                                <li><a class="dropdown-item nav-link"
+                                        href="AiProductSolution.html">AiProductSolution</a></li>
+                                <li><a class="dropdown-item nav-link" href="GrcSolution.html">GRC Solutions</a></li>
+                                <li><a class="dropdown-item nav-link" href="Web-AppDevelopment.html">Web & App
+                                        Development</a></li>
+                                <li><a class="dropdown-item nav-link" href="EcommerceSolution.html">Ecommerce
+                                        Solutions</a></li>
+                                <li><a class="dropdown-item nav-link" href="DigitalMarketing.html">
+                                        Digital Marketing</a></li>
 
-            </ul>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="about.html"  aria-expanded="false">
-             About-Us
-            </a>
-            <span class="navhover"></span>
-            <!-- <ul class="dropdown-menu mx-auto">
+                            </ul>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="about.html" aria-expanded="false">
+                                About-Us
+                            </a>
+                            <span class="navhover"></span>
+                            <!-- <ul class="dropdown-menu mx-auto">
               <li><a class="dropdown-item nav-link" href="memberships/ScoutMemberships.html">Cybron Scout
                   Memberships</a></li>
               <li><a class="dropdown-item nav-link" href="memberships/AssociateMemberships.html">Cybron Associate
@@ -144,36 +168,37 @@
               <li><a class="dropdown-item nav-link" href="memberships/ProfessionalMemberships.html">Cybron Professional
                   Memberships</a></li>
             </ul> -->
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Portfolio">Portfolio</a>
-            <span class="navhover"></span>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us</a>
-            <span class="navhover"></span>
-          </li>
-        </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                            <span class="navhover"></span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                            <span class="navhover"></span>
+                        </li>
+                    </ul>
 
-        <!-- Offcanvas Button -->
-        <form class="d-flex " role="search">
-          <div class="input-group">
-          <button class="btn btn-red" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight1">
-        <i class="fa-solid fa-bars"></i>
-</button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <!-- Optional Element -->
-    <div class="" id="navunder"></div>
-  </nav>
+                    <!-- Offcanvas Button -->
+                    <form class="d-lg-flex d-none" role="search">
+                        <div class="input-group">
+                            <button class="btn btn-red" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight1">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Optional Element -->
+            <div class="" id="navunder"></div>
+        </nav>
 
-  <!-- NAVBAR -->
+        <!-- NAVBAR -->
 
         <div class="container d-flex flex-lg-row  align-items-center flex-column">
             <div class="col-lg-4">
-                <h2 class="text-white display-5 fw-bold">Web & App Development</h2>
+                <h2 class="text-white display-5 fw-bold">Web-App Development</h2>
             </div>
             <div class="col-lg-3 d-flex flex-row align-items-end">
                 <svg xmlns="http://www.w3.org/2000/svg" class="col-10 mx-auto fill-white" viewBox="0 0 338 44">
@@ -185,13 +210,14 @@
 
             <div class="col-lg-5 d-flex flex-row align-items-end mt-lg-5 pt-lg-5 mt-4 text-end text-white">
                 <h5>
-                    We specialize in Web and App Development, delivering cutting-edge solutions to create engaging, user-friendly, and scalable digital experiences tailored to your needs.
+                    Empowering businesses with cutting-edge AI technologies to streamline operations, enhance
+                    decision-making, and drive innovation.
                 </h5>
             </div>
         </div>
 
         <button class="btnhome d-flex fw-bold"><span class="pe-3">Home</span>
-            <li>Web & App Development</li>
+            <li>Web-App Development</li>
         </button>
 
     </div>
@@ -212,7 +238,7 @@
             <!-- About Section -->
             <div class="about-section text-start">
                 <h2 class="fw-bolder py-3 text-white">
-</h2>
+                </h2>
                 <h5 class="text-white">
                     AI-GRC-Software Development Solution .
                     We Develop Secure & Intelligent Solutions
@@ -263,7 +289,7 @@
         <div class="offcanvas-header container">
             <h5 class="offcanvas-title" id="offcanvasTopLabel">
                 <a class="navbar-brand" href="#">
-                         <img src="assets/Logo/logo.png" alt="Logo" class="col-lg-2 col-2" />
+                    <img src="assets/Logo/logo.png" alt="Logo" class="col-lg-2 col-2" />
 
                     <!-- Replace with actual logo path -->
                 </a>
@@ -298,7 +324,7 @@
 
                     <!--  -->
                     <li class="nav-item">
-                          <a class="nav-link" href="portfolio.html">Portfolio</a>
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
                         <span class="navhover"></span>
                     </li>
                     <li class="nav-item">
@@ -332,22 +358,20 @@
 
     <!-- MAIN 1 START -->
     <div
-        class="container-fluid d-flex flex-lg-row pt-5 mt-5 align-items-lg-center flex-column mt-lg-0 mt-5 justify-content-between">
+        class="container-fluid d-flex flex-lg-row pt-5 my-5 align-items-lg-center flex-column mt-lg-0 mt-5 justify-content-between">
         <div class="d-flex flex-lg-row flex-column align-items-lg-center ">
-            <h2 class="strk text-start position-relative ">
-                Our Solution
-                <br>
-                Process.
+            <h5 class="strk text-start position-relative ">
+                AI-Driven Web & App <br> Development Solutions
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" class="arr" height="6" viewBox="0 0 50 6">
                     <path d="M50 3L45 0.113249V5.88675L50 3ZM0 3.5H45.5V2.5H0V3.5Z"></path>
                 </svg></span>
-            </h2>
+            </h5>
 
 
         </div>
         <div class="d-flex  justify-content-end col-lg-4 mt-5 mt-lg-0">
-            <h5 class="text-end">Creating a concise and effective Web & App Development brief is crucial for outlining
-                your business objectives.</h5>
+            <h5 class="text-end">Harnessing AI to Drive Smarter Web & App Development and Seamless Automation
+            </h5>
         </div>
     </div>
     <!-- MAIN2 START -->
@@ -356,37 +380,57 @@
         <!-- Service Overview -->
         <div class="row mb-4 px-lg-3">
             <div class="col">
-                <h2 class=" py-3 fs-1">Service Overview</h2>
+                <h2 class=" py-3 fs-6 fw-bold text-capitalize">expertise you can trust</h2>
                 <div class="d-flex flex-lg-row flex-column">
-                    <p class="fs-5 fw-normal col-lg-6 text-start">
-                        As we reflect on this achievement, we look forward to continuing our journey of digital
-                        innovation, creating transformative solutions, and shaping the future of the digital landscape.
-                        Celebrating a major milestone in digital services is a significant occasion.
-                    </p>
-                    <p class="fs-5 fw-normal col-lg-6 text-start">
-                        As we reflect on this achievement, we look forward to continuing our journey of digital
-                        innovation, creating transformative solutions, and shaping the future of the digital landscape.
-                        Celebrating a major milestone in digital services is a significant occasion.
-                    </p>
-                </div>
-            </div>
-        </div>
+                    <div class="col-lg-9 col-12">
+                        <h2 class="fw-bold fs-1">
+                            We empower businesses with advanced AI technologies to streamline operations <span
+                                class="col-org">&</span> unlock new opportunities for growth and innovation.
+                        </h2>
+                        <p class="pt-3 fw-lighter col-lg-11">
+                            What began as a simple idea and a shared dream has evolved into a mission to empower
+                            businesses with cutting-edge AI technologies. Since our founding, we've been dedicated to
+                            driving innovation, streamlining operations, and enhancing decision-making.
 
-        <!-- Key Features -->
-        <div class="row mb-4 px-lg-3">
-            <div class="col">
-                <h2 class=" py-3 fs-1">Key Features</h2>
-                <div class="d-flex flex-lg-row flex-column">
-                    <p class="fs-5 fw-normal col-lg-6 text-start">
-                        As we reflect on this achievement, we look forward to continuing our journey of digital
-                        innovation, creating transformative solutions, and shaping the future of the digital landscape.
-                        Celebrating a major milestone in digital services is a significant occasion.
-                    </p>
-                    <p class="fs-5 fw-normal col-lg-6 text-start">
-                        These features contribute to a robust email marketing strategy, enabling businesses to send
-                        targeted, personalized, and automated campaigns while ensuring compliance and security. When
-                        choosing an email marketing platform.
-                    </p>
+                            From humble beginnings to ambitious goals, <br> <br> our journey is fueled by an unwavering
+                            commitment to progress and transformative technology. We believe in pushing boundaries to
+                            unlock new possibilities and create solutions that redefine industries. Together, we aim to
+                            build a smarter, more efficient future powered by innovation.
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-12 bg py-4  d-flex flex-column  col-12 px-lg-0 px-3  mb-4">
+
+                        <div
+                            class="col-lg-11 col-10 mx-auto p-2 rounded-3 bg-white   d-flex  align-items-center flex-row justify-content-around   mb-4">
+                            <i class="fas fa-tasks fs-5  bg text-white p-3 rounded-3"></i>
+                            <div class="d-flex flex-column justify-content-center ">
+                                <h4>150 Project</h4>
+                                <p class="fw-light lh-1">We Have Completed</p>
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="col-lg-11 mx-auto p-2 rounded-3 bg-white   d-flex  align-items-center flex-row justify-content-around col-10  mb-4">
+
+                            <i class="fas fa-smile fs-5  bg text-white p-3 rounded-3"></i>
+                            <div class="d-flex flex-column justify-content-center ">
+                                <h3>98 <span class="">%</span></h3>
+                                <p class="fw-light lh-1">Customer Satisfaction</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="col-lg-11 mx-auto p-2 rounded-3 bg-white   d-flex  align-items-center flex-row justify-content-around col-10  mb-4">
+                            <i class="fas fa-clock fs-5  bg text-white p-3 rounded-3"></i>
+                            <div class="d-flex flex-column justify-content-center ">
+                                <h3>3 <span class="">Mins</span></h3>
+                                <p class="fw-light lh-1">Average Answer Time</p>
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -398,9 +442,341 @@
 
     </div>
 
+    <!-- AI PRODUCT SERVICE START -->
+
+    <div class="container-fluid mt-5 py-5 who d-flex flex-column justify-content-center align-items-center">
+        <div class="container d-flex flex-lg-row flex-column py-5">
+            <p class="pe-5 fs-4 text-white col-lg-5">AI-Driven Web & App
+                Development Solutions<svg xmlns="http://www.w3.org/2000/svg" width="50" class="arr" height="6"
+                    viewBox="0 0 50 6">
+                    <path d="M50 3L45 0.113249V5.88675L50 3ZM0 3.5H45.5V2.5H0V3.5Z"></path>
+                </svg>
+            </p>
+            <p class="text-white col-lg-5 ms-auto fs-6 fw-lighter text-end">
+                AI-Driven Web & App Development Solutions
+                At AI-Driven Web & App Development Solutions, we specialize in creating secure and intelligent software
+                tailored to your business needs. Our solutions are designed to streamline operations.
+            </p>
+        </div>
+        <div class="container d-flex flex-lg-column flex-column py-5 gth">
+
+            <div class="col-lg-12 my-2 col-md-12 d-flex flex-lg-row flex-column cardsss py-4 mb-2">
+                <h3 class="text-white1 pe-2 mt-lg-2 col-lg-2 px-2 text-center ">01.</h3>
+                <div class="d-flex text-white1 flex-column col-lg-6 col-12">
+                    <h2 class="text-white1 fw-bold  pb-3 display-6 head-2 text-lg-start text-center">Custom Web & App
+                        Development </h2>
+                    <div class="tags d-flex flex-row justify-content-between col-lg-7">
+                        <p>DevTech</p>
+                        <p>WebDev</p>
+                        <p>AppDev</p>
+                        <p>TechDev</p>
+                        <p>BuildIt</p>
+
+
+                    </div>
+
+                    <div>
+                        <p class="pt-3 col-lg-12 fs-6 fw-normal">
+                            Our Custom Web & App Development solutions leverage AI-powered technologies to capture container and vehicle data with exceptional speed and precision. We design web and mobile applications that seamlessly integrate with Terminal Operating System (TOS) applications.
+                        </p>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <img src="Assets/Service-Image/service-img-19.jpg" class="img-fluid rounded-3 col-12" alt="">
+                    </div>
+                </div>
+                <div
+                    class="col-lg-4 col-12 d-flex flex-column justify-content-between  align-items-end mt-lg-0 mt-2   flex-row ">
+
+                    <button class="mx-lg-0 mx-auto col-lg-5 col-5 set-bt btn-explore  ">
+                        More-Info
+                        <a href="buoylight.html"
+                            class="ex-cion d-flex flex-row align-items-center justify-content-center text-decoration-none">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </a>
+                    </button>
+
+                    <div class="col-9 ms-lg-auto d-flex flex-column align-items-end  p-2 text-white py-5">
+                        <h3 class="text-white1 text-end mb-4">For Inquiry</h3>
+                        <input type="text" class="form-control my-2 mb-3 col-10" placeholder="Your Name" name="name"
+                            id="name">
+                        <input type="email" class="form-control mb-2 mb-3 col-10" placeholder="Your Email" name="email"
+                            id="email">
+
+
+                        <input id="phone" type="tel" class="phonenum mb-3 col-12 mb-3">
+                        <div class="col-12 text-center  mt-2">
+                            <button type="submit"
+                                class="mt-3 mx-auto who text-white1 btn3 col-lg-6 col-6 p-2 d-flex flex-row align-items-center justify-content-center">
+                                Submit
+                                <i class="fa-solid fa-paper-plane icon-hover"></i>
+
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 d-flex flex-lg-row flex-column cardsss py-4 mb-2">
+                <h3 class="text-white1 pe-2 mt-lg-2 col-lg-2 px-2 text-center ">02.</h3>
+                <div class="d-flex text-white1 flex-column col-lg-6 col-12">
+                    <h2 class="text-white1 fw-bold  pb-3 display-6 head-2 text-lg-start text-center">E-commerce
+                        Development </h2>
+                    <div class="tags d-flex flex-row justify-content-between col-lg-7">
+                        <p>EcomDev</p>
+                        <p>WebStore</p>
+                        <p>OnlineShop</p>
+                        <p>EcomTech</p>
+                        <p>ShopDev</p>
+
+
+                    </div>
+
+                    <div>
+                        <p class="pt-3 col-lg-12 fs-6 fw-normal">
+                            Our Custom Web & App Development solutions leverage AI-powered technologies to capture container and vehicle data with exceptional speed and precision. We design web and mobile applications that seamlessly integrate with Terminal Operating System (TOS) applications.
+
+                        </p>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <img src="Assets/Service-Image/service-img-17.jpg" class="img-fluid rounded-3 col-12" alt="">
+                    </div>
+                </div>
+                <div
+                    class="col-lg-4 col-12 d-flex flex-column justify-content-between  align-items-end mt-lg-0 mt-2   flex-row ">
+
+                    <button class="mx-lg-0 mx-auto col-lg-5 col-5 set-bt btn-explore  ">
+                        More-Info
+                        <a href="buoyspot.html"
+                            class="ex-cion d-flex flex-row align-items-center justify-content-center text-decoration-none">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </a>
+                    </button>
+
+                    <div class="col-9 ms-lg-auto d-flex flex-column align-items-end  p-2 text-white py-5">
+                        <h3 class="text-white1 text-end mb-4">For Inquiry</h3>
+                        <input type="text" class="form-control my-2 mb-3 col-10" placeholder="Your Name" name="name"
+                            id="name">
+                        <input type="email" class="form-control mb-2 mb-3 col-10" placeholder="Your Email" name="email"
+                            id="email">
+
+
+                        <input id="phone" type="tel" class="phonenum mb-3 col-12 mb-3">
+                        <div class="col-12 text-center  mt-2">
+                            <button type="submit"
+                                class="mt-3 mx-auto who text-white1 btn3 col-lg-6 col-6 p-2 d-flex flex-row align-items-center justify-content-center">
+                                Submit
+                                <i class="fa-solid fa-paper-plane icon-hover"></i>
+
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 d-flex flex-lg-row flex-column cardsss py-4 mb-2">
+                <h3 class="text-white1 pe-2 mt-lg-2 col-lg-2 px-2 text-center ">03.</h3>
+                <div class="d-flex text-white1 flex-column col-lg-6 col-12">
+                    <h2 class="text-white1 fw-bold  pb-3 display-6 head-2 text-lg-start text-center">Cross-Platform App
+                        Development </h2>
+                    <div class="tags d-flex flex-row justify-content-between col-lg-7">
+                        <p>CrossApp</p>
+                        <p>AppDev</p>
+                        <p>MultiPlat</p>
+                        <p>CrossPlat</p>
+                        <p>AppTech</p>
+
+
+                    </div>
+
+                    <div>
+                        <p class="pt-3 col-lg-12 fs-6 fw-normal">
+                            An AI-base solution to observe activities inside the terminal area round the clock all
+                            seasons.
+
+                            Detecting and alerting for the people in the terminal area without Safety Helmets,
+                            Jackets, Masks, Gloves, etc.
+                        </p>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <img src="Assets/Service-Image/service-img-20.jpg" class="img-fluid rounded-3 col-12" alt="">
+                    </div>
+                </div>
+                <div
+                    class="col-lg-4 col-12 d-flex flex-column justify-content-between  align-items-end mt-lg-0 mt-2   flex-row ">
+
+                    <button class="mx-lg-0 mx-auto col-lg-5 col-5 set-bt btn-explore  ">
+                        More-Info
+                        <a href="buoyspy.html"
+                            class="ex-cion d-flex flex-row align-items-center justify-content-center text-decoration-none">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </a>
+                    </button>
+
+                    <div class="col-9 ms-lg-auto d-flex flex-column align-items-end  p-2 text-white py-5">
+                        <h3 class="text-white1 text-end mb-4">For Inquiry</h3>
+                        <input type="text" class="form-control my-2 mb-3 col-10" placeholder="Your Name" name="name"
+                            id="name">
+                        <input type="email" class="form-control mb-2 mb-3 col-10" placeholder="Your Email" name="email"
+                            id="email">
+
+
+                        <input id="phone" type="tel" class="phonenum mb-3 col-12 mb-3">
+                        <div class="col-12 text-center  mt-2">
+                            <button type="submit"
+                                class="mt-3 mx-auto who text-white1 btn3 col-lg-6 col-6 p-2 d-flex flex-row align-items-center justify-content-center">
+                                Submit
+                                <i class="fa-solid fa-paper-plane icon-hover"></i>
+
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div
+                    class="col-lg-4 col-12 d-flex flex-column justify-content-between  align-items-end mt-lg-0 mt-2   flex-row ">
+
+                    <button class="mx-lg-0 mx-auto col-lg-5 col-5 set-bt btn-explore  ">
+                        More-Info
+                        <a href="buoylight.html"
+                            class="ex-cion d-flex flex-row align-items-center justify-content-center text-decoration-none">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </a>
+                    </button>
+
+                    <div class="col-9 ms-lg-auto d-flex flex-column align-items-end  p-2 text-white py-5">
+                        <h3 class="text-white1 text-end mb-4">For Inquiry</h3>
+                        <input type="text" class="form-control my-2 mb-3 col-10" placeholder="Your Name" name="name"
+                            id="name">
+                        <input type="email" class="form-control mb-2 mb-3 col-10" placeholder="Your Email" name="email"
+                            id="email">
+
+
+                        <input id="phone" type="tel" class="phonenum mb-3 col-12 mb-3">
+                        <div class="col-12 text-center  mt-2">
+                            <button type="submit"
+                                class="mt-3 mx-auto who text-white1 btn3 col-lg-6 col-6 p-2 d-flex flex-row align-items-center justify-content-center">
+                                Submit
+                                <i class="fa-solid fa-paper-plane icon-hover"></i>
+
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 d-flex flex-lg-row flex-column cardsss py-4 mb-2">
+                <h3 class="text-white1 pe-2 mt-lg-2 col-lg-2 px-2 text-center ">04.</h3>
+                <div class="d-flex text-white1 flex-column col-lg-6 col-12">
+                    <h2 class="text-white1 fw-bold  pb-3 display-6 head-2 text-lg-start text-center">UI/UX Design and
+                        Optimization </h2>
+                    <div class="tags d-flex flex-row justify-content-between col-lg-7">
+                        <p>UIDesign</p>
+                        <p>UXDesign</p>
+                        <p>UXOptim</p>
+                        <p>DesignOps</p>
+                        <p>UserExp</p>
+
+
+                    </div>
+
+                    <div>
+                        <p class="pt-3 col-lg-12 fs-6 fw-normal">
+                            An AI-based call center solutions to allow your customers and employees to connect
+                            corporate data over ordinary telephone lines to access required information by talking
+                            to the system in Natural Language. </p>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <img src="Assets/Service-Image/service-img-18.jpg" class="img-fluid rounded-3 col-12" alt="">
+                    </div>
+                </div>
+                <div
+                    class="col-lg-4 col-12 d-flex flex-column justify-content-between  align-items-end mt-lg-0 mt-2   flex-row ">
+
+                    <button class="mx-lg-0 mx-auto col-lg-5 col-5 set-bt btn-explore  ">
+                        More-Info
+                        <a href="callmatics.html"
+                            class="ex-cion d-flex flex-row align-items-center justify-content-center text-decoration-none">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </a>
+                    </button>
+
+                    <div class="col-9 ms-lg-auto d-flex flex-column align-items-end  p-2 text-white py-5">
+                        <h3 class="text-white1 text-end mb-4">For Inquiry</h3>
+                        <input type="text" class="form-control my-2 mb-3 col-10" placeholder="Your Name" name="name"
+                            id="name">
+                        <input type="email" class="form-control mb-2 mb-3 col-10" placeholder="Your Email" name="email"
+                            id="email">
+
+
+                        <input id="phone" type="tel" class="phonenum mb-3 col-12 mb-3">
+                        <div class="col-12 text-center  mt-2">
+                            <button type="submit"
+                                class="mt-3 mx-auto who text-white1 btn3 col-lg-6 col-6 p-2 d-flex flex-row align-items-center justify-content-center">
+                                Submit
+                                <i class="fa-solid fa-paper-plane icon-hover"></i>
+
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div
+                    class="col-lg-4 col-12 d-flex flex-column justify-content-between  align-items-end mt-lg-0 mt-2   flex-row ">
+
+                    <button class="mx-lg-0 mx-auto col-lg-5 col-5 set-bt btn-explore  ">
+                        More-Info
+                        <a href="buoylight.html"
+                            class="ex-cion d-flex flex-row align-items-center justify-content-center text-decoration-none">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </a>
+                    </button>
+
+                    <div class="col-9 ms-lg-auto d-flex flex-column align-items-end  p-2 text-white py-5">
+                        <h3 class="text-white1 text-end mb-4">For Inquiry</h3>
+                        <input type="text" class="form-control my-2 mb-3 col-10" placeholder="Your Name" name="name"
+                            id="name">
+                        <input type="email" class="form-control mb-2 mb-3 col-10" placeholder="Your Email" name="email"
+                            id="email">
+
+
+                        <input id="phone" type="tel" class="mb-3 col-12 mb-3">
+                        <div class="col-12 text-center  mt-2">
+                            <button type="submit"
+                                class="mt-3 mx-auto who text-white1 btn3 col-lg-6 col-6 p-2 d-flex flex-row align-items-center justify-content-center">
+                                Submit
+                                <i class="fa-solid fa-paper-plane icon-hover"></i>
+
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- <div class="container ">
+      <div
+        class="col-lg-8 klo py-3 col-12 ms-auto d-flex flex-lg-row flex-md-row flex-column align-items-center justify-content-lg-around">
+        <div class="col-lg-2 col-md-4 col-6">
+          <h2 class="display-3 text-white fw-bold">70+</h2>
+          <h6 class="text-white fw-normal">Professional Experts</h6>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <h2 class="display-3 text-white fw-bold">20+</h2>
+          <h6 class="text-white fw-normal">Project Complete</h6>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+          <h2 class="display-3 text-white fw-bold">16+</h2>
+          <h6 class="text-white fw-normal">World-Wide Cleints</h6>
+        </div>
+      </div>
+    </div> -->
+    </div>
+    <!-- AI PRODUCT SERVICE END -->
+
     <!-- MAIN 2 END -->
     <!-- MAIN 3 START -->
-    <div class="container-fluid py-5 bg">
+    <div class="container-fluid py-5 bg my-4">
         <!-- Fact and Benefit Section -->
         <div class="row g-4">
             <!-- Management Card -->
@@ -415,7 +791,8 @@
                             </svg>
                         </div>
                         <h3 class=" text-start fw-bold">Management</h3>
-                        <p class=" text-start para-col fw-normal">Gather relevant information through interviews.</p>
+                        <p class=" text-start para-col fw-normal">Gather relevant information through interviews.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -441,7 +818,9 @@
                             </svg>
                         </div>
                         <h3 class="fw-bold text-start">Email Campaign</h3>
-                        <p class=" text-start para-col fw-normal">Generate potential solutions or strategies to address.</p>
+                        <p class=" text-start para-col fw-normal">Generate potential solutions or strategies to
+                            address.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -464,7 +843,9 @@
                             </svg>
                         </div>
                         <h3 class=" fw-bold text-start">Automation</h3>
-                        <p class="text-start para-col fw-normal">Provide training and support to help the client's team.</p>
+                        <p class="text-start para-col fw-normal">Provide training and support to help the client's
+                            team.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -481,7 +862,8 @@
                             </svg>
                         </div>
                         <h3 class=" fw-bold text-start">Social Integration</h3>
-                        <p class=" text-start para-col fw-normal">Provide training and support to help the client's team.</p>
+                        <p class=" text-start para-col fw-normal">Provide training and support to help the client's
+                            team.</p>
                     </div>
                 </div>
             </div>
@@ -489,110 +871,138 @@
 
     </div>
     <!-- MAIN 3 END -->
-     <div
-        class="container-fluid d-flex flex-lg-row pt-5 mt-5 align-items-lg-center flex-column mt-lg-0 mt-5 justify-content-between">
+
+    <!-- MAIN 4 START -->
+    <div
+        class="container-fluid d-flex flex-lg-row pt-5 my-5 align-items-lg-center flex-column mt-lg-0 mt-5 justify-content-between">
         <div class="d-flex flex-lg-row flex-column align-items-lg-center ">
-            <h2 class="strk text-start position-relative ">
-          FAQS
+            <h3 class=" text-start position-relative ">
+                How We Do
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" class="arr" height="6" viewBox="0 0 50 6">
                     <path d="M50 3L45 0.113249V5.88675L50 3ZM0 3.5H45.5V2.5H0V3.5Z"></path>
                 </svg></span>
-            </h2>
+            </h3>
 
 
         </div>
         <div class="d-flex  justify-content-end col-lg-4 mt-5 mt-lg-0">
-            <h5 class="text-end">The specific goals of a marketing agency can vary
-                depending on the client's needs, industry.</h5>
+            <h5 class="text-end">Solutions leveraging AI to empower smarter decision-making and seamless automation.
+            </h5>
         </div>
     </div>
-     <!-- MAIN 4 START -->
-     <div class="container-fluid px-4 py-5">
-        <div class="row g-4">
-            <div class="col-lg-6">
-                <div class=" border-0 shadow-sm p-3">
-                    <h4 class="fw-bold py-2">1. What services does your agency offer?</h4>
-                    <p class="para-color fw-normal">Provide an overview of the primary digital services your agency specializes in, such as digital marketing, web development, design, etc. Feel free to customize these based on the specific services, policies, and practices.</p>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="card border-0 shadow-sm p-3">
-                    <h4 class="fw-bold py-2">2. What industries does your agency work with?</h4>
-                    <p class="para-color fw-normal">Provide an overview of the primary digital services your agency specializes in, such as digital marketing, web development, design, etc. Feel free to customize these based on the specific services, policies, and practices.</p>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="card border-0 shadow-sm p-3">
-                    <h4 class="fw-bold py-2">3. What sets your agency apart from others in the industry?</h4>
-                    <p class="para-color fw-normal">Provide an overview of the primary digital services your agency specializes in, such as digital marketing, web development, design, etc. Feel free to customize these based on the specific services, policies, and practices.</p>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="card border-0 shadow-sm p-3">
-                    <h4 class="fw-bold py-2">4. What is your pricing structure or payment process?</h4>
-                    <p class="para-color fw-normal">Provide an overview of the primary digital services your agency specializes in, such as digital marketing, web development, design, etc. Feel free to customize these based on the specific services, policies, and practices.</p>
-                </div>
-            </div>
+    <div class="mt-5 d-flex flex-lg-row flex-column text-start container-fluid px-lg-3 justify-content-between">
+        <!-- Collaborative Planning -->
+        <div class="col-lg-4 col-12 mb-4">
+            <i class="fas fa-handshake bg text-white p-2 rounded-2 fa-3x mb-3"></i>
+            <h4 class="fw-bold py-2">Collaborative Planning</h4>
+            <p class="fw-lighter">Streamline teamwork with Collaborative Planning, fostering efficiency and synergy
+                in
+                achieving shared goals seamlessly.</p>
+            <ul class="list-unstyled text-start fw-lighter">
+                <li><i class="fas fa-check col-org "></i> Sustainability and Responsibility</li>
+                <li><i class="fas fa-check col-org"></i> Customer-Centric Approach</li>
+                <li><i class="fas fa-check col-org"></i> Businesses can partner with affiliates</li>
+            </ul>
+
         </div>
-  
+
+        <!-- Customized Solutions -->
+        <div class="col-lg-4 col-12 mb-4">
+            <i class="fas fa-cogs bg text-white p-2 rounded-2 fa-3x mb-3"></i>
+            <h4 class="fw-bold py-2">Customized Solutions</h4>
+            <p class="fw-lighter">Tailored solutions for your unique needs, delivering personalized results that
+                elevate
+                your experience and expectation.</p>
+            <ul class="list-unstyled text-start fw-lighter">
+                <li><i class="fas fa-check col-org"></i> Sustainability and Responsibility</li>
+                <li><i class="fas fa-check col-org"></i> Customer-Centric Approach</li>
+                <li><i class="fas fa-check col-org"></i> Businesses can partner with affiliates</li>
+            </ul>
+        </div>
+
+        <!-- Understanding Your Vision -->
+        <div class="col-lg-4 col-12 mb-4">
+            <i class="fas fa-brain bg text-white p-2 rounded-2 fa-3x mb-3"></i>
+            <h4 class="fw-bold py-2">Understanding Your Vision</h4>
+            <p class="fw-lighter">Tailored solutions for your unique needs, delivering personalized results that
+                elevate
+                your experience and expectation.</p>
+            <ul class="list-unstyled text-start fw-lighter">
+                <li><i class="fas fa-check col-org"></i> Sustainability and Responsibility</li>
+                <li><i class="fas fa-check col-org"></i> Customer-Centric Approach</li>
+                <li><i class="fas fa-check col-org"></i> Businesses can partner with affiliates</li>
+            </ul>
+        </div>
     </div>
-    
-      <!-- MAIN 4 END -->
-  <footer class=" pt-5">
-    <div class="container-fluid px-4 py-3">
-      <div class="row">
-        <div class="col-lg-3  col-12 mb-4">
-                        <img src="Assets/Logo/logo.png" alt="Cybron Logo" class="mb-3 col-lg-4 col-3 m-0 p-0">
 
-          <p class="locte text-white fs-6 ">AI-GRC-Software Development Solution . We Develop Secure & Intelligent Solutions</p>
-          <!-- <p><a href="mailto:cybron@cybroninternational.com" class="text-white">cybron@cybroninternational.com</a></p> -->
-        </div>
+    <footer class=" pt-5">
+        <div class="container-fluid px-4 py-3">
+            <div class="row">
+                <div class="col-lg-3  col-12 mb-4">
+                    <img src="Assets/Logo/logo.png" alt="Cybron Logo" class="mb-3 col-lg-4 col-3 m-0 p-0">
 
-        <div class="col-lg-3  col-12 col-md-6 mb-4 ps-lg-5">
-          <h3 class="mb-3 text-white">Usefull Links</h3>
-          <ul class="list-unstyled fs-6">
-            <li class="mb-1 "><a href="index.html" class="text-white fw-lighter text-decoration-none ">Home</a>    
-              <span class="navhover"></span></li>
-            <li class="mb-1"><a href="about.html" class="text-white fw-lighter text-decoration-none">About-Us</a></li>
-            <li class="mb-1"><a href="portfolio.html" class="text-white fw-lighter text-decoration-none">Portfolio</a></li>
-            <li class="mb-1"><a href="AiProductSolution.html" class="text-white fw-lighter text-decoration-none">Service</a></li>
-            <li class="mb-1"><a href="contact.html" class="text-white fw-lighter text-decoration-none">Contact Us</a></li>
-          </ul>
-        
-        </div>
+                    <p class="locte text-white fs-6 ">AI-GRC-Software Development Solution . We Develop Secure &
+                        Intelligent Solutions</p>
+                    <!-- <p><a href="mailto:cybron@cybroninternational.com" class="text-white">cybron@cybroninternational.com</a></p> -->
+                </div>
 
-        <div class="col-lg-3 col-12 col-md-6 mb-4 ps-lg-5">
-          <h3 class="mb-3 text-white">Contact Us</h3>
-          <ul class="list-unstyled fs-6">
-            <li class="mb-1"><a href="mailto:info@aisystemsoft.com?subject=Inquiry&body=Hello, I would like to know more about your services."  class="text-white fw-lighter text-decoration-none"> info@aisystemsoft.com</a></li>
-            <li class="mb-1 mt-2"><a href="tel:+16892764636" class="text-white fw-lighter text-decoration-none">+1 (689) 276-4636</a></li>
+                <div class="col-lg-3  col-12 col-md-6 mb-4 ps-lg-5">
+                    <h3 class="mb-3 text-white">Usefull Links</h3>
+                    <ul class="list-unstyled fs-6">
+                        <li class="mb-1 "><a href="index.html"
+                                class="text-white fw-lighter text-decoration-none ">Home</a>
+                            <span class="navhover"></span>
+                        </li>
+                        <li class="mb-1"><a href="about.html"
+                                class="text-white fw-lighter text-decoration-none">About-Us</a></li>
+                        <li class="mb-1"><a href="portfolio.html"
+                                class="text-white fw-lighter text-decoration-none">Portfolio</a></li>
+                        <li class="mb-1"><a href="AiProductSolution.html"
+                                class="text-white fw-lighter text-decoration-none">Service</a></li>
+                        <li class="mb-1"><a href="contact.html"
+                                class="text-white fw-lighter text-decoration-none">Contact Us</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-3 col-12 col-md-6 mb-4 ps-lg-5">
+                    <h3 class="mb-3 text-white">Contact Us</h3>
+                    <ul class="list-unstyled fs-6">
+                        <li class="mb-1"><a
+                                href="mailto:info@aisystemsoft.com?subject=Inquiry&body=Hello, I would like to know more about your services."
+                                class="text-white fw-lighter text-decoration-none"> info@aisystemsoft.com</a></li>
+                        <li class="mb-1 mt-2"><a href="tel:+16892764636"
+                                class="text-white fw-lighter text-decoration-none">+1 (689) 276-4636</a></li>
 
 
-            <li class="mb-1 mt-2"><a href="https://www.google.com/maps/place/Conroy+Windermere,+FL-34786,+USA" class="text-white fw-lighter text-decoration-none">
-              Conroy Windermere,<br> FL-34786, USA
-            </a></li>
-           </ul>
-        </div>
+                        <li class="mb-1 mt-2"><a
+                                href="https://www.google.com/maps/place/Conroy+Windermere,+FL-34786,+USA"
+                                class="text-white fw-lighter text-decoration-none">
+                                Conroy Windermere,<br> FL-34786, USA
+                            </a></li>
+                    </ul>
+                </div>
 
-        <div class="col-lg-3 col-12 col-md-6 mb-4">
-          <h3 class="mb-3 text-white">Subscribe newsletter</h3>
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Email Address" aria-label="Recipient's username" aria-describedby="basic-addon2">
-            <div class="input-group-append">
-              <button class="btn bg text-white" type="button">
-                <i class="fa fa-paper-plane" aria-hidden="true"></i>
-              </button>
+                <div class="col-lg-3 col-12 col-md-6 mb-4">
+                    <h3 class="mb-3 text-white">Subscribe newsletter</h3>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email Address"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn bg text-white" type="button">
+                                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+
+
         </div>
-      </div>
-
- 
-    </div>
-    <p class="mb-0 mx-auto bg-col pb-3 text-white container-fluid p-3 text-center bottom-footer">© 2024 AiSystemSoft
-      All Rights Reserved</p>
-  </footer>
-
+        <p class="mb-0 mx-auto bg-col pb-3 text-white container-fluid p-3 text-center bottom-footer">© 2024
+            AiSystemSoft
+            All Rights Reserved</p>
+    </footer>
 
 
     <!-- FOOTER -->
@@ -604,48 +1014,65 @@
     <!-- SWIPER CDN -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
-     <!-- INTERNEL JS  -->
-     <script>
+    <!-- EXTERNEL JS FILE -->
+    <!-- <script src="JS/app.js"></script> -->
+    <!-- EXTERNEL JS FILE -->
+    <!-- INTERNEL JS  -->
+    <script>
+        // PHONE NUM
+        // const input1=document.querySelectorAll("#phone")
+        const inputs = document.querySelectorAll(".phonenum");
+
+        inputs.forEach(input => {
+            window.intlTelInput(input, {
+                initialCountry: "us",
+                separateDialCode: true,
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js", // For formatting
+            });
+        });
+        // PHONE NUM
         window.addEventListener("scroll", function () {
 
-    
-var navunder=document.getElementById("navunder");
-const scrollableHeight = document.body.scrollHeight - window.innerHeight;
+
+            var navunder = document.getElementById("navunder");
+            const scrollableHeight = document.body.scrollHeight - window.innerHeight;
 
 
-const scrollProgress = (window.scrollY / scrollableHeight) * 98;
+            const scrollProgress = (window.scrollY / scrollableHeight) * 98;
 
-if(scrollProgress >95){
-  document.getElementById("topbtn").innerHTML=`<i class="fa-solid fa-arrow-up"></i>`;
-}
-else{
-  this.document.getElementById("topbtn").innerHTML=scrollProgress.toFixed(0)+"%";
+            if (scrollProgress > 95) {
+                document.getElementById("topbtn").innerHTML = `<i class="fa-solid fa-arrow-up"></i>`;
+            }
+            else {
+                this.document.getElementById("topbtn").innerHTML = scrollProgress.toFixed(0) + "%";
 
-}
-navunder.style.width=`${scrollProgress}vw`
-var navbar = document.getElementById("navbar");
-var navlink=document.querySelectorAll(".nav-item > .nav-link")
-var btn=document.querySelector(".btn-red")
+            }
+            navunder.style.width = `${scrollProgress}vw`
+            var navbar = document.getElementById("navbar");
+            var navlink = document.querySelectorAll(".nav-item > .nav-link")
+            var btn = document.querySelector(".btn-red")
 
 
-if (window.scrollY > 400) {
-navbar.classList.add("navfix1");// Add fade-in class
-btn.classList.add("nav-color")
-navlink.forEach((e)=>{
-    e.classList.add("nav-color")
-})
-} else {
-btn.classList.remove("nav-color")
+            if (window.scrollY > 400) {
+                navbar.classList.add("navfix1");// Add fade-in class
+                btn.classList.add("nav-color")
+                navlink.forEach((e) => {
+                    e.classList.add("nav-color")
+                })
+            } else {
+                btn.classList.remove("nav-color")
 
-navbar.classList.remove("navfix1"); // Remove fade-in class
+                navbar.classList.remove("navfix1"); // Remove fade-in class
 
-navlink.forEach((e)=>{
-    e.classList.remove("nav-color")
-})
-}
-});
-      </script>
-      <!-- INTERNEL JS -->
+                navlink.forEach((e) => {
+                    e.classList.remove("nav-color")
+                })
+            }
+        });
+    </script>
+    <!-- INTERNEL JS -->
+    <!-- TELL NO CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
 </body>
 
 </html>
