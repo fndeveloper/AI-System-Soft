@@ -14,7 +14,7 @@
 }
 
 body {
-   color: rgb(48, 48, 48) !important;
+    color: rgb(48, 48, 48) !important;
     font-weight: 700 !important;
     font-family: var(--font-family) !important;
 }
@@ -120,39 +120,47 @@ body {
 
 .navbar {
 
-background-color: transparent;
+    background-color: transparent;
     z-index: 1111 !important;
-position: absolute !important;
-top: 0%;
-left: 0%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.158) ;
+    position: absolute !important;
+    top: 0%;
+    left: 0%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.158);
     transition: 0.4s ease-in-out !important;
 }
-.nav-item>a{
-    color:white ;
+
+.nav-item>a {
+    color: white;
 }
-.nav-sec-col{
-    color: var(--color1) !important;
+
+.nav-sec-col {
+    color: #4b4b4b !important;
+    font-weight: 400 !important;
+
 }
+
 #topbtn {
     font-size: 24px !important;
 
 }
-.main1{
+
+.main1 {
     position: relative;
-height: 97vh;
+    height: 97vh;
     margin: 0px;
     padding: 0px;
- 
+
 }
-.banner-img{
+
+.banner-img {
     top: 0% !important;
     left: 0%;
-height: 100%;
+    height: 100%;
     object-fit: cover;
     z-index: -1;
     position: absolute !important;
 }
+
 .topbtnfix {
     color: white;
     padding: 15px 10px !important;
@@ -212,8 +220,8 @@ height: 100%;
 
     border-radius: 50% !important;
     border: 1px solid white;
-    color:white ;
-    padding:6px 10px;
+    color: white;
+    padding: 6px 10px;
     background-color: transparent;
 }
 
@@ -267,10 +275,12 @@ height: 100%;
         padding: 5px !important;
     }
 }
-.icon-fixeds{
-border: 1px solid var(--color1) !important;
-    color: var(--color1)!important;
+
+.icon-fixeds {
+    border: 1px solid var(--color1) !important;
+    color: var(--color1) !important;
 }
+
 .offcanvas {
     z-index: 1111 !important;
 }
@@ -614,7 +624,7 @@ footer {
     background-size: cover;
     object-fit: cover;
     background-position: center;
-    background-image: url("/Assets/Banner-Image/banner-img-10.png");
+    /* background-image: url("/Assets/Banner-Image/banner-img-10.png"); */
     background-color: var(--bg-color) !important;
 }
 
@@ -865,9 +875,10 @@ swiper-slide:hover .slide-pos {
 
 }
 
-.nav-item>.nav-link{
+.nav-item>.nav-link {
     color: white;
 }
+
 .nav-item>.nav-link:hover {
     color: var(--color1) !important;
 }
@@ -1080,32 +1091,101 @@ swiper-slide:hover .slide-pos {
 
 /* ACCORDIAN */
 
-.ser-img-2{
-    background-position:left !important;
+.ser-img-2 {
+    background-position: left !important;
     object-fit: cover;
     background-size: cover;
-    height: 60vh !important ;
+    height: 60vh !important;
 }
+
 /* date picker */
 .fo::before {
-    content: "Select a date" !important; /* Custom placeholder text */
+    content: "Select a date" !important;
+    /* Custom placeholder text */
     position: absolute !important;
-    top: 10px; /* Adjust according to your design */
+    top: 10px;
+    /* Adjust according to your design */
     left: 10px;
     color: #aaa;
     pointer-events: none;
     font-size: 14px;
-  }
+}
 
-  .fo:focus::before {
-    content: "" !important; /* Remove placeholder text when focused */
-  }
+.fo:focus::before {
+    content: "" !important;
 
-  .fo:valid::before {
-    content: "" !important; /* Remove placeholder text when a valid date is selected */
-  }
+}
+
+.fo:valid::before {
+    content: "" !important;
+
+}
+
 /* date picker */
 
-.z-1{
+.z-1 {
     z-index: -1;
 }
+
+.home {
+    height: 76vh;
+    position: relative;
+    background-position: right top;
+    background-size: cover;
+    object-fit: cover;
+
+}
+
+.home-img {
+    z-index: -1;
+    background-size: cover;
+    object-fit: cover;
+    height: 100%;
+    position: absolute;
+}
+
+/*  */
+.fill-white {
+    fill: white !important;
+}
+
+.btnhome {
+    position: absolute;
+    bottom: -10px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: none;
+    color: white !important;
+    left: 6.5%;
+    border: 1px solid rgba(255, 255, 255, 0.253);
+    background-color: var(--color1);
+}
+
+.navfix1 {
+    background-color: white !important;
+}
+
+.nav-color {
+    color: #2e2e2ec5 !important;
+    transition: 0.1s ease-in-out !important;
+
+}
+
+.h20 {
+    z-index: -1;
+    height: 80vh;
+    width: 100%;
+    background-repeat: no-repeat;
+object-fit: cover;
+    background-position: center !important;
+    } input,.form-control{
+    border: 1px solid rgb(196, 196, 196) !important;
+    background-color: white !important;
+
+  }
+  .phonenum{
+    color: black !important;
+  }
+  .form-control::placeholder{
+    color: black !important;
+  }

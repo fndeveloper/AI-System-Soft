@@ -57,13 +57,13 @@ window.addEventListener("scroll", function () {
 
 
 // COUNTRY CODE
-// const inputs = document.querySelector(".phonenum");
+const inputs = document.querySelectorAll(".phonenum");
 
-// inputs.forEach(input => {
-//     window.intlTelInput(input, {
-//         initialCountry: "us",
-//         separateDialCode: true,
-//         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js", // For formatting
-//     });
-// });
+inputs.forEach(input => {
+    window.intlTelInput(input, {
+        initialCountry: "us",
+        separateDialCode: true,
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js", // For formatting
+    });
+});
 // COUNTRY CODE

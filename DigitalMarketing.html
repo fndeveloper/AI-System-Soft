@@ -21,69 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        :root {
-            --font-family: "Raleway", serif;
-            --font-family-play: "Play", serif;
-            --para-color: #545454;
-            --color1: #811f10;
 
-            --color-black: #686868;
-            --border-col: #1818182f;
-            --bg-color: #1A1A1A;
-            --color-round: rgba(220, 220, 220, 0.966);
-        }
-
-        body {
-            font-family: var(--font-family) !important;
-        }
-
-        .home {
-            height: 56vh;
-            position: relative;
-            background-position: right top;
-            background-size: cover;
-            object-fit: cover;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.418)), url("Assets/Banner-Image/banner-img-8.jpg");
-        }
-.para-col{
-    color: var(--para-color) !important;
-}
-        .navbar {
-            position: absolute;
-            top: 0%;
-            background-color: transparent !important;
-        }
-
-        .nav-item>.nav-link {
-            color: white !important;
-        }
-
-        .btn-red {
-            color: white !important;
-            border: 1px solid white !important;
-        }
-
-        .navbar {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.192);
-        }
-
-        .fill-white {
-            fill: white !important;
-        }
-
-        .btnhome {
-            position: absolute;
-            bottom: -10px;
-            padding: 5px 15px;
-            border-radius: 20px;
-            border: none;
-            color: white !important;
-            left: 6.5%;
-            border: 1px solid rgba(255, 255, 255, 0.253);
-            background-color: var(--color1);
-        }
-    </style>
 </head>
 
 <body>
@@ -94,81 +32,79 @@
     </a>
     <!-- HOME START -->
     <div id="home1" class="home d-flex  align-items-center">
+<img src="Assets/Banner-Image/banner-img-8.jpg" class="home-img w-100" alt="">
      
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg px-0 py-2 container-fluid d-flex flex-column" id="navbar1">
-    <div class="container-fluid d-flex flex-row justify-content-between">
-      <!-- Logo -->
-      <a class="navbar-brand" href="#">
-             <img src="assets/Logo/logo.png" alt="Logo" class="col-lg-2 col-2" />
+<nav class="navbar navbar-expand-lg px-0 py-2 container-fluid d-flex flex-column" id="navbar">
+  <div class="container-fluid d-flex flex-row justify-content-between">
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img src="assets/Logo/logo.png" alt="Logo" class="col-lg-2 col-2 pe-lg-3" />
 
-      </a>
+    </a>
 
-      <!-- Toggler Button -->
- <button class="btn btn-red navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-  <i class="fa-solid fa-bars"></i>
+    <!-- Toggler Button -->
+
+<button class="btn btn-red navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+<i class="fa-solid fa-bars"></i>
 </button>
+    <!-- Collapsible Navbar Content -->
+    <div class="collapse sdsd navbar-collapse d-flex flex-row " id="navbarSupportedContent">
+      <ul class="navbar-nav  mt-2 mb-lg-0 d-lg-flex d-none">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          <span class="navhover"></span>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Service
+          </a>
+          <span class="navhover"></span>
+          <ul class="dropdown-menu mx-auto">
+            <li><a class="dropdown-item nav-link" href="AiProductSolution.html">AiProductSolution
+          
 
-      <!-- Collapsible Navbar Content -->
-      <div class="collapse sdsd navbar-collapse d-flex flex-row justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mt-2 mb-lg-0 d-lg-flex d-none">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="index.html">Home</a>
-            <span class="navhover"></span>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Service
-            </a>
-            <span class="navhover"></span>
-            <ul class="dropdown-menu mx-auto">
-              <li><a class="dropdown-item nav-link" href="AiProductSolution.html">AiProductSolution</a></li>
-              <li><a class="dropdown-item nav-link" href="GrcSolution.html">GRC Solutions</a></li>
-              <li><a class="dropdown-item nav-link" href="Web-AppDevelopment.html">Web & App Development</a></li>
-              <li><a class="dropdown-item nav-link" href="EcommerceSolution.html">Ecommerce Solutions</a></li>
-              <li><a class="dropdown-item nav-link" href="DigitalMarketing.html">
+
+            </a></li>
+            <li><a class="dropdown-item nav-link" href="GrcSolution.html">GRC Solutions</a></li>
+            <li><a class="dropdown-item nav-link" href="Web-AppDevelopment.html">Web & App Development</a></li>
+            <li><a class="dropdown-item nav-link" href="EcommerceSolution.html">Ecommerce Solutions</a></li>
+            <li><a class="dropdown-item nav-link" href="DigitalMarketing.html">
                 Digital Marketing</a></li>
 
-            </ul>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="about.html"  aria-expanded="false">
-             About-Us
-            </a>
-            <span class="navhover"></span>
-            <!-- <ul class="dropdown-menu mx-auto">
-              <li><a class="dropdown-item nav-link" href="memberships/ScoutMemberships.html">Cybron Scout
-                  Memberships</a></li>
-              <li><a class="dropdown-item nav-link" href="memberships/AssociateMemberships.html">Cybron Associate
-                  Memberships</a></li>
-              <li><a class="dropdown-item nav-link" href="memberships/ProfessionalMemberships.html">Cybron Professional
-                  Memberships</a></li>
-            </ul> -->
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="portfolio.html">Portfolio</a>
-            <span class="navhover"></span>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us</a>
-            <span class="navhover"></span>
-          </li>
-        </ul>
+          </ul>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="about.html" aria-expanded="false">
+            About-Us
+          </a>
+          <span class="navhover"></span>
+      
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="portfolio.html">Portfolio</a>
+          <span class="navhover"></span>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+          <span class="navhover"></span>
+        </li>
+      </ul>
 
-        <!-- Offcanvas Button -->
-        <form class="d-flex " role="search">
-          <div class="input-group">
-          <button class="btn btn-red" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight1">
-        <i class="fa-solid fa-bars"></i>
-</button>
-          </div>
-        </form>
-      </div>
+      <!-- Offcanvas Button -->
+      <form class="d-lg-flex d-none ms-auto " role="search">
+        <div class="input-group">
+          <button class=" btn-red" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1"
+            aria-controls="offcanvasRight1">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </form>
     </div>
-    <!-- Optional Element -->
-    <div class="" id="navunder"></div>
-  </nav>
-
+  </div>
+  <!-- Optional Element -->
+  <div class="" id="navunder"></div>
+</nav>
   <!-- NAVBAR -->
 
         <div class="container d-flex flex-lg-row  align-items-center flex-column">
