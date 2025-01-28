@@ -624,7 +624,6 @@ footer {
     background-size: cover;
     object-fit: cover;
     background-position: center;
-    /* background-image: url("/Assets/Banner-Image/banner-img-10.png"); */
     background-color: var(--bg-color) !important;
 }
 

@@ -930,63 +930,9 @@
     <!-- SWIPER CDN -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
-    <!-- EXTERNEL JS FILE -->
-    <!-- <script src="JS/app.js"></script> -->
-    <!-- EXTERNEL JS FILE -->
-    <!-- INTERNEL JS  -->
-    <script>
-        // PHONE NUM
-        // const input1=document.querySelectorAll("#phone")
-        const inputs = document.querySelectorAll(".phonenum");
-
-        inputs.forEach(input => {
-            window.intlTelInput(input, {
-                initialCountry: "us",
-                separateDialCode: true,
-                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js", // For formatting
-            });
-        });
-        // PHONE NUM
-        window.addEventListener("scroll", function () {
-
-
-            var navunder = document.getElementById("navunder");
-            const scrollableHeight = document.body.scrollHeight - window.innerHeight;
-
-
-            const scrollProgress = (window.scrollY / scrollableHeight) * 98;
-
-            if (scrollProgress > 95) {
-                document.getElementById("topbtn").innerHTML = `<i class="fa-solid fa-arrow-up"></i>`;
-            }
-            else {
-                this.document.getElementById("topbtn").innerHTML = scrollProgress.toFixed(0) + "%";
-
-            }
-            navunder.style.width = `${scrollProgress}vw`
-            var navbar = document.getElementById("navbar");
-            var navlink = document.querySelectorAll(".nav-item > .nav-link")
-            var btn = document.querySelector(".btn-red")
-
-
-            if (window.scrollY > 400) {
-                navbar.classList.add("navfix1");// Add fade-in class
-                btn.classList.add("nav-color")
-                navlink.forEach((e) => {
-                    e.classList.add("nav-color")
-                })
-            } else {
-                btn.classList.remove("nav-color")
-
-                navbar.classList.remove("navfix1"); // Remove fade-in class
-
-                navlink.forEach((e) => {
-                    e.classList.remove("nav-color")
-                })
-            }
-        });
-    </script>
-    <!-- INTERNEL JS -->
+  <!-- EXTERNEL JS FILE -->
+  <script src="JS/app.js"></script>
+  <!-- EXTERNEL JS FILE -->
     <!-- TELL NO CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
 </body>

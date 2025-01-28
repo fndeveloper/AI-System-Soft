@@ -529,38 +529,7 @@
   <!-- EXTERNEL JS FILE -->
   <script src="JS/app.js"></script>
   <!-- EXTERNEL JS FILE -->
-  <!-- INTERNEL FILES JS -->
-  <script>
 
-    // COUNTRY CODE
-     const inputs = document.querySelectorAll(".phonenum");
-console.log(inputs);
-
-inputs.forEach(input => {
-    window.intlTelInput(input, {
-        initialCountry: "us",
-        separateDialCode: true,
-        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js", // For formatting
-    });
-});
-    
-    var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  });
-}
-    // COUNTRY CODE
-  </script>
-  <!-- INTERNEL FILES JS -->
 </body>
 
 </html>
