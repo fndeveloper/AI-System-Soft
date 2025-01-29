@@ -20,6 +20,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <!-- intl-tel-input CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+ <!-- Utils (Optional) -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"></script>
 
   <title>Contact Us | Intelligent & Cyber Secure Solutions</title>
 </head>
@@ -331,7 +336,8 @@
             <input type="text" class="form-control form-control1" id="lastName" placeholder="Last Name" required>
           </div>
           <div class="col-md-6">
-            <input type="tel" class="form-control form-control1" id="phoneNumber" placeholder="Phone Number" required>
+            <!-- <input type="tel" class="form-control form-control1 phonenum" id="phoneNumber" placeholder=" Phone Number" required> -->
+            <input id="phone" type="tel" class="mb-3 col-12 mb-3 phonenum">
           </div>
 
           <div class="col-md-6">
