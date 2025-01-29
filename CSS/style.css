@@ -1017,9 +1017,12 @@ height: auto !important;
 @media (min-width:992px) {
     .sticky-element {
         position: sticky !important;
-        height: 130vh !important;
+        /* max-height: 140vh !important; */
         top: 2%;
+        
 
+        min-height: 120vh !important;
+        max-height:170vh !important;
         z-index: 10;
     }
 }
