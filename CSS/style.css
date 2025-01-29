@@ -483,9 +483,7 @@ input {
 .form-control,
 .form-select {
     transition: 0.5s ease-in-out !important;
-    border: none !important;
-    color: white !important;
-    background-color: var(--bg-color) !important;
+
 }
 
 .navfix {
