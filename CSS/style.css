@@ -146,13 +146,18 @@ background-color: #811f1000 !important;
 
 .main1 {
     position: relative;
-    height: 97vh;
+    min-height: 95vh !important;
+
     margin: 0px;
     padding: 0px;
 
 
 }
-
+@media (max-width:992px) {
+    .main1 {
+        height: 120vh !important;
+    }
+}
 
 .banner-img {
     position: absolute !important;
@@ -852,7 +857,7 @@ swiper-slide:hover .slide-pos {
 }
 
 .dropdown-menu {
-    height: 0% !important;
+    /* height: 0% !important; */
 
     transition: 0.5s ease-in-out !important;
     transform: rotateX(90deg) !important;
@@ -879,7 +884,7 @@ swiper-slide:hover .slide-pos {
 
 .dropdown:hover .dropdown-menu {
     display: block !important;
-height: 200px !important;
+height: auto !important;
     transform: rotateX(0deg) !important;
 
 }
