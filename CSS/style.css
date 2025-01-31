@@ -1156,6 +1156,35 @@ height: auto !important;
     object-fit: cover;
 
 }
+.text-eni {
+    position: relative;
+    width: fit-content;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+color: transparent !important;
+}
+
+.text-ani-child {
+    position: absolute;
+    width: 50%;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 90%;
+color: white;
+border-right: 2px solid white;
+    animation: move 5s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        width: 20%;
+    }
+    100% {
+/* color: white; */
+        width: 100%;
+    }
+}
 .home-im{
     object-fit: cover !important;
     background-size: cover !important;
