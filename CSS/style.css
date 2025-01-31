@@ -158,13 +158,15 @@ background-color: #811f1000 !important;
         height: 120vh !important;
     }
 }
-
+.banner-img-home{
+    height: 100% !important;
+}
 .banner-img {
     position: absolute !important;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 90%;
     z-index: -1;
     object-fit: cover;
     background-attachment: fixed !important;
@@ -172,7 +174,9 @@ background-color: #811f1000 !important;
     background-size: cover;
     animation: fn 7.5s ease-in-out infinite;
 }
-
+.main1{
+    height: 10vh !important;
+}
 .topbtnfix {
     color: white;
     padding: 15px 10px !important;
@@ -1141,7 +1145,7 @@ height: auto !important;
 }
 
 .home {
-    height: 76vh;
+    height: 78vh !important;
     position: relative;
     background-position: right top;
     background-size: cover;
@@ -1153,7 +1157,7 @@ height: auto !important;
     z-index: -1;
     background-size: cover;
     object-fit: cover;
-    height: 100%;
+    height: 90% !important;
     position: absolute;
 }
 
