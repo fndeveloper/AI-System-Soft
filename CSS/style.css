@@ -855,15 +855,13 @@ swiper-slide:hover .slide-pos {
 }
 
 .dropdown-menu {
-    /* height: 0% !important; */
-
     transition: 0.5s ease-in-out !important;
-    transform: rotateX(90deg) !important;
+
 }
 
 .dropdown-menu>li>.dropdown-item {
     transition: 0.2s ease-in-out !important;
-    color: white !important;
+    color: #2e2e2ec5 !important;
 }
 
 .who1 {
@@ -871,13 +869,13 @@ swiper-slide:hover .slide-pos {
 }
 
 .dropdown-menu>li>.dropdown-item:hover {
-    background-color: white;
-    color: var(--color1) !important;
+    background-color: var(--color1);
+    color: white !important;
 }
 
 .dropdown-menu {
     padding: 14px !important;
-    background-color: var(--color1) !important;
+    background-color: white !important;
 }
 
 .dropdown:hover .dropdown-menu {
