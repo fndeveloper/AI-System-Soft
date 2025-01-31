@@ -19,9 +19,9 @@ window.addEventListener("scroll", function () {
 
   var navlinkd = this.document.querySelectorAll(".nav-item>.nav-link")
 
-  if (window.scrollY > 400) {
+  if (window.scrollY > 700) {
     navbar.classList.add("navfix");
-this.document.getElementById("logo").src="Assets/images/Logo/Ai-SS-Logo.jpg"
+// this.document.getElementById("logo").src="Assets/images/Logo/Ai-SS-Logo.jpg"
     iconf.forEach((e) => {
       e.classList.add("icon-fixeds")
     })
@@ -29,7 +29,7 @@ this.document.getElementById("logo").src="Assets/images/Logo/Ai-SS-Logo.jpg"
       e.classList.add("nav-sec-col")
     })
   } else {
-this.document.getElementById("logo").src="Assets/images/Logo/light_logo.png"
+// this.document.getElementById("logo").src="Assets/images/Logo/Ai-SS-Logo.jpg"
 
     iconf.forEach((e) => {
       e.classList.remove("icon-fixeds")
