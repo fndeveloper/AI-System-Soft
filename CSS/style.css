@@ -780,7 +780,7 @@ footer {
 
 .paraa-1 {
 
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     font-weight: 600;
     font-size: 15px !important;
 }
@@ -1244,7 +1244,7 @@ swiper-slide:hover .slide-pos {
 
 .btnhome {
     position: absolute;
-    bottom: -10px;
+    bottom: 26px !important;
     padding: 5px 15px;
     border-radius: 20px;
     border: none;
