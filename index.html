@@ -27,7 +27,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
   <!-- Utils (Optional) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"></script>
-
+<!-- SWIPER CDN -->
+<link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+<!-- SWIPER CDN -->
 
 </head>
 
@@ -331,61 +333,40 @@
 
   <div class="container-fluid who  p-3 d-flex flex-lg-row flex-column p-0 m-0 justify-content-between">
 
-    <div class="col-lg-5 col-md-6 col-12  text-white1 d-flex flex-row position-relative align-items-center">
-      <img src="Assets/images/Pictures/testimonial.jpg" class="position-absolute img-fluid col-12 h-100  rounded-3 i22" alt="">
-      <div class="col-lg-12 ps-lg-3 col-md-6 col-12 d-flex flex-row align-items-center">
-        <h2 class="display-5 fw-normal col-lg-9 text-white1 i22"><span class="num">30</span>+ Years Experience Team of
-          Consultants</h2>
-  
-      </div>
-    </div>
+    <div class="col-lg-3 col-md-6 col-12  text-white1 d-flex flex-row  align-items-center">
+      <img src="Assets/images/Pictures/testimonial.jpg" class="img-fluid col-12 h-100  rounded-3 i22" alt="">
  
+    </div>
+    <div class="col-lg-3  col-md-6 col-12 d-flex flex-column ">
+      <h2 class="display-6 fw-normal col-lg-12 text-white1"><span class="num">30</span>+ Years Experience Team of
+        Consultants</h2>
+        <p class="text-white fw-light py-4"> We are dedicated to delivering innovative solutions that drive success and optimize operations for our clients.</p>
+        <div class="custom-navigation">
+          <button id="prevBtn">Prev</button>
+          <button id="nextBtn">Next</button>
+        </div>
+      
+   
+      </div>
     <div class="col-lg-5 col-md-6  col-12 text-white1">
-      <swiper-container class="mySwiper col-12" pautoplay-delay="3500">
+      <div class="slider-container col-12">
 
-        <swiper-slide>
-
-          <div class="col-lg-12  col-md-8 text-jus ">
-            <span class="mb-4 py-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
-            <p class="col-text py-5 fs-6">
-              “Very well thought out and articulate communication. Clear milestones, deadlines and fast work.
-              Patience. Infinite patience. No shortcuts. Even if the client is being careless. The best part...always
-              solving problems with great original ideas!”
-            </p>
-       
+        <div class="slider-wrapper " id="sliderWrapper">
+        
+          <div class="slider-item d-flex flex-column">
+       <span ><i class="fa-solid fa-quote-left fs-1"></i></span>
+       <h5 class="fw-light fs-5"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, maxime.</h5>
+       <span><i class="fa-solid fa-quote-right fs-1 float-end"></i></span>
           </div>
+          <div class="slider-item">Slide 2</div>
+          <div class="slider-item">Slide 3</div>
+          <div class="slider-item">Slide 4</div>
+          <div class="slider-item">Slide 5</div>
+        </div>
 
-        </swiper-slide>
-        <swiper-slide>
-
-          <div class="col-lg-12  col-md-8  ">
-            <span class="mb-4 py-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
-            <p class="col-text py-5 fs-6">
-              “Very well thought out and articulate communication. Clear milestones, deadlines and fast work.
-              Patience. Infinite patience. No shortcuts. Even if the client is being careless. The best part...always
-              solving problems with great original ideas!”
-            </p>
-         
-          </div>
-
-        </swiper-slide>
-        <swiper-slide>
-          <div class="col-lg-12  col-md-8  ">
-            <span class="mb-4 py-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
-            <p class="col-text py-5">
-              “Very well thought out and articulate communication. Clear milestones, deadlines and fast work.
-              Patience. Infinite patience. No shortcuts. Even if the client is being careless. The best part...always
-              solving problems with great original ideas!”
-            </p>
-         
-          </div>
-
-        </swiper-slide>
-
-      </swiper-container>
+      </div>
+    
+    
     
     </div>
   </div>

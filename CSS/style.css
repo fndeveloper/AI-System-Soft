@@ -1306,3 +1306,57 @@ input,
 /* MARQUEE START */
 
 /* MARQUEE END */
+.slider-container {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    overflow: hidden; 
+  }
+
+  /* Slider wrapper */
+  .slider-wrapper {
+    display: flex;
+    transition: transform 1.5s ease-in-out; 
+  }
+
+  /* Slider item styling */
+  .slider-item {
+
+    border-radius: 8px;
+    padding: 10px;
+    clip-path: polygon(0% 0%, 100% 0%, 99% 91%, 75% 91%, 75% 100%, 58% 91%, 0 90%);
+    min-width: 100%; 
+    height: 350px;
+    margin-top: 20px;
+    background-color: var(--color1);
+   display: flex;
+flex-direction: column;
+justify-content: space-around;
+   font-size: 24px;
+
+  }
+
+  /* Navigation buttons styling */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--color1) !important;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  /* Optional: Add a little hover effect to buttons */
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
