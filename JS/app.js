@@ -20,6 +20,8 @@ window.addEventListener("scroll", function () {
   var navlinkd = this.document.querySelectorAll(".nav-item>.nav-link")
 
   if (window.scrollY > 700) {
+    
+    this.document.querySelector("topbtnfix").style.bottom="20px"
     navbar.classList.add("navfix");
 // this.document.getElementById("logo").src="Assets/images/Logo/Ai-SS-Logo.jpg"
     iconf.forEach((e) => {
