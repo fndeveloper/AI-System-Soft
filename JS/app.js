@@ -21,17 +21,14 @@ window.addEventListener("scroll", function () {
 
   if (window.scrollY > 700) {
     
-    this.document.querySelector("topbtnfix").style.bottom="20px"
-    navbar.classList.add("navfix");
-// this.document.getElementById("logo").src="Assets/images/Logo/Ai-SS-Logo.jpg"
-    iconf.forEach((e) => {
+      navbar.classList.add("navfix");
+   iconf.forEach((e) => {
       e.classList.add("icon-fixeds")
     })
     navlinkd.forEach((e) => {
       e.classList.add("nav-sec-col")
     })
   } else {
-// this.document.getElementById("logo").src="Assets/images/Logo/Ai-SS-Logo.jpg"
 
     iconf.forEach((e) => {
       e.classList.remove("icon-fixeds")

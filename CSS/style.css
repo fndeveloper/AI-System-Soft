@@ -201,7 +201,9 @@ body {
     transition: 0.9s ease-in-out !important;
    
 }
-
+.text-jus{
+    text-align: justify !important;
+}
 /* NAV-HOVER */
 .navhover {
     /* background-color: #bb9108 !important; */
@@ -780,9 +782,11 @@ footer {
     padding: 0px;
     background-color: var(--color1);
 }
-
+.fa-circle{
+    font-size: 6px !important;
+}
 .paraa-1 {
-
+text-align: justify;
     /* text-transform: capitalize; */
     font-weight: 600;
     font-size: 15px !important;
@@ -1247,7 +1251,7 @@ swiper-slide:hover .slide-pos {
 
 .btnhome {
     position: absolute;
-    bottom: 26px !important;
+    bottom: 26px ;
     padding: 5px 15px;
     border-radius: 20px;
     border: none;
