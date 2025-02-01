@@ -1251,6 +1251,10 @@ swiper-slide:hover .slide-pos {
     fill: white !important;
 }
 .i22{
+    background-position: center;
+    object-fit: cover;
+    background-size: cover;
+    height: 250px;
     z-index: 1;
 }
 .btnhome {
