@@ -912,8 +912,12 @@ swiper-slide:hover .slide-pos {
 }
 
 .dropdown-menu>li>.dropdown-item {
+    padding: 10px 0px;
+  font-weight: 400;
+  border-bottom: 1px solid var(--border-col);
+  font-size: 16px !important;
     transition: 0.2s ease-in-out !important;
-    color: #2e2e2ec5 !important;
+    color: #1b1b1bc5 !important;
 }
 
 .who1 {
