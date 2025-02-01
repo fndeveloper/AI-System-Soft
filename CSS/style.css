@@ -1360,3 +1360,14 @@ justify-content: space-around;
   .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
+  .custom-navigation>button:hover{
+    background-color: var(--color1) !important;
+  }
+  .custom-navigation>button{
+    padding: 15px;
+transition: 0.3s ease-in-out;
+    border: none;
+    color: white;
+    border: 1px solid var(--para-color);
+    background-color: transparent;
+  }
