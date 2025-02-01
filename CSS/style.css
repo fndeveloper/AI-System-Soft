@@ -821,9 +821,11 @@ swiper-container {
 }
 
 swiper-slide {
-    text-align: center;
+    height: 100%;
+    padding: 10px;
+    text-align: justify;
     font-size: 18px;
-
+    clip-path: polygon(0% 0%, 100% 0%, 100% 94%, 75% 94%, 75% 100%, 67% 95%, 0 95%);  background-color: var(--color1);
 
 }
 
@@ -1248,7 +1250,9 @@ swiper-slide:hover .slide-pos {
 .fill-white {
     fill: white !important;
 }
-
+.i22{
+    z-index: 1;
+}
 .btnhome {
     position: absolute;
     bottom: 26px ;
