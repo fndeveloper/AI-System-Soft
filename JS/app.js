@@ -74,3 +74,7 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 // ACCORDIAN
+
+// MARQUEE START
+
+// MARQUEE END

@@ -377,7 +377,9 @@ body {
     bottom: 30% !important;
 }
 
-
+a:hover,button:hover{
+    cursor: grabbing !important;
+}
 
 .pb-g {
     font-size: 14px;
@@ -1289,3 +1291,6 @@ input,
     color: black !important;
 
 }
+/* MARQUEE START */
+
+/* MARQUEE END */
