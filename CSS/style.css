@@ -1376,3 +1376,17 @@ transition: 0.3s ease-in-out;
     border: 1px solid var(--para-color);
     background-color: transparent;
   }
+  .contact_image{
+    background-size: cover;
+    object-fit: cover;
+    height: 70vh !important;
+  }
+  @media (max-width:992px) {
+      
+      .phonenum{
+        width:58vw !important;
+      }
+  }
+  .phonenum{
+    width:22vw ;
+  }
