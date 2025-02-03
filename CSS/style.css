@@ -1390,3 +1390,37 @@ transition: 0.3s ease-in-out;
   .phonenum{
     width:22vw ;
   }
+  /* MARQUEE START*/
+  /* Container for the scrolling effect */
+.marquee-container {
+    width: 100vw;
+    overflow: hidden;
+    background-color: #fff; /* Optional: background color for the scrolling container */
+    position: relative;
+  }
+  
+  .marquee-content {
+    display: flex;
+    width: max-content;
+    animation: marquee  linear infinite;
+    animation-duration: 46s !important;
+    animation-delay: 1s !important;
+  }
+  
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%); 
+    }
+  }
+  
+  .marquee-content img {
+    margin-right: 20px; 
+    max-height: 100px;
+    object-fit: contain; 
+  }
+  
+  /* MARQUE END */
