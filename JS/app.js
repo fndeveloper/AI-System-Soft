@@ -113,3 +113,7 @@ prevBtn.addEventListener('click', () => {
 
 showSlide(currentIndex);
 // SWIPER HOME JS 
+
+// MARQUEE SLIDER START
+
+// MARQUEE SLIDER END
