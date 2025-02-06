@@ -1,70 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GoPayFast Payment</title>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اسکرول اینیمیشن مثال</title>
+  <style>
+    body {
+      height: 200vh;
+      --scroll: 0;
+    }
+    .animated-element {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) translateY(calc(var(--scroll) * 100px));
+      opacity: calc(1 - var(--scroll));
+      transition: transform 0.1s linear, opacity 0.1s linear;
+    }
+  </style>
 </head>
 <body>
+  <div class="animated-element"><h1>hi my name is fasih nasir </h1></div>
 
-    <form id="gopayfast-form">
-        <input type="hidden" id="merchant_id" value="20472">
-        <input type="hidden" id="merchant_key" value="l_MKeZj96jSHDlnLRqds7yPk1">
-        <input type="hidden" id="return_url" value="YOUR_RETURN_URL">
-        <input type="hidden" id="cancel_url" value="YOUR_CANCEL_URL">
-        <input type="hidden" id="notify_url" value="YOUR_NOTIFY_URL">
-        <input type="hidden" id="amount" value="10.00">
-        <input type="hidden" id="item_name" value="Test Product">
-        <button type="button" id="payNowBtn">Pay Now</button>
-    </form>
-    <script src="https://api.gopayfast.com/v1/js/gopayfast.js" defer></script> <!-- Ensures it loads -->
-    <script>
-        window.onload = function() {
-            if (typeof GoPayFast === "undefined") {
-                console.error("GoPayFast library failed to load. Check the script URL.");
-                return;
-            }
-
-            document.getElementById("payNowBtn").addEventListener("click", function() {
-                var gp = new GoPayFast({
-                    merchantId: document.getElementById("merchant_id").value,
-                    merchantKey: document.getElementById("merchant_key").value,
-                    amount: document.getElementById("amount").value,
-                    itemName: document.getElementById("item_name").value,
-                    returnUrl: document.getElementById("return_url").value,
-                    cancelUrl: document.getElementById("cancel_url").value,
-                    notifyUrl: document.getElementById("notify_url").value
-                });
-
-                gp.pay(); // Call the payment function
-            });
-        };
-    </script>
-
-</body>
-</html>
-
-
-
-
-<!-- <script src="https://api.gopayfast.com/v1/js/gopayfast.js"></script>
-<button id="gopayfast-btn">Pay Now</button>
-
-<script>
-  var gopayfastBtn = document.getElementById('gopayfast-btn');
-  gopayfastBtn.addEventListener('click', function() {
-    var gp = new GoPayFast({
-      merchantId: '20472',
-      merchantKey: 'l_MKeZj96jSHDlnLRqds7yPk1',
-      amount: '10.00',
-      itemName: 'Test Product',
-      returnUrl: 'YOUR_RETURN_URL',
-      cancelUrl: 'YOUR_CANCEL_URL',
-      notifyUrl: 'YOUR_NOTIFY_URL'
-    });
-    gp.pay();
-  });
-</script> -->
+  <script>
+    window.addEventListener('scroll', () => {
+      document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+    }, false);
+  </script>
 </body>
 </html>

@@ -518,30 +518,18 @@ select {
 input {
     color: white !important;
 }
-
-.form-control:focus {
-    color: white !important;
-    outline: none !important;
+.form-control::placeholder{
+    font-weight: 300 !important;
+    color:rgba(255, 255, 255, 0.658)!important;
+}
+.form-control,.phonenum,select{
     border: none !important;
+    border-radius: 0% !important;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.349) !important;
+    background-color: transparent !important;
 }
 
-.form-control:focus .form-control::placeholder {
-    color: white !important;
-}
 
-.form-control {
-    box-sizing: border-box !important;
-    padding: 10px !important;
-    transition: 0.5s ease-in-out !important;
-
-    border: none !important;
-}
-
-.form-control,
-.form-select {
-    transition: 0.5s ease-in-out !important;
-
-}
 
 .navfix {
     position: fixed !important;
@@ -979,20 +967,17 @@ text-align: justify;
     transition: all 0.7s !important;
 }
 
-#phone {
 
-    font-family: var(--font-family-play);
-    background-color: var(--bg-color);
-    padding: 10px;
-
-    border: none;
-    border-radius: 2px;
-}
 
 .col-org {
     color: var(--color1) !important;
 }
-
+@media (max-width:992px) {
+    .phonenum{
+        width: calc(100vw - 30%) !important;
+    }
+    
+}
 .col-9> {
     font-family: var(--font-family-play) !important;
 }
@@ -1274,21 +1259,12 @@ text-align: justify;
     background-position: center !important;
 }
 
-input,
-.form-control {
-    border: 1px solid rgb(196, 196, 196) !important;
-    background-color: white !important;
-
-}
 
 .phonenum {
     color: black !important;
 }
 
-.form-control::placeholder {
-    color: black !important;
 
-}
 /* MARQUEE START */
 
 /* MARQUEE END */
@@ -1362,15 +1338,7 @@ transition: 0.3s ease-in-out;
     object-fit: cover;
     height: 70vh !important;
   }
-  @media (max-width:992px) {
-      
-      .phonenum{
-        width:58vw !important;
-      }
-  }
-  .phonenum{
-    width:22vw ;
-  }
+
   /* MARQUEE START*/
   /* Container for the scrolling effect */
 .marquee-container {
@@ -1424,3 +1392,12 @@ transition: 0.3s ease-in-out;
     object-fit: cover;
   }
   /* MARQUE SLIDER END */
+
+.form_ser>div>div>.form-control::placeholder{
+
+color: rgb(27, 27, 27) !important;
+}
+.form_ser>div>div>.form-control,.form_ser>div>div>.phonenum{
+ border: 1px solid var(--border-col) !important;
+ 
+}
