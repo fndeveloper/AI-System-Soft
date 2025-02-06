@@ -116,4 +116,5 @@ showSlide(currentIndex);
 
 // MARQUEE SLIDER START
 
-// MARQUEE SLIDER END
+// MARQUEE SLIDER 
+

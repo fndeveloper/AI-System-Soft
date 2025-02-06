@@ -1,31 +1,140 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>اسکرول اینیمیشن مثال</title>
+  <title>Card Slider</title>
   <style>
+    /* General Styles */
     body {
-      height: 200vh;
-      --scroll: 0;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
     }
-    .animated-element {
-      position: fixed;
+
+    /* Slider Container */
+    .slider-container {
+      position: relative;
+      width: 80%;
+      max-width: 900px;
+      overflow: hidden;
+    }
+
+    /* Card Wrapper */
+    .card-wrapper {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    /* Individual Card */
+    .card {
+      flex: 0 0 calc(33.33% - 20px); /* Show 3 cards at a time */
+      margin: 10px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    /* Arrows */
+    .arrow {
+      position: absolute;
       top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) translateY(calc(var(--scroll) * 100px));
-      opacity: calc(1 - var(--scroll));
-      transition: transform 0.1s linear, opacity 0.1s linear;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 24px;
+      border-radius: 50%;
+      transition: background-color 0.3s ease;
+    }
+
+    .arrow:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .left-arrow {
+      left: 10px;
+      z-index: 22;
+    }
+
+    .right-arrow {
+      right: 10px;
     }
   </style>
 </head>
 <body>
-  <div class="animated-element"><h1>hi my name is fasih nasir </h1></div>
+  <div class="slider-container">
+    <!-- Left Arrow -->
+    <button class="arrow left-arrow" onclick="slideLeft()">&#10094;</button>
+
+    <!-- Card Container -->
+    <div class="card-wrapper">
+      <div class="card">
+        <h3>Card 1</h3>
+        <p>This is the first card.</p>
+      </div>
+      <div class="card">
+        <h3>Card 2</h3>
+        <p>This is the second card.</p>
+      </div>
+      <div class="card">
+        <h3>Card 3</h3>
+        <p>This is the third card.</p>
+      </div>
+      <div class="card">
+        <h3>Card 4</h3>
+        <p>This is the fourth card.</p>
+      </div>
+      <div class="card">
+        <h3>Card 5</h3>
+        <p>This is the fifth card.</p>
+      </div>
+      <div class="card">
+        <h3>Card 6</h3>
+        <p>This is the sixth card.</p>
+      </div>
+      <div class="card">
+        <h3>Card 7</h3>
+        <p>This is the seventh card.</p>
+      </div>
+      <div class="card">
+        <h3>Card 8</h3>
+        <p>This is the eighth card.</p>
+      </div>
+    </div>
+
+    <!-- Right Arrow -->
+    <button class="arrow right-arrow" onclick="slideRight()">&#10095;</button>
+  </div>
 
   <script>
-    window.addEventListener('scroll', () => {
-      document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-    }, false);
+    let currentIndex = 0;
+    const cardWrapper = document.querySelector('.card-wrapper');
+    const cards = document.querySelectorAll('.card');
+    const cardWidth = cards[0].offsetWidth + 20; // Card width + margin
+
+    function slideLeft() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        cardWrapper.style.transform = `translateX(-${currentIndex * cardWidth * 3}px)`; // Move 3 cards at a time
+      }
+    }
+
+    function slideRight() {
+      if (currentIndex < cards.length / 3 - 1) {
+        currentIndex++;
+        cardWrapper.style.transform = `translateX(-${currentIndex * cardWidth * 3}px)`; // Move 3 cards at a time
+      }
+    }
   </script>
 </body>
 </html>
