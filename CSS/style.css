@@ -132,8 +132,7 @@ body {
 /* MEDIA QUIRES */
 
 .navbar {
-
-    background-color: rgba(255, 255, 255, 0.979);
+    background-color: rgb(255, 255, 255); 
     z-index: 1111 !important;
     position: absolute !important;
     top: 0%;
@@ -1353,8 +1352,8 @@ footer {
 }
 
 .contact_image {
-    background-size: cover;
-    object-fit: cover;
+    background-size: cover !important;
+    object-fit: cover !important;
     height: 70vh !important;
 }
 
