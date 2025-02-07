@@ -1357,35 +1357,7 @@ footer {
     height: 70vh !important;
 }
 
-/* MARQUEE START*/
-/* Container for the scrolling effect */
 
-.marquee-content {
-    display: flex;
-    width: max-content;
-    animation: marquee linear infinite;
-    animation-duration: 46s !important;
-    animation-delay: 1s !important;
-}
-
-
-@keyframes marquee {
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-.marquee-content img {
-    margin-right: 20px;
-    max-height: 100px;
-    object-fit: contain;
-}
-
-/* MARQUE END */
 /* MARQUE SLIDER START */
 swiper-container{
     width: 95vw !important;

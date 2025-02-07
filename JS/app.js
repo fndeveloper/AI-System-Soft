@@ -86,7 +86,6 @@ const nextBtn = document.getElementById('nextBtn');
 
 let currentIndex = 0;
 
-
 function showSlide(index) {
 
   if (index >= slides.length) {
@@ -96,11 +95,8 @@ function showSlide(index) {
   } else {
     currentIndex = index;
   }
-
-
   sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
-
 
 nextBtn.addEventListener('click', () => {
   showSlide(currentIndex + 1); 
@@ -109,6 +105,7 @@ nextBtn.addEventListener('click', () => {
 prevBtn.addEventListener('click', () => {
   showSlide(currentIndex - 1); 
 });
+
 
 
 showSlide(currentIndex);
