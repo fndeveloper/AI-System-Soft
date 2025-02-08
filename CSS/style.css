@@ -157,7 +157,9 @@ body {
     font-size: 24px !important;
 
 }
-
+iframe{
+    height: 70vh !important;
+}
 .main1 {
     position: relative;
     min-height: 100svh !important;
@@ -332,7 +334,12 @@ body {
     position: relative !important;
     overflow: hidden;
 }
-
+swiper-container>swiper-slide>img{
+    height: 80px !important;
+object-fit: cover !important;
+width: 400px !important;
+background-size: cover !important;
+}
 .banner-btn, .banner-btn-hover {
     position: absolute !important;
     width: 100%;
