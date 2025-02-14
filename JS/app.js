@@ -114,4 +114,19 @@ showSlide(currentIndex);
 // MARQUEE SLIDER START
 
 // MARQUEE SLIDER 
+// THEME START
+const toggleButton = document.getElementById('theme-toggle');
 
+// Function to toggle theme
+toggleButton.addEventListener('click', () => {
+  // Get current theme from body
+  const currentTheme = document.body.getAttribute('data-theme');
+  
+  // Toggle between light and dark theme
+  if (currentTheme === 'light') {
+    document.body.setAttribute('data-theme', 'dark');
+  } else {
+    document.body.setAttribute('data-theme', 'light');
+  }
+});
+// THEME END
