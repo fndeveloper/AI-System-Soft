@@ -924,14 +924,15 @@ footer {
 .dropdown-menu {
     padding: 14px !important;
     background-color: white !important;
+visibility: visible !important;
+opacity: 0;
+}
+.dropdown:hover .dropdown-menu{
+  opacity: 1;
+  display: block;
 }
 
-.dropdown:hover .dropdown-menu {
-    display: block !important;
-    height: auto !important;
-    transform: rotateX(0deg) !important;
 
-}
 
 .nav-item>.nav-link {
     color: white;
