@@ -1207,11 +1207,11 @@ color: white !important;
   }
   .child-dropdown {
     position: absolute;
-    left: 98%; 
-    top: 50% !important;
+    left: 100%; 
+    top: 0% !important;
     display: none; 
     min-width: 200px;
-    border-radius: 5px;
+
     background-color: #f8f9fa;
   }
   
@@ -1322,11 +1322,11 @@ position: relative;
 
 
 
-
-.phonenum {
-    color: black !important;
-}
-
+.iti {
+    z-index: 1222 !important;
+    width: 100% !important;
+    position: absolute;
+  }
 
 /* MARQUEE START */
 
