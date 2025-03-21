@@ -1063,9 +1063,7 @@ opacity: 0;
         /* max-height: 140vh !important; */
         top: 2%;
 
-
-        min-height: 120vh !important;
-        max-height: 170vh !important;
+height: max-content !important;
         z-index: 10;
     }
 }
