@@ -1,6 +1,6 @@
   <div class="col-md-4">
               <label for="country" class="form-label">Country:</label>
-              <input type="text" class="form-control" id="country" placeholder="Country" required>
+              <input type="text" class="form-control" id="country" maxlength="17" placeholder="Country" required>
             </div>
 
 ======================================================================================
