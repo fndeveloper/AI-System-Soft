@@ -182,12 +182,12 @@ iframe {
 
 .banner-img {
     width: 100%;
- height: 90%;
+ height: 100%;
     z-index: -1;
     object-fit: cover;
     background-position: center;
     background-size: cover;
-
+background-color: black !important;
     top: 0%;
 }
 
@@ -1255,12 +1255,15 @@ color: white !important;
     height: 100%;
  } */
 .home {
-height: 100vh;
-
-   background-position: right top;
+    margin: 0px !important ;
+    padding: 0px !important;
+height: 90vh;
+background-color: rgba(0, 0, 0, 0.323);
+   /* background-position: right top; */
     background-size: cover;
     object-fit: cover;
 position: relative;
+
 }
 
 .text-eni {
@@ -1334,7 +1337,7 @@ position: relative;
 
 
 .iti {
-    z-index: 1222 !important;
+    z-index: 122 !important;
     width: 100% !important;
     position: absolute;
   }
