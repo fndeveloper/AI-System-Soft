@@ -35,7 +35,10 @@
 }
 /* LIGHT THEME */
 body {
-
+    overflow-x: hidden;
+    box-sizing: border-box !important;
+margin: 0% !important;
+padding: 0% !important;
     background-color: #811f1000 !important;
     font-family: var(--font-family) !important;
 }
@@ -140,6 +143,8 @@ body {
 /* MEDIA QUIRES */
 
 .navbar {
+    margin: 0px;
+    padding: 0%;
     background-color: rgba(255, 255, 255, 0.986) !important;
     z-index: 1111 !important;
    transition: 0.4s ease-in-out !important;
@@ -908,6 +913,8 @@ footer {
 }
 
 .who1 {
+    margin: 0%;
+    padding: 0%;
     background-color: var(--bg-color) !important;
 }
 
@@ -1237,10 +1244,13 @@ color: white !important;
     z-index: -1;
 }
 .home_new {
+    width: 100%;
     max-height: 100vh !important;
     min-height: 100vh !important;
 }
 .banner-img_new{
+    margin: 0px !important ;
+    padding: 0px !important;
     width: 100%;
   max-height:110vh;
   min-height: 100vh;
@@ -1268,6 +1278,7 @@ background-color: rgba(0, 0, 0, 0.402);
     background-size: cover;
     object-fit: cover;
 position: relative;
+width: 100% !important;
 
 }
 
