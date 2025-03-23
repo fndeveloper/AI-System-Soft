@@ -1254,6 +1254,11 @@ color: white !important;
  /* .banner-img_new{
     height: 100%;
  } */
+  img{
+    background-size: cover !important;
+    background-position: center !important;
+    object-fit: cover !important;
+}
 .home {
     margin: 0px !important ;
     padding: 0px !important;
