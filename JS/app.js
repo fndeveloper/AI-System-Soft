@@ -79,54 +79,39 @@ for (i = 0; i < acc.length; i++) {
 // MARQUEE END
 
 // SWIPER HOME JS 
+// Get elements
 const sliderWrapper = document.getElementById('sliderWrapper');
 const slides = document.querySelectorAll('.slider-item');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
-let currentIndex = 0;
+if (sliderWrapper && slides.length > 0 && prevBtn && nextBtn) {
+  let currentIndex = 0;
 
-function showSlide(index) {
-
-  if (index >= slides.length) {
-    currentIndex = 0; 
-  } else if (index < 0) {
-    currentIndex = slides.length - 1; 
-  } else {
-    currentIndex = index;
+  function showSlide(index) {
+    if (index >= slides.length) {
+      currentIndex = 0; 
+    } else if (index < 0) {
+      currentIndex = slides.length - 1; 
+    } else {
+      currentIndex = index;
+    }
+    sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
   }
-  sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+  nextBtn.addEventListener('click', () => {
+    showSlide(currentIndex + 1);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    showSlide(currentIndex - 1);
+  });
+
+  showSlide(currentIndex);
 }
 
-nextBtn.addEventListener('click', () => {
-  showSlide(currentIndex + 1); 
-});
-
-prevBtn.addEventListener('click', () => {
-  showSlide(currentIndex - 1); 
-});
-
-
-
-showSlide(currentIndex);
 // SWIPER HOME JS 
 
 // MARQUEE SLIDER START
 
 // MARQUEE SLIDER 
-// THEME START
-const toggleButton = document.getElementById('theme-toggle');
-
-// Function to toggle theme
-toggleButton.addEventListener('click', () => {
-  // Get current theme from body
-  const currentTheme = document.body.getAttribute('data-theme');
-  
-  // Toggle between light and dark theme
-  if (currentTheme === 'light') {
-    document.body.setAttribute('data-theme', 'dark');
-  } else {
-    document.body.setAttribute('data-theme', 'light');
-  }
-});
-// THEME END

@@ -1360,6 +1360,7 @@ visibility: hidden !important;
 
 
 .iti {
+    color: white !important;
     z-index: 122 !important;
     width: 100% !important;
     position: absolute;
