@@ -43,12 +43,10 @@ padding: 0% !important;
     font-family: var(--font-family) !important;
 }
 .form-select {
-    color: white;
-    background-color: #333; /* Optional: Dark background */
-}
-.form-select option:first-child {
     color: white !important;
+    background-color: #333;  
 }
+
 .text-white1 {
 
     color: rgba(230, 230, 230, 0.842) !important;
@@ -541,20 +539,20 @@ select {
     color: var(--para-color) !important;
 }
 
-input {
+input ,textarea {
     color: white !important;
 }
 
 .form-control::placeholder {
     font-weight: 300 !important;
-    color: rgba(255, 255, 255, 0.658) !important;
+    color: rgb(255, 255, 255) !important;
 }
 
-.form-control, .phonenum, select {
+.form-control,  select ,textarea {
     border: none !important;
     border-radius: 0% !important;
     border-bottom: 1px solid rgba(211, 211, 211, 0.349) !important;
-    background-color: transparent !important;
+    background-color: var(--bg-color) !important;
 }
 
 
@@ -1366,11 +1364,34 @@ visibility: hidden !important;
 
 
 .iti {
-    color: white !important;
     z-index: 122 !important;
     width: 100% !important;
     position: absolute;
-  }
+    opacity: 1 !important;
+outline: none;
+    background-color: var(--bg-color) !important;
+}
+.iti .iti__selected-dial-code {
+    color: white !important; 
+}
+
+.iti__country-list {
+overflow-x: hidden !important;
+    width: 390% !important;
+    background-color: var(--bg-color) !important; /* Apni background color value rakho */
+    color:white !important; /* Text ko white karne ke liye */
+}
+
+.iti input {
+position: absolute;
+    opacity: 1 !important;
+ padding: 6px 0px;
+ color: var(--bg-color);
+    border: none !important;
+    border-radius: 0% !important;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.349) !important;
+    background-color: var(--bg-color) !important;/
+}
 
 /* MARQUEE START */
 
@@ -1478,7 +1499,11 @@ swiper-slide img {
     color: rgb(27, 27, 27) !important;
 }
 
-.form_ser>div>div>.form-control, .form_ser>div>div>.phonenum {
+.form_ser>div>div>.form-control {
     border: 1px solid var(--border-col) !important;
-
+background-color: transparent !important;
+}
+.form_ser>div>div>.iti input{
+    border: 1px solid var(--border-col) !important;
+background-color: transparent !important;
 }
