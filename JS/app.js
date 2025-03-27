@@ -115,3 +115,18 @@ if (sliderWrapper && slides.length > 0 && prevBtn && nextBtn) {
 // MARQUEE SLIDER START
 
 // MARQUEE SLIDER 
+function openSubMenu(menuId) {
+  let mainCanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasMain'));
+  mainCanvas.hide(); // Hide main menu
+  
+  let subCanvas = new bootstrap.Offcanvas(document.getElementById(menuId));
+  subCanvas.show(); // Show selected submenu
+}
+
+function closeSubMenu(menuId) {
+  let subCanvas = new bootstrap.Offcanvas(document.getElementById(menuId));
+  subCanvas.hide(); // Hide submenu
+  
+  let mainCanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasMain'));
+  mainCanvas.show(); // Show main menu again
+}
