@@ -86,16 +86,14 @@ padding: 0% !important;
         font-size: 28px !important;
     }
 }
-.topoff>div>ul>li>a {
+.topoff  .nav-item .nav-link {
     text-transform: capitalize;
     color: white !important;
     font-weight: 600;
-    font-size: 14px !important;
+    font-size: 22px !important;
 }
 
-.topoff {
-    height: 70vh;
-}
+
 
 .lets-talk-btn-hover {
     position: absolute;
@@ -126,7 +124,7 @@ bottom: 70px;
 }
 .top-header-icon{
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
 }
 .lets-talk-btn:hover .lets-talk-btn-hover {
     left: 0%;
@@ -1237,24 +1235,21 @@ transition: 0.6s ease-in-out;
 background-color: var(--color1) !important;
 color: white !important;
   }
-  .child-dropdown {
-    position: absolute;
-    left: 100%; 
-    top: 0% !important;
-    display: none; 
-    min-width: 200px;
-
-    background-color: #f8f9fa;
-  }
+@media (min-width:992px) {
+    .child-dropdown {
+        position: absolute;
+        left: 100%; 
+        top: 0% !important;
+        display: none; 
+        min-width: 200px;
+    
+        background-color: #f8f9fa;
+      }
+}
   
 @media (max-width:992px) {
     .child-dropdown {
-        position: absolute;
-    left: 30% !important; 
-        top: 10;
-        display: none; 
-        min-width: 200px;
-        border-radius: 5px;
+    width: 100% !important;
         background-color: #f8f9fa;
       }
       
