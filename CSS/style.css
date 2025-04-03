@@ -112,7 +112,7 @@ padding: 0% !important;
 .top-nav-heading {
     opacity: 0.1;
 position: absolute;
-bottom: 70px;
+bottom: 90px;
 }
 
 .top-header-icon>a {
@@ -124,7 +124,7 @@ bottom: 70px;
 }
 .top-header-icon{
     position: absolute;
-    bottom: 20px;
+    bottom: 40px;
 }
 .lets-talk-btn:hover .lets-talk-btn-hover {
     left: 0%;
