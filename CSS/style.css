@@ -220,7 +220,14 @@ background-color: black !important;
     transition: 0.9s ease-in-out !important;
 
 }
+.gth {
+    text-align: justify !important;
 
+}
+.over{
+    text-align: justify !important;
+
+}
 .text-jus {
     text-align: justify !important;
 }
@@ -910,12 +917,12 @@ footer {
 
 }
 
-.dropdown-menu {
+.navbar .dropdown-menu {
     transition: 0.5s ease-in-out !important;
 
 }
 
-.dropdown-menu>li>.dropdown-item {
+.navbar .dropdown-menu>li>.dropdown-item {
     transition: 0.2s ease-in-out !important;
     color: #2e2e2ec5 !important;
 
@@ -928,18 +935,18 @@ footer {
     background-color: var(--bg-color) !important;
 }
 
-.dropdown-menu>li>.dropdown-item:hover {
+.navbar .dropdown-menu>li>.dropdown-item:hover {
     background-color: var(--color1);
     color: white !important;
 }
 
-.dropdown-menu {
+.navbar .dropdown-menu {
     padding:10px 5px !important;
     background-color: white !important;
 visibility: visible !important;
 opacity: 0;
 }
-.dropdown:hover .dropdown-menu{
+.navbar .dropdown:hover  .dropdown-menu{
   opacity: 1;
   display: block;
 }
@@ -1194,7 +1201,7 @@ height: max-content !important;
 
 }
 /* CHILD DROPDOWN CSS START */
-.dropdown-menu1{
+.navbar .dropdown-menu1{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     background-color: white;
     box-shadow: 2px black;
@@ -1211,7 +1218,7 @@ transition: 0.6s ease-in-out;
 .dropdown-submenu {
     position: relative;
   }
-  .dropdown-menu1>li>.dropdown-item:hover{
+  .navbar .dropdown-menu1>li>.dropdown-item:hover{
 background-color: var(--color1) !important;
 color: white !important;
   }

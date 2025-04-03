@@ -115,3 +115,22 @@ if (sliderWrapper && slides.length > 0 && prevBtn && nextBtn) {
 // MARQUEE SLIDER START
 
 // MARQUEE SLIDER 
+document.querySelector(".servcie_nav_link") .addEventListener("click",()=>{
+document.querySelector(".off_canvas_nav").innerHTML=`
+ <li class="dropdown-submenu position-relative">
+                            <a class="dropdown-item  d-flex justify-content-between align-items-center dropdown-toggle nav-link" href="Ai-Product-Solution.html">
+                                Ai Product Solution
+                                <i class="fa-solid fa-chevron-right ms-2"></i>   </a>
+                       
+                                                            <ul class="dropdown-menu1 list-unstyled child-dropdown">
+                                    <li><a class="dropdown-item" href="buoylight.html">buoylight</a></li>
+                                    <li><a class="dropdown-item" href="buoyspot.html">buoyspot</a></li>
+                                    <li><a class="dropdown-item" href="buoyspy.html">buoyspy</a></li>
+                                    <li><a class="dropdown-item" href="callmatics.html">callmatics</a></li>
+                                    <li><a class="dropdown-item" href="plannet_scan.html">plannetscan</a></li>
+
+                                    
+                                  </ul>
+                            </li>
+`
+})
