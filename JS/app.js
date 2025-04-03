@@ -112,25 +112,37 @@ if (sliderWrapper && slides.length > 0 && prevBtn && nextBtn) {
 
 // SWIPER HOME JS 
 
-// MARQUEE SLIDER START
+document.addEventListener("DOMContentLoaded",()=>{
+  
 
-// MARQUEE SLIDER 
-document.querySelector(".servcie_nav_link") .addEventListener("click",()=>{
-document.querySelector(".off_canvas_nav").innerHTML=`
- <li class="dropdown-submenu position-relative">
-                            <a class="dropdown-item  d-flex justify-content-between align-items-center dropdown-toggle nav-link" href="Ai-Product-Solution.html">
-                                Ai Product Solution
-                                <i class="fa-solid fa-chevron-right ms-2"></i>   </a>
-                       
-                                                            <ul class="dropdown-menu1 list-unstyled child-dropdown">
-                                    <li><a class="dropdown-item" href="buoylight.html">buoylight</a></li>
-                                    <li><a class="dropdown-item" href="buoyspot.html">buoyspot</a></li>
-                                    <li><a class="dropdown-item" href="buoyspy.html">buoyspy</a></li>
-                                    <li><a class="dropdown-item" href="callmatics.html">callmatics</a></li>
-                                    <li><a class="dropdown-item" href="plannet_scan.html">plannetscan</a></li>
+  document.getElementById("servcie_nav_link").addEventListener("click", () => {
+    var servcie_sub_drop = document.getElementById("servcie_sub_drop");
+    var off_canvas_nav=document.getElementById("off_canvas_nav")
+  
+    if (servcie_sub_drop) {
+      off_canvas_nav.innerHTML = servcie_sub_drop.innerHTML;
+    } else {
+      console.log("Dropdown element not found!");
+    }
+    var link = document.getElementById("servcie_nav_link_ai");
 
-                                    
-                                  </ul>
-                            </li>
-`
+    // if (link) {
+      link.addEventListener("click", (e) => {
+        off_canvas_nav.innerHTML=document.getElementById("servcie_ai_sub_drop").innerHTML
+      // });
+    } 
+    
+  )
+  document.getElementById("prev_btn").addEventListener("click",()=>{
+ setTimeout(() => {
+  off_canvas_nav.innerHTML=document.getElementById("off_canvas_nav").innerHTML;
+ }, 2500);
+  })
+
+  });
+  
 })
+
+// document.addEventListener("DOMContentLoaded", () => {
+
+// });
