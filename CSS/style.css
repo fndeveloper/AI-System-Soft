@@ -411,6 +411,7 @@ swiper-container>swiper-slide>img {
 }
 
 .offcanvas {
+    height: 100vh !important;
     z-index: 1111 !important;
 }
 
@@ -647,7 +648,6 @@ input ,textarea {
     transition: 0.9s ease-in-out !important;
     height: 100vh !important;
 
-    opacity: 0.99;
     animation: top 0.1s linear !important;
 
 }
