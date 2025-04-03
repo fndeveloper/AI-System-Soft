@@ -1253,11 +1253,11 @@ color: white !important;
         background-color: #f8f9fa;
       }
       
+      .dropdown-submenu:hover .child-dropdown {
+        display: block;
+      }
+      
 }
-  .dropdown-submenu:hover .child-dropdown {
-    display: block;
-  }
-  
 
   .child-dropdown .dropdown-item {
     padding: 8px 15px;
