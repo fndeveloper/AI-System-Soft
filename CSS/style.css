@@ -113,6 +113,8 @@ padding: 0% !important;
 
 .top-nav-heading {
     opacity: 0.1;
+position: absolute;
+bottom: 70px;
 }
 
 .top-header-icon>a {
@@ -122,7 +124,10 @@ padding: 0% !important;
     border-radius: 50%;
     font-size: 22px !important;
 }
-
+.top-header-icon{
+    position: absolute;
+    bottom: 10px;
+}
 .lets-talk-btn:hover .lets-talk-btn-hover {
     left: 0%;
     height: 100%;
@@ -1219,6 +1224,9 @@ transition: 0.6s ease-in-out;
 .sub-dropdown-menu{
     display: none;
     transition: 0.5s ease-in-out;
+}
+.offcanvas-body .nav-item > .nav-link{
+    color: white !important;
 }
 /* Position the Child Dropdown */
 .dropdown-submenu {
