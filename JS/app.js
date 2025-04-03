@@ -134,9 +134,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     
   )
   document.getElementById("prev_btn").addEventListener("click",()=>{
- setTimeout(() => {
-  off_canvas_nav.innerHTML=document.getElementById("off_canvas_nav").innerHTML;
- }, 2500);
+   off_canvas_nav.innerHTML=document.getElementById("off_canvas_nav").innerHTML;
   })
 
   });
