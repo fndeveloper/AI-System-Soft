@@ -1243,10 +1243,16 @@ color: white !important;
         position: absolute;
         left: 100%; 
         top: 0% !important;
-        display: none; 
         min-width: 200px;
-    transition: 0.6s ease-in-out !important;
+        transition: 0.6s ease-in-out !important;
         background-color: #f8f9fa;
+        display: none; 
+        opacity: 0;
+      }
+      .dropdown-submenu:hover .child-dropdown {
+        display: block;
+    transition: 0.6s ease-in-out !important;
+    
       }
 }
 
@@ -1258,13 +1264,9 @@ color: white !important;
         background-color: #f8f9fa;
     }
     
-    .dropdown-submenu:hover .child-dropdown {
-        display: block;
-    transition: 0.6s ease-in-out !important;
-
-      }
-      
 }
+
+
 
   .child-dropdown .dropdown-item {
     padding: 8px 15px;
