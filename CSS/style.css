@@ -1262,7 +1262,7 @@ transition: 0.6s ease-in-out !important;
 
   }
 
-  .child-dropdown .dropdown-item {
+ .navbar .child-dropdown .dropdown-item {
     padding: 8px 15px;
     font-size: 14px;
     transition: 0.6s ease-in-out !important;
