@@ -42,12 +42,42 @@ padding: 0% !important;
     background-color: #811f1000 !important;
     font-family: var(--font-family) !important;
 }
+.cardteam , .cardteam img ,.cardteam .designation {
+    border-radius: 20px !important;
+}
+.cardteam img{
+    object-fit: cover;
+    width: 50vw !important;
+    height: 60vh !important;
 
+    background-size: contain;
+}
+@media (max-width:992px) {
+    
+.cardteam img{
+    object-fit: cover;
+    width: 100vw !important;
+    height: 60vh !important;
+
+    background-size: contain;
+}
+}
+.cardteam{
+    box-shadow: rgba(149, 157, 165, 0.315) 0px 8px 24px;
+}
 .form-select {
     color: white !important;
     background-color: #333;  
 }
+.members_card img{
+height: 100%;
+width: 100%;
+/* padding: 10px; */
+background-color: teal !important;
+background-size: cover;
+object-fit: cover;
 
+}
 .text-white1 {
 
     color: rgba(230, 230, 230, 0.842) !important;
