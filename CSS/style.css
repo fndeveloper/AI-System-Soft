@@ -1004,10 +1004,21 @@ opacity: 0;
 
 .nav-item>.nav-link {
     color: white;
+transition: 0.4s ease-in-out !important;
 }
+
 
 .nav-item>.nav-link:hover {
     color: var(--color1) !important;
+}
+footer .nav-item>.nav-link{
+transition: 0.4s ease-in-out !important;
+    border-bottom: 1px solid var(--color1);
+
+}
+footer .nav-item>.nav-link:hover {
+    color: white !important;
+    border-bottom: 1px solid white;
 }
 
 .navhover {
