@@ -205,6 +205,12 @@ bottom: 90px;
     font-weight: 400 !important;
 
 }
+.nav_of_footer li .nav-link ,.copyright_footer{
+    font-weight: 200 !important;
+    font-size: 14px;
+    padding: 0px !important;
+color: rgb(226, 226, 226) !important;
+}
 
 #topbtn {
     font-size: 24px !important;
