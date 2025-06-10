@@ -1,45 +1,37 @@
-
-
 window.addEventListener("scroll", function () {
-  var navunder = document.getElementById("navunder");
-  const scrollableHeight = document.body.scrollHeight - window.innerHeight;
-  const scrollProgress = (window.scrollY / scrollableHeight) * 98;
-  if (scrollProgress > 95) {
-    document.getElementById("topbtn").innerHTML = `<i class="fa-solid fa-arrow-up"></i>`;
-}
-  else {
-    this.document.getElementById("topbtn").innerHTML = scrollProgress.toFixed(0) + "%";
-
-  }
-  navunder.style.width = `${scrollProgress}vw`
-  var navbar = document.getElementById("navbar");
-  var navbar1 = document.getElementById("navbar1");
-  var iconf = document.querySelectorAll(".btn-red");
+    var navunder = document.getElementById("navunder");
+    const scrollableHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollProgress = (window.scrollY / scrollableHeight) * 98;
+   
+    navunder.style.width =` ${scrollProgress}vw`
+    var navbar = document.getElementById("navbar");
+    var navbar1 = document.getElementById("navbar1");
+    var iconf = document.querySelectorAll(".btn-red");
 
 
-  var navlinkd = this.document.querySelectorAll(".nav-item>.nav-link")
+    var navlinkd = this.document.querySelectorAll(".nav-item>.nav-link")
 
-  if (window.scrollY > 700) {
-    
-      navbar.classList.add("navfix");
-   iconf.forEach((e) => {
-      e.classList.add("icon-fixeds")
-    })
-    navlinkd.forEach((e) => {
-      e.classList.add("nav-sec-col")
-    })
-  } else {
+    if (window.scrollY > 700) {
 
-    iconf.forEach((e) => {
-      e.classList.remove("icon-fixeds")
-    })
-    navbar.classList.remove("navfix");
-    navlinkd.forEach((e) => {
+        navbar.classList.add("navfix");
+        iconf.forEach((e) => {
+            e.classList.add("icon-fixeds")
+        })
+        navlinkd.forEach((e) => {
+            e.classList.add("nav-sec-col")
+        })
+    } else {
+
+        iconf.forEach((e) => {
+            e.classList.remove("icon-fixeds")
+        })
+        navbar.classList.remove("navfix");
+        navlinkd.forEach((e) => {
 
 
-      e.classList.remove("nav-sec-col")
-    })
-  }
+            e.classList.remove("nav-sec-col")
+        })
+    }
 });
 
 ;
@@ -49,11 +41,11 @@ window.addEventListener("scroll", function () {
 const inputs = document.querySelectorAll(".phonenum");
 
 inputs.forEach(input => {
-  window.intlTelInput(input, {
-    initialCountry: "us",
-    separateDialCode: true,
-    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js", // For formatting
-  });
+    window.intlTelInput(input, {
+        initialCountry: "us",
+        separateDialCode: true,
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js", // For formatting
+    });
 });
 // COUNTRY CODE
 
@@ -62,15 +54,15 @@ var acc = document.getElementsByClassName("accordion");
 var i;
 
 for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
+    acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
 }
 // ACCORDIAN
 
@@ -86,39 +78,40 @@ const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
 if (sliderWrapper && slides.length > 0 && prevBtn && nextBtn) {
-  let currentIndex = 0;
+    let currentIndex = 0;
 
-  function showSlide(index) {
-    if (index >= slides.length) {
-      currentIndex = 0; 
-    } else if (index < 0) {
-      currentIndex = slides.length - 1; 
-    } else {
-      currentIndex = index;
+    function showSlide(index) {
+        if (index >= slides.length) {
+            currentIndex = 0;
+        } else if (index < 0) {
+            currentIndex = slides.length - 1;
+        } else {
+            currentIndex = index;
+        }
+   sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+
     }
-    sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
-  }
 
-  nextBtn.addEventListener('click', () => {
-    showSlide(currentIndex + 1);
-  });
+    nextBtn.addEventListener('click', () => {
+        showSlide(currentIndex + 1);
+    });
 
-  prevBtn.addEventListener('click', () => {
-    showSlide(currentIndex - 1);
-  });
+    prevBtn.addEventListener('click', () => {
+        showSlide(currentIndex - 1);
+    });
 
-  showSlide(currentIndex);
+    showSlide(currentIndex);
 }
 
 // SWIPER HOME JS 
 
 // document.addEventListener("DOMContentLoaded",()=>{
-  
+
 
 //   document.getElementById("servcie_nav_link").addEventListener("click", () => {
 //     var servcie_sub_drop = document.getElementById("servcie_sub_drop");
 //     var off_canvas_nav=document.getElementById("off_canvas_nav")
-  
+
 //     if (servcie_sub_drop) {
 //       off_canvas_nav.innerHTML = servcie_sub_drop.innerHTML;
 //     } else {
@@ -126,10 +119,10 @@ if (sliderWrapper && slides.length > 0 && prevBtn && nextBtn) {
 //     }
 //     var link = document.getElementById("servcie_nav_link_ai");
 
-   
+
 //   document.getElementById("prev_btn").addEventListener("click",()=>{
 //     console.log("r");
-    
+
 //    off_canvas_nav.innerHTML=`
 //     <li class="nav-item">
 //                             <a class="nav-link" aria-current="page" href="index.html">Home</a>
@@ -155,7 +148,7 @@ if (sliderWrapper && slides.length > 0 && prevBtn && nextBtn) {
 //                                     href="#" role="button"   data-bs-toggle="dropdown" aria-expanded="false">
 //                                     Ai Product Solution
 //                                  </a>
-                                 
+
 
 //                                     <ul class="dropdown-menu col-12 w-100  list-unstyled child-dropdown" >
 //                                          <li><a class="dropdown-item" href="buoylight.html">buoylight</a></li>
@@ -214,28 +207,27 @@ if (sliderWrapper && slides.length > 0 && prevBtn && nextBtn) {
 //   })
 
 //   });
-  
+
 // })
 
 // document.addEventListener("DOMContentLoaded", () => {
 
 // });
 document.addEventListener("DOMContentLoaded", () => {
-//  SERVICE NAVBAR START
-  let serviceNavLink = document.getElementById("service_nav_link");
+    //  SERVICE NAVBAR START
+    let serviceNavLink = document.getElementById("service_nav_link");
 
-  serviceNavLink.addEventListener("click", () => {
-      let offcanvasMain = new bootstrap.Offcanvas(document.getElementById("offcanvasMain"));
-      let offcanvasService = new bootstrap.Offcanvas(document.getElementById("offcanvasService"));
+    serviceNavLink.addEventListener("click", () => {
+        let offcanvasMain = new bootstrap.Offcanvas(document.getElementById("offcanvasMain"));
+        let offcanvasService = new bootstrap.Offcanvas(document.getElementById("offcanvasService"));
 
-      offcanvasMain.hide();
-      offcanvasService.show();
-  });
-//  SERVICE NAVBAR END
-//  AI SERVICE NAVBAR START
-//  AI SERVICE NAVBAR START
+        offcanvasMain.hide();
+        offcanvasService.show();
+    });
+    //  SERVICE NAVBAR END
+    //  AI SERVICE NAVBAR START
+    //  AI SERVICE NAVBAR START
 
 
 
 });
-
