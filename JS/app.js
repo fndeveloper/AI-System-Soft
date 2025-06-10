@@ -70,7 +70,8 @@ for (i = 0; i < acc.length; i++) {
 
 // MARQUEE END
 
-// SWIPER HOME JS 
+// SWIPER HOME JS
+
 // Get elements
 const sliderWrapper = document.getElementById('sliderWrapper');
 const slides = document.querySelectorAll('.slider-item');
@@ -78,32 +79,30 @@ const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
 if (sliderWrapper && slides.length > 0 && prevBtn && nextBtn) {
-    let currentIndex = 0;
+  let currentIndex = 0;
 
-    function showSlide(index) {
-        if (index >= slides.length) {
-            currentIndex = 0;
-        } else if (index < 0) {
-            currentIndex = slides.length - 1;
-        } else {
-            currentIndex = index;
-        }
-   sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
-
+  function showSlide(index) {
+    if (index >= slides.length) {
+      currentIndex = 0;
+    } else if (index < 0) {
+      currentIndex = slides.length - 1;
+    } else {
+      currentIndex = index;
     }
+    sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
 
-    nextBtn.addEventListener('click', () => {
-        showSlide(currentIndex + 1);
-    });
+  nextBtn.addEventListener('click', () => {
+    showSlide(currentIndex + 1);
+  });
 
-    prevBtn.addEventListener('click', () => {
-        showSlide(currentIndex - 1);
-    });
+  prevBtn.addEventListener('click', () => {
+    showSlide(currentIndex - 1);
+  });
 
-    showSlide(currentIndex);
+  showSlide(currentIndex);
 }
 
-// SWIPER HOME JS 
 
 // document.addEventListener("DOMContentLoaded",()=>{
 
