@@ -1587,3 +1587,24 @@ background-color: transparent !important;
     border: 1px solid var(--border-col) !important;
 background-color: transparent !important;
 }
+
+/* ================ NEW ADDTITION START ============== */
+.form_ser .form-control{
+    color: #1A1A1A !important;
+}
+.form_ser .iti{
+    color: var(--bg-color) !important;
+    background-color: white !important;
+}
+.form_ser .iti .iti__selected-dial-code {
+    color: rgb(29, 29, 29) !important; 
+}
+
+ .form_ser.iti__country-list {
+overflow-x: hidden !important;
+    width: 390% !important;
+    background-color: var(--bg-color) !important; /* Apni background color value rakho */
+    color:rgb(37, 37, 37) !important; /* Text ko white karne ke liye */
+}
+
+/* ================ NEW ADDTITION END ============== */
