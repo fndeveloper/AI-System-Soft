@@ -68,6 +68,9 @@ padding: 0% !important;
 .cardteam{
     box-shadow: rgba(149, 157, 165, 0.315) 0px 8px 24px;
 }
+.cardInfo p{
+    font-size: 15px !important;
+}
 .form-select {
     color: white !important;
     background-color: #333;  
