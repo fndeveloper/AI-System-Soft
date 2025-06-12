@@ -52,6 +52,9 @@ padding: 0% !important;
 
     background-size: contain;
 }
+.cardteam img{
+    height: 300px !important;
+}
 @media (max-width:992px) {
     
 .cardteam img{
