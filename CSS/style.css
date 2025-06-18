@@ -1552,10 +1552,15 @@ overflow-x: hidden !important;
     padding: 10px !important;
     margin: 0% 4% !important;
     left: 0% !important;
-    position: fixed !important;
     transition: 0.1s ease-in-out !important;
-    width: 95vw !important;
     display: none !important;
+}
+@media (min-width:992px) {
+    .large_nav .dropdown:hover .dropdown-menu {
+     position: fixed !important;
+     width: 95vw !important;
+ 
+}
 }
 .dropdown-menu {
     position: absolute;
