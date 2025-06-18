@@ -1547,19 +1547,20 @@ overflow-x: hidden !important;
     display: inline-block !important;
     padding-bottom: 30px;
     z-index: 31111 !important;
-}.large_nav .dropdown-menu {
-    z-index: 934222 !important;
+}
+.large_nav .dropdown-menu {
     padding: 10px !important;
-    margin: 0% 4% !important;
-    left: 0% !important;
-    transition: 0.1s ease-in-out !important;
     display: none !important;
 }
 @media (min-width:992px) {
     .large_nav .dropdown:hover .dropdown-menu {
+        z-index: 934222 !important;
+        transition: 0.1s ease-in-out !important;
+        left: 0% !important;
+        margin: 0% 4% !important;
      position: fixed !important;
-     width: 95vw !important;
- 
+     width: 90vw !important;
+  
 }
 }
 .dropdown-menu {
