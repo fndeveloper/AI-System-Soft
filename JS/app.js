@@ -220,22 +220,5 @@ if (sliderWrapper && slides.length > 0 && prevBtn && nextBtn) {
 // document.addEventListener("DOMContentLoaded", () => {
 
 // });
-document.addEventListener("DOMContentLoaded", () => {
-//  SERVICE NAVBAR START
-  let serviceNavLink = document.getElementById("service_nav_link");
 
-  serviceNavLink.addEventListener("click", () => {
-      let offcanvasMain = new bootstrap.Offcanvas(document.getElementById("offcanvasMain"));
-      let offcanvasService = new bootstrap.Offcanvas(document.getElementById("offcanvasService"));
-
-      offcanvasMain.hide();
-      offcanvasService.show();
-  });
-//  SERVICE NAVBAR END
-//  AI SERVICE NAVBAR START
-//  AI SERVICE NAVBAR START
-
-
-
-});
 
