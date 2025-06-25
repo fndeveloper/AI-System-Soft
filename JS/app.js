@@ -267,7 +267,7 @@ if (sliderWrapper && slides.length > 0 && prevBtn && nextBtn) {
     if(collapse_of_home_service && see_les){
 
     collapse_of_home_service.forEach((e)=>{
-  console.log(e);
+ 
   
       e.addEventListener("shown.bs.collapse",function(){
           see_les.innerHTML=`
