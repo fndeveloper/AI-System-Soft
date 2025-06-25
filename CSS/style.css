@@ -704,7 +704,9 @@ input, textarea {
     font-size: 14px;
     color: var(--para-color);
 }
-
+.para_bg{
+   background-color: #ebebeb !important;
+}
 footer {
     background-size: cover;
     object-fit: cover;
