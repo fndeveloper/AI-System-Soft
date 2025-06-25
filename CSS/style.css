@@ -732,8 +732,8 @@ footer {
     position: relative !important;
     transition: 0.9s ease-in-out !important;
 }
-
 .col-22 {
+    height: 100% !important;
     border-right: 1px solid white !important;
 }
 
