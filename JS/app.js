@@ -222,3 +222,66 @@ if (sliderWrapper && slides.length > 0 && prevBtn && nextBtn) {
 // });
 
 
+ var swiper = new Swiper(".fn_swiper", {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        // Responsive for mobile/tablet
+        0: {
+          slidesPerView: 1,
+        },
+        640: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 1,
+        }
+      }
+    });
+    
+    // =============== PRODUCT SWIPER START ===============
+     new Swiper(".product_swiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 1500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      320: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      992: { slidesPerView: 3 },
+    }
+  });
+    // =============== PRODUCT SWIPER END =================
+
+
+    // ================ HOME SERVICE COLLAPSE START ================
+    var collapse_of_home_service=document.querySelectorAll(".collapse_of_home_service")
+    var see_les=document.getElementById("see_les");
+    if(collapse_of_home_service && see_les){
+
+    collapse_of_home_service.forEach((e)=>{
+  console.log(e);
+  
+      e.addEventListener("shown.bs.collapse",function(){
+          see_les.innerHTML=`
+          See Less
+          `
+      })
+          e.addEventListener("hidden.bs.collapse",function(){
+          see_les.innerHTML=`
+          See More
+          `
+      })
+      
+    })
+
+   }
+    
+    // ================ HOME SERVICE COLLAPSE END   ================
