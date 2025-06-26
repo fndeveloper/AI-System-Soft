@@ -4,13 +4,7 @@ window.addEventListener("scroll", function () {
   var navunder = document.getElementById("navunder");
   const scrollableHeight = document.body.scrollHeight - window.innerHeight;
   const scrollProgress = (window.scrollY / scrollableHeight) * 98;
-  if (scrollProgress > 95) {
-    document.getElementById("topbtn").innerHTML = `<i class="fa-solid fa-arrow-up"></i>`;
-}
-  else {
-    this.document.getElementById("topbtn").innerHTML = scrollProgress.toFixed(0) + "%";
-
-  }
+ 
   navunder.style.width = `${scrollProgress}vw`
   var navbar = document.getElementById("navbar");
   var navbar1 = document.getElementById("navbar1");
@@ -244,20 +238,22 @@ if (sliderWrapper && slides.length > 0 && prevBtn && nextBtn) {
     });
     
     // =============== PRODUCT SWIPER START ===============
-     new Swiper(".product_swiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    loop: true,
-    autoplay: {
-      delay: 1500,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      320: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
-      992: { slidesPerView: 3 },
-    }
-  });
+new Swiper(".product_swiper", {
+  loop: true,
+  spaceBetween: 10,
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    0: { slidesPerView: 3 },      // phones portrait
+    576: { slidesPerView: 3 },    // phones landscape
+    768: { slidesPerView: 3 },    // tablets
+    992: { slidesPerView: 3 },    // desktops
+  }
+});
+
+
     // =============== PRODUCT SWIPER END =================
 
 

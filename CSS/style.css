@@ -357,12 +357,7 @@ iframe {
     overflow: hidden;
 }
 
-.roun swiper-container > swiper-slide > img {
-    height: 80px !important;
-    object-fit: cover !important;
-    width: 400px !important;
-    background-size: cover !important;
-}
+
 
 .d_nonoe_Servcie {
     display: none;
@@ -491,7 +486,7 @@ a:hover, button:hover {
     }
 }
 
-.roun {
+.product_swiper {
     border: 1px solid var(--color-round) !important;
 }
 
@@ -952,15 +947,12 @@ footer {
     background-color: var(--color1);
     background-color: #2b2a2a;
 }
-
-    .social-icons > div > a > i {
-        padding: 10px;
+.social-icons > div > a{
+     background-color: var(--para-bg);
         font-size: 20px;
-        color: white !important;
-        border-radius: 12%;
-        background-color: var(--color1);
-    }
+        color:var(--color1) !important;
 
+    }
 .offcanvas-end {
     transition: 0.8s ease-in-out !important;
 }
@@ -1412,25 +1404,10 @@ img {
 
 
 /* MARQUE SLIDER START */
-.roun swiper-container {
-    width: 95vw !important;
-}
 
-.roun swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-   .roun  swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+
+
 
 /* MARQUE SLIDER END */
 
@@ -1557,6 +1534,14 @@ CSS
    padding-bottom: 50px !important;
 
   }
+  .product_swiper{
+    height: 100px !important;
+    width: 90% !important; 
+  }
+  .product_swiper_wrapper {
+    height: 100px;
+    width: 80% !important;
+  }
 .foodprints_section .swiper-slide img{
     background-size: cover;
     object-fit:cover;
@@ -1580,7 +1565,7 @@ background-position: center;
     transition: 0.6s ease-in-out !important;
     padding: 10px;
     border-radius: 40px !important;
-    background-color: #ffffff !important;
+    background-color: #bdbdbd !important;
     opacity: 1;
   }
 
