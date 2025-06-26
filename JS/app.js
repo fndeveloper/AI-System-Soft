@@ -38,7 +38,10 @@ window.addEventListener("scroll", function () {
 
 ;
 
-
+var current_year=document.getElementById("current_year");
+if(current_year){
+  current_year.innerHTML=`${new Date().getFullYear()}  `
+}
 // COUNTRY CODE
 const inputs = document.querySelectorAll(".phonenum");
 
@@ -238,21 +241,26 @@ if (sliderWrapper && slides.length > 0 && prevBtn && nextBtn) {
     });
     
     // =============== PRODUCT SWIPER START ===============
-new Swiper(".product_swiper", {
-  loop: true,
-  spaceBetween: 10,
-  autoplay: {
-    delay: 1500,
-    disableOnInteraction: false,
-  },
-  breakpoints: {
-    0: { slidesPerView: 3 },      // phones portrait
-    576: { slidesPerView: 3 },    // phones landscape
-    768: { slidesPerView: 3 },    // tablets
-    992: { slidesPerView: 3 },    // desktops
-  }
-});
-
+ document.querySelectorAll(".product_swiper").forEach((sliderEl) => {
+    new Swiper(sliderEl, {
+      loop: true,
+      spaceBetween: 10,
+      autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: sliderEl.querySelector(".swiper-pagination"),
+        clickable: true,
+      },
+      slidesPerView: 1,  
+      breakpoints: {
+        576: { slidesPerView: 2 },
+        768: { slidesPerView: 3 },
+        992: { slidesPerView: 3 }
+      }
+    });
+  });
 
     // =============== PRODUCT SWIPER END =================
 

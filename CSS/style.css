@@ -1583,4 +1583,14 @@ background-position: center;
     transition: 0.5s ease-in-out ;
   }
 /* SWIPER CSS END  */
+
 /* ==================== HOME SLIDERWR CODE END ===================================== */
+ .splide__slide img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    /* Optional: adjust arrow colors */
+    .splide__arrow {
+      color: #333;
+    }
