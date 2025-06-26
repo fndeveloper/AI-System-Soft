@@ -1534,6 +1534,9 @@ CSS
    padding-bottom: 50px !important;
 
   }
+  .nav_of_footer a{
+    color: white !important;
+  }
   .product_swiper{
     height: 100px !important;
     width: 90% !important; 
