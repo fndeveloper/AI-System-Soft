@@ -24,7 +24,7 @@
     --border-col: #1818182f;
     --bg-color: #1A1A1A;
     --color-round: rgba(220, 220, 220, 0.966);
-    --para-bg: #ebebeb;
+    --para-bg: #e7e7e7;
 }
 /* LIGHT THEME */
 [data-theme="light"] {
@@ -996,6 +996,7 @@ footer {
 }
 
 .tags > p {
+    text-align: start !important;
     text-transform: capitalize;
     font-size: 14px;
     padding: 5px 17px;
