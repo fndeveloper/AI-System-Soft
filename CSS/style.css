@@ -1631,4 +1631,15 @@ background-size: cover ;
         .client_swiper ,.product_swiper{
             height: 120px !important;
         }
+.grc_logo_div
+{
+    display: flex;
+    justify-content: center;
+}
+        .grc_logo_div img{
+height:100px !important;
+object-fit: cover;
+background-size: cover;
+
+        }
     /* ===== CLIENT SWIPER END ========= */
