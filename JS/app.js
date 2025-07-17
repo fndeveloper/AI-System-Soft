@@ -250,7 +250,7 @@ if (sliderWrapper && slides.length > 0 && prevBtn && nextBtn) {
         disableOnInteraction: false,
       },
       pagination: {
-        el: sliderEl.querySelector(".swiper-pagination"),
+        // el: sliderEl.querySelector(".swiper-pagination"),
         clickable: true,
       },
       slidesPerView: 1,  
@@ -264,7 +264,29 @@ if (sliderWrapper && slides.length > 0 && prevBtn && nextBtn) {
 
     // =============== PRODUCT SWIPER END =================
 
+    // =============== PRODUCT SWIPER START ===============
+ document.querySelectorAll(".client_swiper").forEach((sliderEl) => {
+    new Swiper(sliderEl, {
+      loop: true,
+      spaceBetween: 10,
+      autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        // el: sliderEl.querySelector(".swiper-pagination"),
+        clickable: true,
+      },
+      slidesPerView: 1,  
+      breakpoints: {
+        576: { slidesPerView: 2 },
+        768: { slidesPerView: 3 },
+        992: { slidesPerView: 3 }
+      }
+    });
+  });
 
+    // =============== PRODUCT SWIPER END =================
     // ================ HOME SERVICE COLLAPSE START ================
     var collapse_of_home_service=document.querySelectorAll(".collapse_of_home_service")
     var see_les=document.getElementById("see_les");

@@ -1595,3 +1595,39 @@ background-position: center;
     .splide__arrow {
       color: #333;
     }
+    .product_swiper .swiper-slide{
+    display: flex;
+    flex-direction: row ;
+    justify-content: center;
+    align-items: center;
+         box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+   
+     }
+    /* ===== CLIENT SWIPER START ======== */
+    .client_swiper .swiper-slide img{
+height: 80px !important; 
+object-fit: cover;
+background-size: cover ; 
+border-radius: 8px  ;
+padding: 5px 15px !important;
+}
+.client_swiper .swiper-slide{
+    display: flex;
+    flex-direction: row ;
+    justify-content: center;
+    align-items: center;
+         box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+   
+     }
+    @media (max-width:992px) {
+            .client_swiper .swiper-slide img{
+                padding: 5px !important;
+                object-fit: cover;
+background-size: cover ; 
+
+            }
+    }
+        .client_swiper{
+            height: 120px !important;
+        }
+    /* ===== CLIENT SWIPER END ========= */
