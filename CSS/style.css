@@ -1099,10 +1099,7 @@ footer {
     transition: 0.4s;
 }
 
-    .active,
-    .accordion:hover {
-        background-color: var(--color1);
-    }
+ 
 
     .accordion:after {
         content: '\002B';
@@ -1426,7 +1423,7 @@ img {
     background-color: transparent !important;
 }
 
-CSS
+
 .justify {
     text-align: justify;
 }
@@ -1629,7 +1626,7 @@ background-size: cover ;
             }
     }
         .client_swiper ,.product_swiper{
-            height: 120px !important;
+            height: 90px !important;
         }
 .grc_logo_div
 {
@@ -1643,3 +1640,30 @@ background-size: cover;
 
         }
     /* ===== CLIENT SWIPER END ========= */
+
+
+
+
+    .accordion_privacy{
+        background-color: transparent;
+    }
+       .accordion_privacy .accordion-button{
+        background-color: var(--color1) !important;
+        color: white !important;
+         box-shadow: none !important;
+         
+        }
+        .accordion_privacy .accordion-item{
+             border-radius: 8px;
+         margin: 1% 0%;
+         border: none !important;
+         background-color: #e9e9e9;
+         box-shadow: none !important;
+       }
+       .accordion_privacy.sticky-active {
+  position: sticky;
+  top: 0; /* Adjust as needed (e.g., to avoid nav overlap) */
+  z-index: 100;
+  background: #fff; /* Optional: for better visibility */
+}
+
