@@ -219,29 +219,12 @@ if (sliderWrapper && slides.length > 0 && prevBtn && nextBtn) {
 // });
 
 
- var swiper = new Swiper(".fn_swiper", {
-      slidesPerView: 1,
-      spaceBetween: 24,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        // Responsive for mobile/tablet
-        0: {
-          slidesPerView: 1,
-        },
-        640: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 1,
-        }
-      }
-    });
+
     
     // =============== PRODUCT SWIPER START ===============
- document.querySelectorAll(".product_swiper").forEach((sliderEl) => {
+var produ_swipper=document.querySelectorAll(".product_swiper");
+if(produ_swipper){
+produ_swipper.forEach((sliderEl) => {
     new Swiper(sliderEl, {
       loop: true,
       spaceBetween: 10,
@@ -261,7 +244,7 @@ if (sliderWrapper && slides.length > 0 && prevBtn && nextBtn) {
       }
     });
   });
-
+}
     // =============== PRODUCT SWIPER END =================
 
     // =============== PRODUCT SWIPER START ===============
@@ -311,3 +294,20 @@ if (sliderWrapper && slides.length > 0 && prevBtn && nextBtn) {
    }
     
     // ================ HOME SERVICE COLLAPSE END   ================
+
+ // ================== GET A LOCATION START ==========================
+document.addEventListener("DOMContentLoaded", () => {
+
+  document.body.classList.add("fade-in");
+});document.querySelectorAll("nav-link").forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.body.classList.remove("fade-in");
+      document.body.classList.add("fade-out");
+
+      setTimeout(() => {
+        window.location.href = this.href;
+      }, 1000); // Wait for fade-out transition
+    });
+  });
+    // ================== GET A LOCATION END ==========================
