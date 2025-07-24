@@ -295,7 +295,7 @@ produ_swipper.forEach((sliderEl) => {
     
     // ================ HOME SERVICE COLLAPSE END   ================
 
- // ================== GET A LOCATION START ==========================
+ // ================== PAGGE CHANGE TRANSITION START ==========================
 document.addEventListener("DOMContentLoaded", () => {
 
   document.body.classList.add("fade-in");
@@ -307,7 +307,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       setTimeout(() => {
         window.location.href = this.href;
-      }, 1000); // Wait for fade-out transition
+      }, 1000); 
     });
   });
-    // ================== GET A LOCATION END ==========================
+    // ================== PAGGE CHANGE TRANSITION END ==========================
