@@ -307,7 +307,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       setTimeout(() => {
         window.location.href = this.href;
-      }, 1000); 
+      }, 500); 
     });
   });
     // ================== PAGGE CHANGE TRANSITION END ==========================
