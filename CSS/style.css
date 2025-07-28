@@ -41,16 +41,18 @@ body {
     padding: 0% !important;
     font-family: var(--font-family) !important;
     overflow-x: hidden !important;
-     opacity: 0;
+    opacity: 0;
     transition: opacity 1s ease-in-out;
 }
-  body.fade-in {
-    opacity: 1 !important;
-  }
 
-  body.fade-out {
-    opacity: 0 !important;
-  }
+    body.fade-in {
+        opacity: 1 !important;
+    }
+
+    body.fade-out {
+        opacity: 0 !important;
+    }
+
 .form-select {
     background-color: #333;
 }
@@ -236,6 +238,7 @@ iframe {
 }
 
 .over {
+    padding-top:10px !important;
     text-align: justify !important;
 }
 
@@ -1474,13 +1477,10 @@ CSS
     .cardteam img {
         object-fit: cover;
         /*width: 50vw !important;*/
-        height: 50vh !important;
+        height: 400px !important;
         background-size: contain;
     }
 
-    .cardteam img {
-        height: 300px !important;
-    }
 
 @media (max-width:992px) {
 
@@ -1662,6 +1662,7 @@ CSS
 .client_swiper, .product_swiper {
     height: 90px !important;
 }
+
 .grc_logo_div {
     display: flex;
     justify-content: center;
@@ -1672,40 +1673,83 @@ CSS
         object-fit: cover;
         background-size: cover;
     }
+
 .table_grc img {
     object-fit: cover;
-    background-size:cover !important;
-    height:60px  !important;
-margin : 0% auto  !important ;
-   
+    background-size: cover !important;
+    height: 60px !important;
+    margin: 0% auto !important;
 }
-.table_grc{
+
+.table_grc {
     font-size: 14px !important;
 }
+
 .fs_6 {
     font-size: 15px !important;
 }
+
 #grcAccordion .accordion-item {
     margin: 1% 0% !important;
 }
+
 #grcAccordion {
-    font-size:14px  !important;
+    font-size: 14px !important;
 }
+
 #grcAccordion {
     background-color: var(--color1) !important;
 }
-#grcAccordion .active{
-    color:green !important; 
-}
 
-/* ===== CLIENT SWIPER END ========= */  
-
-  footer .nav-item > .nav-link{
-    transition: 0.6s ease-in-out !important;
-      border-bottom: 1px solid var(--color1);
-  
-}
-  footer .nav-item > .nav-link:hover {
-    color: white !important;
-      border-bottom: 1px solid white;
+    #grcAccordion .active {
+        color: green !important;
     }
+
+/* ===== CLIENT SWIPER END ========= */
+
+footer .nav-item > .nav-link {
+    transition: 0.6s ease-in-out !important;
+    border-bottom: 1px solid var(--color1);
+}
+
+    footer .nav-item > .nav-link:hover {
+        color: white !important;
+        border-bottom: 1px solid white;
+    }
+
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: 100%;
+    background: #fff; /* optional background */
+    padding: 10px 0;
+    margin-bottom:8px;
+}
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee-scroll 40s linear infinite;
+}
+
+    .marquee-content img {
+        height: 60px;
+        margin: 0 30px;
+        vertical-align: middle;
+        transition: transform 0.3s ease;
+    }
+
+        .marquee-content img:hover {
+            transform: scale(1.1);
+        }
+
+@keyframes marquee-scroll {
+    from {
+        transform: translateX(10%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
